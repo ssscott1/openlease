@@ -1,16 +1,28 @@
 import { redirect } from "next/navigation";
+import { createClient } from "@/lib/supabase/server";
 import { getStaffSession } from "@/lib/admin/auth";
 import { AdminShell } from "@/components/admin/AdminShell";
+import { Unauthorised } from "@/components/admin/Unauthorised";
 
 export default async function AdminAppLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  if (!user) {
+    redirect("/admin/login");
+  }
+
   const session = await getStaffSession();
   if (!session) {
-    // Signed in but not (active) staff — or session expired. Back to login.
-    redirect("/admin/login?reason=unauthorised");
+    // Signed in but no active staff profile. Render in place — redirecting
+    // to login here would loop against the auth proxy (the session is valid).
+    return <Unauthorised email={user.email ?? ""} />;
   }
 
   return (

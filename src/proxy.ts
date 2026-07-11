@@ -20,12 +20,17 @@ export default async function proxy(request: NextRequest) {
 }
 
 async function handleAdmin(request: NextRequest) {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  if (!supabaseUrl || !supabaseKey) {
+    // Misconfigured deployment — let the page render its own error rather
+    // than failing (or looping) at the proxy.
+    return NextResponse.next();
+  }
+
   let response = NextResponse.next({ request });
 
-  const supabase = createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    {
+  const supabase = createServerClient(supabaseUrl, supabaseKey, {
       cookies: {
         getAll() {
           return request.cookies.getAll();
@@ -45,23 +50,23 @@ async function handleAdmin(request: NextRequest) {
 
   // Refresh the session and gate access. Role checks (admin/sales) happen
   // server-side in the admin layout on top of RLS — this is the first fence.
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  // The proxy only ever redirects in ONE direction (towards login): signed-in
+  // users are never bounced off the login page, because any counterpart
+  // redirect (e.g. a signed-in user without a staff profile) would loop.
+  let user = null;
+  try {
+    user = (await supabase.auth.getUser()).data.user;
+  } catch {
+    // Auth service unreachable — treat as signed out.
+  }
 
   const isLoginPage = request.nextUrl.pathname === "/admin/login";
 
   if (!user && !isLoginPage) {
     const url = request.nextUrl.clone();
     url.pathname = "/admin/login";
-    url.searchParams.set("next", request.nextUrl.pathname);
-    return NextResponse.redirect(url);
-  }
-
-  if (user && isLoginPage) {
-    const url = request.nextUrl.clone();
-    url.pathname = "/admin";
     url.search = "";
+    url.searchParams.set("next", request.nextUrl.pathname);
     return NextResponse.redirect(url);
   }
 
