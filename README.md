@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# OpenLease
 
-## Getting Started
+Brand-new cars for professionals on temporary Australian visas. The lease
+matches the visa — any term from 9 to 24 months (including odd terms like 15)
+— with **one all-inclusive weekly price** covering everything except fuel:
+insurance, servicing, maintenance, tyres, rego & CTP, roadside, and
+delivery + collection. No Australian credit history required.
 
-First, run the development server:
+Public site + interactive quoting tool + staff CRM, in five languages
+(English, 简体中文, 繁體中文, العربية with full RTL, ਪੰਜਾਬੀ).
+
+## Stack
+
+- **Next.js 16** (App Router, TypeScript) + **Tailwind CSS v4**
+- **Supabase** — Postgres with RLS, Auth, Storage (vehicle images),
+  Edge Functions (transactional email via Resend)
+- **next-intl** — locale routing, message catalogues in `/messages`
+
+## Getting started
 
 ```bash
+npm install
+cp .env.example .env.local   # fill in your Supabase URL + publishable key
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Apply the SQL in `supabase/migrations/` to your Supabase project in order
+(via the SQL editor, `supabase db push`, or the Supabase MCP), then deploy
+the edge function:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+supabase functions deploy send-lead-emails
+supabase secrets set RESEND_API_KEY=... EMAIL_FROM="OpenLease <quotes@yourdomain>"
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Without `RESEND_API_KEY` the function no-ops gracefully — lead capture never
+depends on email delivery.
 
-## Learn More
+### Staff access
 
-To learn more about Next.js, take a look at the following resources:
+Create a user in Supabase Auth, then add a row in `profiles` with role
+`admin` or `sales`. Admin Login is at `/admin/login`. Customer Login in the
+header redirects to the URL stored in `settings.customer_login_url`
+(default `https://www.karia.com.au`) — repoint it in the CRM, no deploy.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Architecture notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Nothing is hard-coded.** Vehicles, pricing rules (term multipliers,
+  380 km/week, excess rate, included items), settings and all public copy
+  come from the database or `/messages/*.json`. Edit a rate in the CRM and
+  the public quote changes immediately.
+- **Pricing engine** (`src/lib/pricing.ts`) is shared by the site, the
+  lead-capture API and the CRM. `weekly_price = round(base_weekly_rate ×
+  term_multiplier(term))`, with linear interpolation between configured
+  anchors (15 months between 12×1.08 and 18×1.04 → ×1.06).
+- **Controlled write path.** The public site can only INSERT `leads` +
+  `quotes` (never read them) through `/api/quote`, which recomputes pricing
+  server-side. RLS is the enforcement layer, verified with anon-role tests.
+- **Audit + timeline are automatic.** DB triggers log every mutation to
+  `audit_log` and every lead status change to `activities`, so Kanban drags
+  are captured even if a client forgets.
+- **Compliance boundary** (spec §4.3): converting a quote to an application
+  enters a gated flow with five responsible-lending/disclosure checkpoints.
+  Approval is blocked until all are recorded. `TODO(compliance)` markers in
+  `ApplicationDetail.tsx` document the real integrations to wire in.
+- **i18n**: Arabic renders full RTL (`dir` + logical CSS properties).
+  Non-English catalogues are machine-assisted **drafts** — see
+  `TRANSLATIONS.md` before launch. `node scripts/check-messages.mjs`
+  enforces key parity.
 
-## Deploy on Vercel
+## CRM (`/admin`)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Pipeline Kanban with drag-and-drop + table view (sort/filter/bulk/CSV),
+lead detail with full activity timeline and inline editing, quote re-send /
+duplicate / convert, vehicle CRUD with image upload, live pricing editor
+with price preview, settings, dashboard (new leads, conversion, weekly
+revenue, source/language mix), end-of-term radar with re-lease and
+collection workflows, audit log, global search (`/`), shortcuts
+(`n` new lead, `g`+`d/p/r/v/s` to navigate).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Known follow-ups
+
+- Professional review of the four draft translation files (TRANSLATIONS.md)
+- Daily digest email (settings flag exists; needs a scheduled function)
+- Compliance integrations per `TODO(compliance)` markers
+- Enable leaked-password protection in Supabase Auth settings

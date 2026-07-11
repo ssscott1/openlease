@@ -14,6 +14,8 @@ export default async function DashboardPage() {
   const leads = (leadsRes.data ?? []) as Lead[];
   const quotes = (quotesRes.data ?? []) as Quote[];
 
+  // Server component: rendered per request, so reading the clock is fine.
+  // eslint-disable-next-line react-hooks/purity
   const now = Date.now();
   const days = (n: number) => now - n * 86_400_000;
   const newLeads7 = leads.filter((l) => new Date(l.created_at).getTime() > days(7)).length;

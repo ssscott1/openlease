@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { getStaffSession } from "@/lib/admin/auth";
@@ -43,20 +44,20 @@ export default async function AuditPage({
       </p>
 
       <div className="mt-4 flex flex-wrap gap-2">
-        <a
+        <Link
           href="/admin/audit"
           className={`rounded-full border px-3 py-1 text-xs font-medium ${!entity ? "border-accent bg-accent-soft text-accent-strong" : "border-line text-ink-soft"}`}
         >
           All
-        </a>
+        </Link>
         {entities.map((e) => (
-          <a
+          <Link
             key={e}
             href={`/admin/audit?entity=${e}`}
             className={`rounded-full border px-3 py-1 text-xs font-medium ${entity === e ? "border-accent bg-accent-soft text-accent-strong" : "border-line text-ink-soft"}`}
           >
             {e}
-          </a>
+          </Link>
         ))}
       </div>
 
@@ -102,15 +103,15 @@ export default async function AuditPage({
       {totalPages > 1 && (
         <div className="mt-4 flex items-center justify-center gap-3 text-sm">
           {page > 1 && (
-            <a href={`/admin/audit?page=${page - 1}${entity ? `&entity=${entity}` : ""}`} className="rounded-lg border border-line px-3 py-1.5 font-medium hover:border-ink-soft">
+            <Link href={`/admin/audit?page=${page - 1}${entity ? `&entity=${entity}` : ""}`} className="rounded-lg border border-line px-3 py-1.5 font-medium hover:border-ink-soft">
               ← Newer
-            </a>
+            </Link>
           )}
           <span className="text-ink-soft">Page {page} of {totalPages}</span>
           {page < totalPages && (
-            <a href={`/admin/audit?page=${page + 1}${entity ? `&entity=${entity}` : ""}`} className="rounded-lg border border-line px-3 py-1.5 font-medium hover:border-ink-soft">
+            <Link href={`/admin/audit?page=${page + 1}${entity ? `&entity=${entity}` : ""}`} className="rounded-lg border border-line px-3 py-1.5 font-medium hover:border-ink-soft">
               Older →
-            </a>
+            </Link>
           )}
         </div>
       )}

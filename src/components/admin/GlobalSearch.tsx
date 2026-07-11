@@ -25,11 +25,11 @@ export function GlobalSearch({ onClose }: { onClose: () => void }) {
   }, []);
 
   useEffect(() => {
-    if (!query.trim()) {
-      setResults([]);
-      return;
-    }
     const handle = setTimeout(async () => {
+      if (!query.trim()) {
+        setResults([]);
+        return;
+      }
       setLoading(true);
       const supabase = createClient();
       const term = `%${query.trim()}%`;

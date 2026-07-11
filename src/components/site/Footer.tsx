@@ -1,4 +1,5 @@
-import { getTranslations, getLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
+import NextLink from "next/link";
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
@@ -16,7 +17,6 @@ export async function Footer({
   const t = await getTranslations("footer");
   const tHeader = await getTranslations("header");
   const tDisclaimer = await getTranslations("disclaimer");
-  const locale = await getLocale();
   const year = new Date().getFullYear();
 
   return (
@@ -107,9 +107,9 @@ export async function Footer({
                 </a>
               </li>
               <li>
-                <a href="/admin/login" className="hover:text-ink">
+                <NextLink href="/admin/login" className="hover:text-ink">
                   {t("adminLogin")}
-                </a>
+                </NextLink>
               </li>
             </ul>
           </div>

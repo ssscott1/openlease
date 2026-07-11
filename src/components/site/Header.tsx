@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import NextLink from "next/link";
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
@@ -57,12 +58,12 @@ export function Header({ customerLoginUrl }: { customerLoginUrl: string }) {
           >
             {t("customerLogin")}
           </a>
-          <a
+          <NextLink
             href="/admin/login"
             className="text-sm font-medium text-ink-soft transition hover:text-ink"
           >
             {t("adminLogin")}
-          </a>
+          </NextLink>
           <a
             href="#build"
             className="rounded-full bg-accent px-4 py-1.5 text-sm font-semibold text-white transition hover:bg-accent-strong"
@@ -128,12 +129,12 @@ export function Header({ customerLoginUrl }: { customerLoginUrl: string }) {
             >
               {t("customerLogin")}
             </a>
-            <a
+            <NextLink
               href="/admin/login"
               className="px-4 py-1 text-center text-sm font-medium text-ink-soft"
             >
               {t("adminLogin")}
-            </a>
+            </NextLink>
           </div>
         </div>
       )}

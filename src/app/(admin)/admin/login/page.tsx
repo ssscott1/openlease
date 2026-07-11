@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import Link from "next/link";
 import { LoginForm } from "./LoginForm";
 
 export default function AdminLoginPage() {
@@ -19,9 +20,9 @@ export default function AdminLoginPage() {
         </Suspense>
         <p className="mt-6 text-center text-xs text-ink-soft">
           Staff access only. Customers:{" "}
-          <a href="/" className="underline hover:text-ink">
+          <Link href="/" className="underline hover:text-ink">
             return to the website
-          </a>
+          </Link>
           .
         </p>
       </div>

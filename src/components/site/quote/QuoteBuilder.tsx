@@ -59,10 +59,6 @@ export function QuoteBuilder({
     label: tIncluded.has(`items.${key}`) ? tIncluded(`items.${key}`) : key,
   }));
 
-  function itemLabel(key: string) {
-    return tIncluded.has(`items.${key}`) ? tIncluded(`items.${key}`) : key;
-  }
-
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (!vehicle) {

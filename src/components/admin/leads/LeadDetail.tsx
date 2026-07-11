@@ -421,7 +421,7 @@ export function LeadDetail({
               Next action
             </h2>
             <label className="mt-3 block text-xs font-medium text-ink-soft">
-              What's next?
+              What&apos;s next?
               <input
                 defaultValue={lead.next_action}
                 onBlur={(e) => {
