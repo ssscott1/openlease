@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Sedan illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f2f8f5"/>
+      <stop offset="1" stop-color="#e7f5ef"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#bg)"/>
+  <ellipse cx="320" cy="332" rx="240" ry="16" fill="#0b0f0d" opacity="0.08"/>
+  <path d="M175 250 C195 185 245 165 320 165 C395 165 445 185 465 250 Z" fill="#334155"/>
+  <path d="M195 245 C212 195 252 178 318 178 C384 178 424 195 441 245 Z" fill="#cfe2db"/>
+  <rect x="316" y="180" width="6" height="66" fill="#334155"/>
+  <rect x="70" y="238" width="500" height="66" rx="33" fill="#3f4f63"/>
+  <rect x="70" y="262" width="500" height="42" rx="21" fill="#334155"/>
+  <rect x="96" y="252" width="60" height="10" rx="5" fill="#e7f5ef" opacity="0.85"/>
+  <rect x="484" y="252" width="60" height="10" rx="5" fill="#b45309" opacity="0.7"/>
+  <circle cx="185" cy="304" r="44" fill="#0b0f0d"/>
+  <circle cx="185" cy="304" r="20" fill="#e5e7eb"/>
+  <circle cx="455" cy="304" r="44" fill="#0b0f0d"/>
+  <circle cx="455" cy="304" r="20" fill="#e5e7eb"/>
+  <rect x="250" y="270" width="140" height="8" rx="4" fill="#0e8a5f" opacity="0.9"/>
+</svg>

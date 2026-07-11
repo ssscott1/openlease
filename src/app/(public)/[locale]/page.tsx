@@ -1,7 +1,17 @@
-import { setRequestLocale, getTranslations } from "next-intl/server";
 import { hasLocale } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { getActiveVehicles, getPricingConfig } from "@/lib/queries";
+import { getSetting } from "@/lib/settings";
+import { Hero } from "@/components/site/sections/Hero";
+import { Pillars } from "@/components/site/sections/Pillars";
+import { Included } from "@/components/site/sections/Included";
+import { Delivery } from "@/components/site/sections/Delivery";
+import { HowItWorks } from "@/components/site/sections/HowItWorks";
+import { Partners } from "@/components/site/sections/Partners";
+import { Faq } from "@/components/site/sections/Faq";
+import { QuoteBuilder } from "@/components/site/quote/QuoteBuilder";
 
 export default async function HomePage({
   params,
@@ -13,25 +23,35 @@ export default async function HomePage({
     notFound();
   }
   setRequestLocale(locale);
-  const t = await getTranslations("hero");
+
+  const [vehicles, config, disclaimerOverride, partnerFormFlag] =
+    await Promise.all([
+      getActiveVehicles().catch(() => []),
+      getPricingConfig().catch(() => null),
+      getSetting("disclaimer_text", ""),
+      getSetting("feature_partner_form", "true"),
+    ]);
+
+  const tDisclaimer = await getTranslations("disclaimer");
+  const includedKm = config?.included_km_per_week ?? 380;
+  const disclaimer =
+    disclaimerOverride.trim() || tDisclaimer("text", { km: includedKm });
 
   return (
-    <section className="mx-auto flex max-w-6xl flex-col items-center px-4 py-24 text-center sm:px-6">
-      <p className="rounded-full bg-accent-soft px-4 py-1 text-sm font-medium text-accent-strong">
-        {t("eyebrow")}
-      </p>
-      <h1 className="mt-6 max-w-3xl text-4xl font-semibold tracking-tight sm:text-6xl">
-        {t("title")}
-      </h1>
-      <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft">
-        {t("subtitle")}
-      </p>
-      <a
-        href="#build"
-        className="mt-8 rounded-full bg-accent px-6 py-3 text-base font-semibold text-white transition hover:bg-accent-strong"
-      >
-        {t("cta")}
-      </a>
-    </section>
+    <>
+      <Hero
+        termMin={config?.term_min_months ?? 9}
+        termMax={config?.term_max_months ?? 24}
+      />
+      {config && vehicles.length > 0 && (
+        <QuoteBuilder vehicles={vehicles} config={config} disclaimer={disclaimer} />
+      )}
+      <Pillars />
+      <Included items={config?.included_items ?? []} />
+      <Delivery />
+      <HowItWorks />
+      <Partners showForm={partnerFormFlag !== "false"} />
+      <Faq includedKm={includedKm} />
+    </>
   );
 }

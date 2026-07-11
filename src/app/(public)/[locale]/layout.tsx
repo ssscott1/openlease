@@ -6,7 +6,7 @@ import { routing, rtlLocales, type Locale } from "@/i18n/routing";
 import { geistSans, geistMono } from "@/app/fonts";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
-import { DEFAULT_CUSTOMER_LOGIN_URL, getSetting } from "@/lib/settings";
+import { DEFAULT_CUSTOMER_LOGIN_URL, getSettings } from "@/lib/settings";
 import "@/app/globals.css";
 
 export const metadata: Metadata = {
@@ -33,10 +33,14 @@ export default async function PublicLayout({
   setRequestLocale(locale);
 
   const dir = rtlLocales.includes(locale as Locale) ? "rtl" : "ltr";
-  const customerLoginUrl = await getSetting(
+  const settings = await getSettings([
     "customer_login_url",
-    DEFAULT_CUSTOMER_LOGIN_URL,
-  );
+    "contact_email",
+    "contact_phone",
+    "disclaimer_text",
+  ]);
+  const customerLoginUrl =
+    settings.customer_login_url || DEFAULT_CUSTOMER_LOGIN_URL;
 
   return (
     <html
@@ -48,7 +52,12 @@ export default async function PublicLayout({
         <NextIntlClientProvider>
           <Header customerLoginUrl={customerLoginUrl} />
           <main className="flex-1">{children}</main>
-          <Footer customerLoginUrl={customerLoginUrl} />
+          <Footer
+            customerLoginUrl={customerLoginUrl}
+            disclaimer={settings.disclaimer_text?.trim() || undefined}
+            contactEmail={settings.contact_email}
+            contactPhone={settings.contact_phone}
+          />
         </NextIntlClientProvider>
       </body>
     </html>
