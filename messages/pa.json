@@ -1,246 +1,249 @@
 {
+  "_meta": {
+    "status": "DRAFT — machine-assisted translation (Punjabi, Gurmukhi script). TODO: professional human review required before launch (see TRANSLATIONS.md)."
+  },
   "common": {
     "brand": "OpenLease",
-    "perWeek": "/week",
-    "from": "from",
-    "months": "{count} months",
-    "loading": "Loading…",
-    "error": "Something went wrong. Please try again.",
-    "close": "Close"
+    "perWeek": "/ਹਫ਼ਤਾ",
+    "from": "ਸ਼ੁਰੂ",
+    "months": "{count} ਮਹੀਨੇ",
+    "loading": "ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ…",
+    "error": "ਕੁਝ ਗਲਤ ਹੋ ਗਿਆ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+    "close": "ਬੰਦ ਕਰੋ"
   },
   "header": {
     "nav": {
-      "cars": "Cars",
-      "included": "What's included",
-      "howItWorks": "How it works",
-      "partners": "Partners",
-      "faq": "FAQ"
+      "cars": "ਗੱਡੀਆਂ",
+      "included": "ਕੀ ਸ਼ਾਮਲ ਹੈ",
+      "howItWorks": "ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ",
+      "partners": "ਭਾਈਵਾਲ",
+      "faq": "ਸਵਾਲ-ਜਵਾਬ"
     },
-    "customerLogin": "Customer Login",
-    "adminLogin": "Admin Login",
-    "languageLabel": "Language",
-    "buildYourLease": "Build your lease",
-    "menuOpen": "Open menu",
-    "menuClose": "Close menu"
+    "customerLogin": "ਗਾਹਕ ਲੌਗਇਨ",
+    "adminLogin": "ਐਡਮਿਨ ਲੌਗਇਨ",
+    "languageLabel": "ਭਾਸ਼ਾ",
+    "buildYourLease": "ਆਪਣੀ ਲੀਜ਼ ਬਣਾਓ",
+    "menuOpen": "ਮੀਨੂ ਖੋਲ੍ਹੋ",
+    "menuClose": "ਮੀਨੂ ਬੰਦ ਕਰੋ"
   },
   "hero": {
-    "eyebrow": "For professionals on temporary Australian visas",
-    "title": "A car for the term of your visa.",
-    "subtitle": "Open lease terms. Brand-new cars. One weekly price covering everything but fuel — insurance, servicing, maintenance, tyres, rego and roadside included. Delivered to you, collected when you leave.",
-    "cta": "Build your lease",
-    "secondaryCta": "How it works",
+    "eyebrow": "ਆਸਟ੍ਰੇਲੀਆ ਦੇ ਅਸਥਾਈ ਵੀਜ਼ੇ ਵਾਲੇ ਪੇਸ਼ੇਵਰਾਂ ਲਈ",
+    "title": "ਤੁਹਾਡੇ ਵੀਜ਼ੇ ਦੀ ਮਿਆਦ ਜਿੰਨੀ ਗੱਡੀ।",
+    "subtitle": "ਖੁੱਲ੍ਹੀ ਲੀਜ਼ ਮਿਆਦ। ਬਿਲਕੁਲ ਨਵੀਆਂ ਗੱਡੀਆਂ। ਇੱਕ ਹਫ਼ਤਾਵਾਰ ਕੀਮਤ ਜਿਸ ਵਿੱਚ ਤੇਲ ਤੋਂ ਇਲਾਵਾ ਸਭ ਕੁਝ ਸ਼ਾਮਲ — ਬੀਮਾ, ਸਰਵਿਸ, ਮੁਰੰਮਤ, ਟਾਇਰ, ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਅਤੇ ਸੜਕ ਸਹਾਇਤਾ। ਤੁਹਾਡੇ ਕੋਲ ਪਹੁੰਚਾਈ ਜਾਂਦੀ ਹੈ, ਜਾਣ ਵੇਲੇ ਵਾਪਸ ਲੈ ਲਈ ਜਾਂਦੀ ਹੈ।",
+    "cta": "ਆਪਣੀ ਲੀਜ਼ ਬਣਾਓ",
+    "secondaryCta": "ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ",
     "badges": {
-      "newCars": "Brand-new cars",
-      "noCredit": "No Australian credit history needed",
-      "anyTerm": "Any term from {min} to {max} months"
+      "newCars": "ਬਿਲਕੁਲ ਨਵੀਆਂ ਗੱਡੀਆਂ",
+      "noCredit": "ਆਸਟ੍ਰੇਲੀਆਈ ਕ੍ਰੈਡਿਟ ਇਤਿਹਾਸ ਦੀ ਲੋੜ ਨਹੀਂ",
+      "anyTerm": "{min} ਤੋਂ {max} ਮਹੀਨਿਆਂ ਤੱਕ ਕੋਈ ਵੀ ਮਿਆਦ"
     }
   },
   "quote": {
-    "sectionTitle": "Build your lease",
-    "sectionSubtitle": "Pick a car, set your term to match your visa, and see your all-inclusive weekly price — instantly.",
+    "sectionTitle": "ਆਪਣੀ ਲੀਜ਼ ਬਣਾਓ",
+    "sectionSubtitle": "ਗੱਡੀ ਚੁਣੋ, ਮਿਆਦ ਆਪਣੇ ਵੀਜ਼ੇ ਨਾਲ ਮਿਲਾਓ, ਅਤੇ ਆਪਣੀ ਸਭ-ਸ਼ਾਮਲ ਹਫ਼ਤਾਵਾਰ ਕੀਮਤ ਤੁਰੰਤ ਦੇਖੋ।",
     "step1": {
-      "label": "Step 1",
-      "title": "Choose your car"
+      "label": "ਕਦਮ 1",
+      "title": "ਆਪਣੀ ਗੱਡੀ ਚੁਣੋ"
     },
     "step2": {
-      "label": "Step 2",
-      "title": "Set your term",
-      "delight": "Most leases lock you into 12 or 24 months. Yours can be exactly {months}.",
-      "hint": "Match your term to your visa — any length from {min} to {max} months.",
-      "sliderLabel": "Lease term in months",
-      "monthsShort": "mo",
-      "monthsLong": "{count} months"
+      "label": "ਕਦਮ 2",
+      "title": "ਆਪਣੀ ਮਿਆਦ ਸੈੱਟ ਕਰੋ",
+      "delight": "ਬਹੁਤੀਆਂ ਲੀਜ਼ਾਂ ਤੁਹਾਨੂੰ 12 ਜਾਂ 24 ਮਹੀਨਿਆਂ ਵਿੱਚ ਬੰਨ੍ਹ ਦਿੰਦੀਆਂ ਹਨ। ਤੁਹਾਡੀ ਬਿਲਕੁਲ {months} ਮਹੀਨੇ ਹੋ ਸਕਦੀ ਹੈ।",
+      "hint": "ਆਪਣੀ ਮਿਆਦ ਵੀਜ਼ੇ ਨਾਲ ਮਿਲਾਓ — {min} ਤੋਂ {max} ਮਹੀਨਿਆਂ ਤੱਕ ਕੋਈ ਵੀ ਲੰਬਾਈ।",
+      "sliderLabel": "ਲੀਜ਼ ਮਿਆਦ ਮਹੀਨਿਆਂ ਵਿੱਚ",
+      "monthsShort": "ਮਹੀਨੇ",
+      "monthsLong": "{count} ਮਹੀਨੇ"
     },
     "step3": {
-      "label": "Step 3",
-      "title": "Your weekly price",
-      "allInclusive": "Everything included except fuel",
-      "term": "Term",
-      "totalContract": "Total contract value",
-      "kmNote": "Includes {km} km per week",
-      "excessNote": "Excess km at {rate}/km"
+      "label": "ਕਦਮ 3",
+      "title": "ਤੁਹਾਡੀ ਹਫ਼ਤਾਵਾਰ ਕੀਮਤ",
+      "allInclusive": "ਤੇਲ ਤੋਂ ਇਲਾਵਾ ਸਭ ਕੁਝ ਸ਼ਾਮਲ",
+      "term": "ਮਿਆਦ",
+      "totalContract": "ਕੁੱਲ ਕੰਟਰੈਕਟ ਮੁੱਲ",
+      "kmNote": "ਹਰ ਹਫ਼ਤੇ {km} ਕਿਲੋਮੀਟਰ ਸ਼ਾਮਲ",
+      "excessNote": "ਵਾਧੂ ਕਿਲੋਮੀਟਰ {rate}/ਕਿਮੀ ਦੀ ਦਰ ਨਾਲ"
     },
     "step4": {
-      "label": "Step 4",
-      "title": "Get your quote",
-      "cta": "Get my quote"
+      "label": "ਕਦਮ 4",
+      "title": "ਆਪਣਾ ਕੋਟ ਲਵੋ",
+      "cta": "ਮੇਰਾ ਕੋਟ ਭੇਜੋ"
     },
     "vehicleCard": {
-      "select": "Select",
-      "selected": "Selected",
-      "seats": "{count} seats",
+      "select": "ਚੁਣੋ",
+      "selected": "ਚੁਣੀ ਗਈ",
+      "seats": "{count} ਸੀਟਾਂ",
       "fuelEconomy": "{value}"
     },
     "form": {
-      "title": "Get your quote by email",
-      "subtitle": "We'll send your quote and hold your price. No credit check, no obligation.",
-      "name": "Full name",
-      "email": "Email",
-      "phone": "Phone (or WhatsApp)",
-      "employer": "Employer",
-      "visaType": "Visa type",
-      "visaTypePlaceholder": "Select your visa",
+      "title": "ਈਮੇਲ ਰਾਹੀਂ ਆਪਣਾ ਕੋਟ ਲਵੋ",
+      "subtitle": "ਅਸੀਂ ਤੁਹਾਡਾ ਕੋਟ ਭੇਜਾਂਗੇ ਅਤੇ ਤੁਹਾਡੀ ਕੀਮਤ ਰੋਕ ਕੇ ਰੱਖਾਂਗੇ। ਨਾ ਕੋਈ ਕ੍ਰੈਡਿਟ ਜਾਂਚ, ਨਾ ਕੋਈ ਪਾਬੰਦੀ।",
+      "name": "ਪੂਰਾ ਨਾਮ",
+      "email": "ਈਮੇਲ",
+      "phone": "ਫ਼ੋਨ (ਜਾਂ WhatsApp)",
+      "employer": "ਮਾਲਕ/ਕੰਪਨੀ",
+      "visaType": "ਵੀਜ਼ਾ ਕਿਸਮ",
+      "visaTypePlaceholder": "ਆਪਣਾ ਵੀਜ਼ਾ ਚੁਣੋ",
       "visaTypes": {
-        "482": "482 — Skills in Demand",
-        "485": "485 — Temporary Graduate",
-        "500": "500 — Student",
-        "400": "400 — Temporary Work",
-        "407": "407 — Training",
-        "408": "408 — Temporary Activity",
-        "417": "417 / 462 — Working Holiday",
-        "600": "600 — Visitor",
-        "other": "Other / not sure"
+        "482": "482 — ਸਕਿਲਜ਼ ਇਨ ਡਿਮਾਂਡ",
+        "485": "485 — ਟੈਂਪਰੇਰੀ ਗ੍ਰੈਜੂਏਟ",
+        "500": "500 — ਵਿਦਿਆਰਥੀ",
+        "400": "400 — ਅਸਥਾਈ ਕੰਮ",
+        "407": "407 — ਟ੍ਰੇਨਿੰਗ",
+        "408": "408 — ਅਸਥਾਈ ਗਤੀਵਿਧੀ",
+        "417": "417 / 462 — ਵਰਕਿੰਗ ਹੌਲੀਡੇ",
+        "600": "600 — ਵਿਜ਼ਿਟਰ",
+        "other": "ਹੋਰ / ਪੱਕਾ ਨਹੀਂ"
       },
-      "visaExpiry": "Visa expiry date",
-      "submit": "Send my quote",
-      "submitting": "Sending…",
-      "privacyNote": "We only use your details to prepare your quote and follow up. No spam, no credit check.",
+      "visaExpiry": "ਵੀਜ਼ਾ ਖ਼ਤਮ ਹੋਣ ਦੀ ਤਾਰੀਖ",
+      "submit": "ਮੇਰਾ ਕੋਟ ਭੇਜੋ",
+      "submitting": "ਭੇਜਿਆ ਜਾ ਰਿਹਾ ਹੈ…",
+      "privacyNote": "ਅਸੀਂ ਤੁਹਾਡੀ ਜਾਣਕਾਰੀ ਸਿਰਫ਼ ਕੋਟ ਤਿਆਰ ਕਰਨ ਅਤੇ ਸੰਪਰਕ ਕਰਨ ਲਈ ਵਰਤਦੇ ਹਾਂ। ਨਾ ਸਪੈਮ, ਨਾ ਕ੍ਰੈਡਿਟ ਜਾਂਚ।",
       "errors": {
-        "nameRequired": "Please enter your name",
-        "emailRequired": "Please enter a valid email",
-        "phoneRequired": "Please enter your phone number",
-        "vehicleRequired": "Please choose a car first",
-        "generic": "We couldn't send your quote. Please try again or email us."
+        "nameRequired": "ਕਿਰਪਾ ਕਰਕੇ ਆਪਣਾ ਨਾਮ ਦਰਜ ਕਰੋ",
+        "emailRequired": "ਕਿਰਪਾ ਕਰਕੇ ਸਹੀ ਈਮੇਲ ਦਰਜ ਕਰੋ",
+        "phoneRequired": "ਕਿਰਪਾ ਕਰਕੇ ਆਪਣਾ ਫ਼ੋਨ ਨੰਬਰ ਦਰਜ ਕਰੋ",
+        "vehicleRequired": "ਕਿਰਪਾ ਕਰਕੇ ਪਹਿਲਾਂ ਗੱਡੀ ਚੁਣੋ",
+        "generic": "ਅਸੀਂ ਤੁਹਾਡਾ ਕੋਟ ਨਹੀਂ ਭੇਜ ਸਕੇ। ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜਾਂ ਸਾਨੂੰ ਈਮੇਲ ਕਰੋ।"
       },
       "success": {
-        "title": "Your quote is on its way",
-        "body": "We've emailed your quote for the {vehicle} over {months} months at {price}/week. Our team will be in touch within one business day.",
-        "again": "Build another quote"
+        "title": "ਤੁਹਾਡਾ ਕੋਟ ਭੇਜ ਦਿੱਤਾ ਗਿਆ ਹੈ",
+        "body": "ਅਸੀਂ {vehicle} ਲਈ {months} ਮਹੀਨਿਆਂ ਵਾਸਤੇ {price}/ਹਫ਼ਤਾ ਦਾ ਕੋਟ ਤੁਹਾਡੀ ਈਮੇਲ 'ਤੇ ਭੇਜ ਦਿੱਤਾ ਹੈ। ਸਾਡੀ ਟੀਮ ਇੱਕ ਕੰਮਕਾਜੀ ਦਿਨ ਵਿੱਚ ਸੰਪਰਕ ਕਰੇਗੀ।",
+        "again": "ਹੋਰ ਕੋਟ ਬਣਾਓ"
       }
     }
   },
   "pillars": {
-    "title": "How OpenLease is different",
-    "subtitle": "Car leasing in Australia was built for permanent residents on fixed terms. We built OpenLease for you.",
+    "title": "OpenLease ਕਿਵੇਂ ਵੱਖਰਾ ਹੈ",
+    "subtitle": "ਆਸਟ੍ਰੇਲੀਆ ਵਿੱਚ ਗੱਡੀ ਦੀ ਲੀਜ਼ ਪੱਕੇ ਵਸਨੀਕਾਂ ਅਤੇ ਬੰਨ੍ਹੀਆਂ ਮਿਆਦਾਂ ਲਈ ਬਣੀ ਸੀ। ਅਸੀਂ OpenLease ਤੁਹਾਡੇ ਲਈ ਬਣਾਇਆ ਹੈ।",
     "openTerms": {
-      "title": "Open terms",
-      "body": "Your lease matches your visa — not the other way around. 9 to 24 months, any month in between, including odd terms like 15."
+      "title": "ਖੁੱਲ੍ਹੀਆਂ ਮਿਆਦਾਂ",
+      "body": "ਤੁਹਾਡੀ ਲੀਜ਼ ਤੁਹਾਡੇ ਵੀਜ਼ੇ ਨਾਲ ਮਿਲਦੀ ਹੈ — ਉਲਟਾ ਨਹੀਂ। 9 ਤੋਂ 24 ਮਹੀਨੇ, ਵਿਚਕਾਰ ਦਾ ਕੋਈ ਵੀ ਮਹੀਨਾ, 15 ਵਰਗੀਆਂ ਵੱਖਰੀਆਂ ਮਿਆਦਾਂ ਸਮੇਤ।"
     },
     "allInclusive": {
-      "title": "All-inclusive",
-      "body": "A brand-new car with one weekly price. Insurance, servicing, maintenance, tyres, rego, CTP and roadside — everything but fuel."
+      "title": "ਸਭ ਕੁਝ ਸ਼ਾਮਲ",
+      "body": "ਬਿਲਕੁਲ ਨਵੀਂ ਗੱਡੀ, ਇੱਕ ਹਫ਼ਤਾਵਾਰ ਕੀਮਤ। ਬੀਮਾ, ਸਰਵਿਸ, ਮੁਰੰਮਤ, ਟਾਇਰ, ਰਜਿਸਟ੍ਰੇਸ਼ਨ, CTP ਅਤੇ ਸੜਕ ਸਹਾਇਤਾ — ਤੇਲ ਤੋਂ ਇਲਾਵਾ ਸਭ ਕੁਝ।"
     },
     "noCredit": {
-      "title": "No Australian credit history needed",
-      "body": "You're approved on your employment contract, salary and visa — even before you arrive in Australia."
+      "title": "ਆਸਟ੍ਰੇਲੀਆਈ ਕ੍ਰੈਡਿਟ ਇਤਿਹਾਸ ਦੀ ਲੋੜ ਨਹੀਂ",
+      "body": "ਤੁਹਾਨੂੰ ਤੁਹਾਡੇ ਨੌਕਰੀ ਦੇ ਕੰਟਰੈਕਟ, ਤਨਖਾਹ ਅਤੇ ਵੀਜ਼ੇ ਦੇ ਆਧਾਰ 'ਤੇ ਮਨਜ਼ੂਰੀ ਮਿਲਦੀ ਹੈ — ਆਉਣ ਤੋਂ ਪਹਿਲਾਂ ਵੀ।"
     }
   },
   "included": {
-    "title": "One weekly price. Everything but fuel.",
-    "subtitle": "No surprise bills, no separate policies, no rego renewals. If the car needs it, it's covered.",
+    "title": "ਇੱਕ ਹਫ਼ਤਾਵਾਰ ਕੀਮਤ। ਤੇਲ ਤੋਂ ਇਲਾਵਾ ਸਭ ਕੁਝ।",
+    "subtitle": "ਨਾ ਅਚਾਨਕ ਬਿੱਲ, ਨਾ ਵੱਖਰੀਆਂ ਪਾਲਿਸੀਆਂ, ਨਾ ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਰੀਨਿਊਅਲ। ਜੇ ਗੱਡੀ ਨੂੰ ਲੋੜ ਹੈ, ਤਾਂ ਇਹ ਕਵਰ ਹੈ।",
     "items": {
-      "insurance": "Comprehensive insurance",
-      "servicing": "Servicing",
-      "maintenance": "Maintenance",
-      "tyres": "Tyres",
-      "rego": "Registration & CTP",
-      "roadside": "24/7 roadside assistance",
-      "delivery": "Delivery & collection"
+      "insurance": "ਪੂਰਾ ਬੀਮਾ",
+      "servicing": "ਸਰਵਿਸ",
+      "maintenance": "ਮੁਰੰਮਤ",
+      "tyres": "ਟਾਇਰ",
+      "rego": "ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਅਤੇ CTP",
+      "roadside": "24/7 ਸੜਕ ਸਹਾਇਤਾ",
+      "delivery": "ਪਹੁੰਚਾਉਣਾ ਅਤੇ ਵਾਪਸ ਲੈਣਾ"
     },
-    "fuelExcluded": "Fuel",
-    "fuelExcludedNote": "The only thing you pay for is fuel."
+    "fuelExcluded": "ਤੇਲ",
+    "fuelExcludedNote": "ਤੁਸੀਂ ਸਿਰਫ਼ ਤੇਲ ਦਾ ਭੁਗਤਾਨ ਕਰਦੇ ਹੋ।"
   },
   "delivery": {
-    "title": "Delivered on arrival. Collected when you leave.",
-    "body": "We deliver your car to the airport or your new home, ready to drive. At the end of your term, we come and collect it. Zero hassle at the two moments you least need it.",
-    "point1": "Airport or home delivery, timed to your arrival",
-    "point2": "Fully registered, insured and fuelled for handover",
-    "point3": "End-of-term collection wherever suits you"
+    "title": "ਪਹੁੰਚਣ 'ਤੇ ਡਿਲੀਵਰ। ਜਾਣ ਵੇਲੇ ਵਾਪਸ।",
+    "body": "ਅਸੀਂ ਤੁਹਾਡੀ ਗੱਡੀ ਏਅਰਪੋਰਟ ਜਾਂ ਤੁਹਾਡੇ ਨਵੇਂ ਘਰ ਪਹੁੰਚਾਉਂਦੇ ਹਾਂ, ਚਲਾਉਣ ਲਈ ਤਿਆਰ। ਮਿਆਦ ਖ਼ਤਮ ਹੋਣ 'ਤੇ ਅਸੀਂ ਆ ਕੇ ਲੈ ਜਾਂਦੇ ਹਾਂ। ਜਿਨ੍ਹਾਂ ਦੋ ਪਲਾਂ ਵਿੱਚ ਤੁਹਾਨੂੰ ਸੌਖ ਦੀ ਸਭ ਤੋਂ ਵੱਧ ਲੋੜ ਹੈ, ਉੱਥੇ ਜ਼ੀਰੋ ਪਰੇਸ਼ਾਨੀ।",
+    "point1": "ਏਅਰਪੋਰਟ ਜਾਂ ਘਰ ਡਿਲੀਵਰੀ, ਤੁਹਾਡੇ ਪਹੁੰਚਣ ਦੇ ਸਮੇਂ ਮੁਤਾਬਕ",
+    "point2": "ਹੈਂਡਓਵਰ ਵੇਲੇ ਪੂਰੀ ਤਰ੍ਹਾਂ ਰਜਿਸਟਰਡ, ਬੀਮਾਸ਼ੁਦਾ ਅਤੇ ਤੇਲ ਨਾਲ ਭਰੀ",
+    "point3": "ਮਿਆਦ ਖ਼ਤਮ ਹੋਣ 'ਤੇ ਜਿੱਥੇ ਤੁਹਾਨੂੰ ਠੀਕ ਲੱਗੇ ਉੱਥੋਂ ਵਾਪਸੀ"
   },
   "howItWorks": {
-    "title": "How it works",
-    "subtitle": "From your visa grant to your driveway in four steps.",
+    "title": "ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ",
+    "subtitle": "ਵੀਜ਼ਾ ਮਿਲਣ ਤੋਂ ਤੁਹਾਡੇ ਘਰ ਦੇ ਦਰਵਾਜ਼ੇ ਤੱਕ ਚਾਰ ਕਦਮਾਂ ਵਿੱਚ।",
     "steps": {
       "1": {
-        "title": "Choose your car & term",
-        "body": "Pick a brand-new car and slide the term to match your visa."
+        "title": "ਗੱਡੀ ਅਤੇ ਮਿਆਦ ਚੁਣੋ",
+        "body": "ਬਿਲਕੁਲ ਨਵੀਂ ਗੱਡੀ ਚੁਣੋ ਅਤੇ ਮਿਆਦ ਨੂੰ ਆਪਣੇ ਵੀਜ਼ੇ ਨਾਲ ਮਿਲਾਓ।"
       },
       "2": {
-        "title": "Apply online",
-        "body": "Apply before you arrive — approval on your contract, salary and visa. No Australian credit history required."
+        "title": "ਆਨਲਾਈਨ ਅਪਲਾਈ ਕਰੋ",
+        "body": "ਪਹੁੰਚਣ ਤੋਂ ਪਹਿਲਾਂ ਅਪਲਾਈ ਕਰੋ — ਕੰਟਰੈਕਟ, ਤਨਖਾਹ ਅਤੇ ਵੀਜ਼ੇ ਦੇ ਆਧਾਰ 'ਤੇ ਮਨਜ਼ੂਰੀ। ਆਸਟ੍ਰੇਲੀਆਈ ਕ੍ਰੈਡਿਟ ਇਤਿਹਾਸ ਦੀ ਲੋੜ ਨਹੀਂ।"
       },
       "3": {
-        "title": "We deliver on arrival",
-        "body": "Your car is waiting — at the airport or your new front door."
+        "title": "ਪਹੁੰਚਣ 'ਤੇ ਅਸੀਂ ਡਿਲੀਵਰ ਕਰਦੇ ਹਾਂ",
+        "body": "ਤੁਹਾਡੀ ਗੱਡੀ ਉਡੀਕ ਰਹੀ ਹੈ — ਏਅਰਪੋਰਟ 'ਤੇ ਜਾਂ ਤੁਹਾਡੇ ਨਵੇਂ ਘਰ ਦੇ ਦਰਵਾਜ਼ੇ 'ਤੇ।"
       },
       "4": {
-        "title": "Drive. We collect at the end.",
-        "body": "One weekly payment covers everything but fuel. When your term ends, we collect the car."
+        "title": "ਚਲਾਓ। ਅਖ਼ੀਰ ਵਿੱਚ ਅਸੀਂ ਵਾਪਸ ਲੈਂਦੇ ਹਾਂ।",
+        "body": "ਇੱਕ ਹਫ਼ਤਾਵਾਰ ਭੁਗਤਾਨ ਤੇਲ ਤੋਂ ਇਲਾਵਾ ਸਭ ਕੁਝ ਕਵਰ ਕਰਦਾ ਹੈ। ਮਿਆਦ ਖ਼ਤਮ ਹੋਣ 'ਤੇ ਅਸੀਂ ਗੱਡੀ ਵਾਪਸ ਲੈ ਲੈਂਦੇ ਹਾਂ।"
       }
     }
   },
   "partners": {
-    "title": "For employers & migration partners",
-    "body": "Relocating international talent? Give your people mobility from day one. We partner with employers, relocation agents and migration specialists to make cars part of the landing package — with consolidated billing and priority delivery.",
-    "point1": "Fleet-style terms for individual visa lengths",
-    "point2": "One invoice, many drivers, zero admin",
-    "point3": "Priority delivery slots for arrival dates",
-    "cta": "Partner with us",
+    "title": "ਮਾਲਕਾਂ ਅਤੇ ਮਾਈਗ੍ਰੇਸ਼ਨ ਭਾਈਵਾਲਾਂ ਲਈ",
+    "body": "ਅੰਤਰਰਾਸ਼ਟਰੀ ਟੈਲੰਟ ਲਿਆ ਰਹੇ ਹੋ? ਆਪਣੇ ਲੋਕਾਂ ਨੂੰ ਪਹਿਲੇ ਦਿਨ ਤੋਂ ਆਵਾਜਾਈ ਦੀ ਆਜ਼ਾਦੀ ਦਿਓ। ਅਸੀਂ ਮਾਲਕਾਂ, ਰੀਲੋਕੇਸ਼ਨ ਏਜੰਟਾਂ ਅਤੇ ਮਾਈਗ੍ਰੇਸ਼ਨ ਮਾਹਿਰਾਂ ਨਾਲ ਮਿਲ ਕੇ ਗੱਡੀ ਨੂੰ ਲੈਂਡਿੰਗ ਪੈਕੇਜ ਦਾ ਹਿੱਸਾ ਬਣਾਉਂਦੇ ਹਾਂ — ਇਕੱਠੀ ਬਿਲਿੰਗ ਅਤੇ ਤਰਜੀਹੀ ਡਿਲੀਵਰੀ ਨਾਲ।",
+    "point1": "ਵਿਅਕਤੀਗਤ ਵੀਜ਼ਾ ਮਿਆਦਾਂ ਲਈ ਫਲੀਟ-ਪੱਧਰ ਦੀਆਂ ਸ਼ਰਤਾਂ",
+    "point2": "ਇੱਕ ਇਨਵੌਇਸ, ਕਈ ਡਰਾਈਵਰ, ਜ਼ੀਰੋ ਪ੍ਰਬੰਧਕੀ ਕੰਮ",
+    "point3": "ਪਹੁੰਚਣ ਦੀਆਂ ਤਾਰੀਖਾਂ ਲਈ ਤਰਜੀਹੀ ਡਿਲੀਵਰੀ ਸਲਾਟ",
+    "cta": "ਸਾਡੇ ਨਾਲ ਭਾਈਵਾਲੀ ਕਰੋ",
     "form": {
-      "title": "Partner with us",
-      "subtitle": "Tell us about your organisation and we'll be in touch within one business day.",
-      "name": "Contact name",
-      "email": "Work email",
-      "phone": "Phone",
-      "company": "Organisation",
-      "message": "How can we help?",
-      "submit": "Send enquiry",
+      "title": "ਸਾਡੇ ਨਾਲ ਭਾਈਵਾਲੀ ਕਰੋ",
+      "subtitle": "ਸਾਨੂੰ ਆਪਣੀ ਸੰਸਥਾ ਬਾਰੇ ਦੱਸੋ ਅਤੇ ਅਸੀਂ ਇੱਕ ਕੰਮਕਾਜੀ ਦਿਨ ਵਿੱਚ ਸੰਪਰਕ ਕਰਾਂਗੇ।",
+      "name": "ਸੰਪਰਕ ਨਾਮ",
+      "email": "ਕੰਮ ਦੀ ਈਮੇਲ",
+      "phone": "ਫ਼ੋਨ",
+      "company": "ਸੰਸਥਾ",
+      "message": "ਅਸੀਂ ਕਿਵੇਂ ਮਦਦ ਕਰ ਸਕਦੇ ਹਾਂ?",
+      "submit": "ਪੁੱਛਗਿੱਛ ਭੇਜੋ",
       "success": {
-        "title": "Thanks — we'll be in touch",
-        "body": "Your enquiry has been received. A partnerships lead will contact you within one business day."
+        "title": "ਧੰਨਵਾਦ — ਅਸੀਂ ਜਲਦੀ ਸੰਪਰਕ ਕਰਾਂਗੇ",
+        "body": "ਤੁਹਾਡੀ ਪੁੱਛਗਿੱਛ ਮਿਲ ਗਈ ਹੈ। ਭਾਈਵਾਲੀ ਟੀਮ ਇੱਕ ਕੰਮਕਾਜੀ ਦਿਨ ਵਿੱਚ ਸੰਪਰਕ ਕਰੇਗੀ।"
       }
     }
   },
   "faq": {
-    "title": "Frequently asked questions",
+    "title": "ਅਕਸਰ ਪੁੱਛੇ ਜਾਂਦੇ ਸਵਾਲ",
     "items": {
       "who": {
-        "q": "Who is OpenLease for?",
-        "a": "Professionals coming to Australia on temporary visas — skilled workers, graduates, students and working-holiday makers — who need a car for exactly the length of their stay."
+        "q": "OpenLease ਕਿਸ ਲਈ ਹੈ?",
+        "a": "ਅਸਥਾਈ ਵੀਜ਼ਿਆਂ 'ਤੇ ਆਸਟ੍ਰੇਲੀਆ ਆਉਣ ਵਾਲੇ ਪੇਸ਼ੇਵਰਾਂ ਲਈ — ਹੁਨਰਮੰਦ ਕਾਮੇ, ਗ੍ਰੈਜੂਏਟ, ਵਿਦਿਆਰਥੀ ਅਤੇ ਵਰਕਿੰਗ-ਹੌਲੀਡੇ ਵਾਲੇ — ਜਿਨ੍ਹਾਂ ਨੂੰ ਆਪਣੇ ਠਹਿਰਾਅ ਜਿੰਨੀ ਮਿਆਦ ਲਈ ਗੱਡੀ ਚਾਹੀਦੀ ਹੈ।"
       },
       "included": {
-        "q": "What does the weekly price include?",
-        "a": "Everything except fuel: comprehensive insurance, servicing, maintenance, tyres, registration and CTP, 24/7 roadside assistance, plus delivery and collection. One payment, no surprises."
+        "q": "ਹਫ਼ਤਾਵਾਰ ਕੀਮਤ ਵਿੱਚ ਕੀ ਸ਼ਾਮਲ ਹੈ?",
+        "a": "ਤੇਲ ਤੋਂ ਇਲਾਵਾ ਸਭ ਕੁਝ: ਪੂਰਾ ਬੀਮਾ, ਸਰਵਿਸ, ਮੁਰੰਮਤ, ਟਾਇਰ, ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਅਤੇ CTP, 24/7 ਸੜਕ ਸਹਾਇਤਾ, ਨਾਲ ਹੀ ਡਿਲੀਵਰੀ ਅਤੇ ਵਾਪਸੀ। ਇੱਕ ਭੁਗਤਾਨ, ਕੋਈ ਹੈਰਾਨੀ ਨਹੀਂ।"
       },
       "credit": {
-        "q": "Do I need an Australian credit history?",
-        "a": "No. We approve you on your employment contract, salary and visa. You can be approved before you even land in Australia."
+        "q": "ਕੀ ਮੈਨੂੰ ਆਸਟ੍ਰੇਲੀਆਈ ਕ੍ਰੈਡਿਟ ਇਤਿਹਾਸ ਚਾਹੀਦਾ ਹੈ?",
+        "a": "ਨਹੀਂ। ਅਸੀਂ ਤੁਹਾਡੇ ਨੌਕਰੀ ਦੇ ਕੰਟਰੈਕਟ, ਤਨਖਾਹ ਅਤੇ ਵੀਜ਼ੇ ਦੇ ਆਧਾਰ 'ਤੇ ਮਨਜ਼ੂਰੀ ਦਿੰਦੇ ਹਾਂ। ਤੁਸੀਂ ਆਸਟ੍ਰੇਲੀਆ ਪਹੁੰਚਣ ਤੋਂ ਪਹਿਲਾਂ ਵੀ ਮਨਜ਼ੂਰ ਹੋ ਸਕਦੇ ਹੋ।"
       },
       "term": {
-        "q": "Can the lease really match my exact visa length?",
-        "a": "Yes. Any term from 9 to 24 months — including non-standard terms like 15 months. Set the slider to your visa length and that's your lease."
+        "q": "ਕੀ ਲੀਜ਼ ਸੱਚਮੁੱਚ ਮੇਰੇ ਵੀਜ਼ੇ ਦੀ ਬਿਲਕੁਲ ਸਹੀ ਮਿਆਦ ਨਾਲ ਮਿਲ ਸਕਦੀ ਹੈ?",
+        "a": "ਹਾਂ। 9 ਤੋਂ 24 ਮਹੀਨਿਆਂ ਤੱਕ ਕੋਈ ਵੀ ਮਿਆਦ — 15 ਮਹੀਨਿਆਂ ਵਰਗੀਆਂ ਗ਼ੈਰ-ਮਿਆਰੀ ਮਿਆਦਾਂ ਸਮੇਤ। ਸਲਾਈਡਰ ਨੂੰ ਆਪਣੇ ਵੀਜ਼ੇ ਦੀ ਲੰਬਾਈ 'ਤੇ ਸੈੱਟ ਕਰੋ, ਉਹੀ ਤੁਹਾਡੀ ਲੀਜ਼ ਹੈ।"
       },
       "km": {
-        "q": "How many kilometres are included?",
-        "a": "Pricing is based on up to {km} km per week. If you drive more, excess kilometres are charged at a published per-km rate — you'll always know it up front."
+        "q": "ਕਿੰਨੇ ਕਿਲੋਮੀਟਰ ਸ਼ਾਮਲ ਹਨ?",
+        "a": "ਕੀਮਤ ਹਰ ਹਫ਼ਤੇ {km} ਕਿਲੋਮੀਟਰ ਤੱਕ ਦੇ ਆਧਾਰ 'ਤੇ ਹੈ। ਜੇ ਤੁਸੀਂ ਵੱਧ ਚਲਾਉਂਦੇ ਹੋ, ਤਾਂ ਵਾਧੂ ਕਿਲੋਮੀਟਰ ਪ੍ਰਕਾਸ਼ਿਤ ਪ੍ਰਤੀ-ਕਿਮੀ ਦਰ ਨਾਲ ਲੱਗਦੇ ਹਨ — ਤੁਹਾਨੂੰ ਹਮੇਸ਼ਾ ਪਹਿਲਾਂ ਪਤਾ ਹੋਵੇਗਾ।"
       },
       "end": {
-        "q": "What happens at the end of my lease?",
-        "a": "We come and collect the car — from your home, work or the airport. If your visa is extended, you can extend or re-lease instead."
+        "q": "ਮੇਰੀ ਲੀਜ਼ ਖ਼ਤਮ ਹੋਣ 'ਤੇ ਕੀ ਹੁੰਦਾ ਹੈ?",
+        "a": "ਅਸੀਂ ਆ ਕੇ ਗੱਡੀ ਲੈ ਜਾਂਦੇ ਹਾਂ — ਤੁਹਾਡੇ ਘਰ, ਕੰਮ ਜਾਂ ਏਅਰਪੋਰਟ ਤੋਂ। ਜੇ ਤੁਹਾਡਾ ਵੀਜ਼ਾ ਵਧ ਜਾਂਦਾ ਹੈ, ਤਾਂ ਤੁਸੀਂ ਵਧਾ ਸਕਦੇ ਹੋ ਜਾਂ ਦੁਬਾਰਾ ਲੀਜ਼ ਕਰ ਸਕਦੇ ਹੋ।"
       },
       "apply": {
-        "q": "Can I apply before I arrive in Australia?",
-        "a": "Yes — most of our customers do. Apply with your employment contract and visa, get approved, and your car will be waiting when you land."
+        "q": "ਕੀ ਮੈਂ ਆਸਟ੍ਰੇਲੀਆ ਪਹੁੰਚਣ ਤੋਂ ਪਹਿਲਾਂ ਅਪਲਾਈ ਕਰ ਸਕਦਾ ਹਾਂ?",
+        "a": "ਹਾਂ — ਸਾਡੇ ਬਹੁਤੇ ਗਾਹਕ ਇਹੀ ਕਰਦੇ ਹਨ। ਆਪਣੇ ਕੰਟਰੈਕਟ ਅਤੇ ਵੀਜ਼ੇ ਨਾਲ ਅਪਲਾਈ ਕਰੋ, ਮਨਜ਼ੂਰੀ ਲਵੋ, ਅਤੇ ਉਤਰਨ ਵੇਲੇ ਤੁਹਾਡੀ ਗੱਡੀ ਉਡੀਕ ਰਹੀ ਹੋਵੇਗੀ।"
       }
     }
   },
   "disclaimer": {
-    "text": "All pricing is indicative and based on the driver travelling up to {km} km per week. Excess kilometres are charged at a published per-km rate. Final pricing is confirmed on application and subject to assessment and approval. OpenLease agreements are consumer leases provided under applicable Australian consumer credit law."
+    "text": "ਸਾਰੀਆਂ ਕੀਮਤਾਂ ਸੰਕੇਤਕ ਹਨ ਅਤੇ ਡਰਾਈਵਰ ਦੇ ਹਰ ਹਫ਼ਤੇ {km} ਕਿਲੋਮੀਟਰ ਤੱਕ ਚਲਾਉਣ 'ਤੇ ਆਧਾਰਿਤ ਹਨ। ਵਾਧੂ ਕਿਲੋਮੀਟਰ ਪ੍ਰਕਾਸ਼ਿਤ ਪ੍ਰਤੀ-ਕਿਮੀ ਦਰ ਨਾਲ ਲੱਗਦੇ ਹਨ। ਅੰਤਿਮ ਕੀਮਤ ਅਰਜ਼ੀ ਵੇਲੇ ਪੱਕੀ ਹੁੰਦੀ ਹੈ ਅਤੇ ਮੁਲਾਂਕਣ ਤੇ ਮਨਜ਼ੂਰੀ ਦੇ ਅਧੀਨ ਹੈ। OpenLease ਸਮਝੌਤੇ ਲਾਗੂ ਆਸਟ੍ਰੇਲੀਆਈ ਖਪਤਕਾਰ ਕਰਜ਼ਾ ਕਾਨੂੰਨ ਅਧੀਨ ਦਿੱਤੀਆਂ ਜਾਂਦੀਆਂ ਖਪਤਕਾਰ ਲੀਜ਼ਾਂ ਹਨ।"
   },
   "footer": {
-    "tagline": "Brand-new cars for the term of your visa. One weekly price, everything but fuel.",
-    "contactTitle": "Contact",
-    "linksTitle": "Explore",
-    "legalTitle": "Legal",
-    "loginTitle": "Log in",
-    "customerLogin": "Customer Login",
-    "adminLogin": "Admin Login",
-    "rights": "© {year} OpenLease. All rights reserved.",
-    "languageLabel": "Language"
+    "tagline": "ਤੁਹਾਡੇ ਵੀਜ਼ੇ ਦੀ ਮਿਆਦ ਲਈ ਬਿਲਕੁਲ ਨਵੀਆਂ ਗੱਡੀਆਂ। ਇੱਕ ਹਫ਼ਤਾਵਾਰ ਕੀਮਤ, ਤੇਲ ਤੋਂ ਇਲਾਵਾ ਸਭ ਕੁਝ।",
+    "contactTitle": "ਸੰਪਰਕ",
+    "linksTitle": "ਖੋਜੋ",
+    "legalTitle": "ਕਾਨੂੰਨੀ",
+    "loginTitle": "ਲੌਗਇਨ",
+    "customerLogin": "ਗਾਹਕ ਲੌਗਇਨ",
+    "adminLogin": "ਐਡਮਿਨ ਲੌਗਇਨ",
+    "rights": "© {year} OpenLease। ਸਾਰੇ ਹੱਕ ਰਾਖਵੇਂ ਹਨ।",
+    "languageLabel": "ਭਾਸ਼ਾ"
   },
   "notFound": {
-    "title": "Page not found",
-    "body": "The page you're looking for doesn't exist.",
-    "cta": "Back to home"
+    "title": "ਪੰਨਾ ਨਹੀਂ ਮਿਲਿਆ",
+    "body": "ਜਿਹੜਾ ਪੰਨਾ ਤੁਸੀਂ ਲੱਭ ਰਹੇ ਹੋ ਉਹ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।",
+    "cta": "ਮੁੱਖ ਪੰਨੇ 'ਤੇ ਵਾਪਸ"
   }
 }

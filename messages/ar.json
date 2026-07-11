@@ -1,246 +1,249 @@
 {
+  "_meta": {
+    "status": "DRAFT — machine-assisted translation (Modern Standard Arabic). TODO: professional human review required before launch (see TRANSLATIONS.md)."
+  },
   "common": {
     "brand": "OpenLease",
-    "perWeek": "/week",
-    "from": "from",
-    "months": "{count} months",
-    "loading": "Loading…",
-    "error": "Something went wrong. Please try again.",
-    "close": "Close"
+    "perWeek": "/أسبوعيًا",
+    "from": "ابتداءً من",
+    "months": "{count} شهرًا",
+    "loading": "جارٍ التحميل…",
+    "error": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+    "close": "إغلاق"
   },
   "header": {
     "nav": {
-      "cars": "Cars",
-      "included": "What's included",
-      "howItWorks": "How it works",
-      "partners": "Partners",
-      "faq": "FAQ"
+      "cars": "السيارات",
+      "included": "ما هو مشمول",
+      "howItWorks": "كيف يعمل",
+      "partners": "الشركاء",
+      "faq": "الأسئلة الشائعة"
     },
-    "customerLogin": "Customer Login",
-    "adminLogin": "Admin Login",
-    "languageLabel": "Language",
-    "buildYourLease": "Build your lease",
-    "menuOpen": "Open menu",
-    "menuClose": "Close menu"
+    "customerLogin": "دخول العملاء",
+    "adminLogin": "دخول الإدارة",
+    "languageLabel": "اللغة",
+    "buildYourLease": "صمّم عقدك",
+    "menuOpen": "فتح القائمة",
+    "menuClose": "إغلاق القائمة"
   },
   "hero": {
-    "eyebrow": "For professionals on temporary Australian visas",
-    "title": "A car for the term of your visa.",
-    "subtitle": "Open lease terms. Brand-new cars. One weekly price covering everything but fuel — insurance, servicing, maintenance, tyres, rego and roadside included. Delivered to you, collected when you leave.",
-    "cta": "Build your lease",
-    "secondaryCta": "How it works",
+    "eyebrow": "للمهنيين الحاصلين على تأشيرات أسترالية مؤقتة",
+    "title": "سيارة لمدة تأشيرتك.",
+    "subtitle": "مدد إيجار مرنة. سيارات جديدة تمامًا. سعر أسبوعي واحد يشمل كل شيء عدا الوقود — التأمين والصيانة الدورية والإصلاحات والإطارات والتسجيل والمساعدة على الطريق. نوصلها إليك، ونستلمها عند مغادرتك.",
+    "cta": "صمّم عقدك",
+    "secondaryCta": "كيف يعمل",
     "badges": {
-      "newCars": "Brand-new cars",
-      "noCredit": "No Australian credit history needed",
-      "anyTerm": "Any term from {min} to {max} months"
+      "newCars": "سيارات جديدة تمامًا",
+      "noCredit": "لا حاجة لسجل ائتماني أسترالي",
+      "anyTerm": "أي مدة من {min} إلى {max} شهرًا"
     }
   },
   "quote": {
-    "sectionTitle": "Build your lease",
-    "sectionSubtitle": "Pick a car, set your term to match your visa, and see your all-inclusive weekly price — instantly.",
+    "sectionTitle": "صمّم عقد الإيجار",
+    "sectionSubtitle": "اختر سيارة، واضبط المدة لتطابق تأشيرتك، وشاهد سعرك الأسبوعي الشامل — فورًا.",
     "step1": {
-      "label": "Step 1",
-      "title": "Choose your car"
+      "label": "الخطوة 1",
+      "title": "اختر سيارتك"
     },
     "step2": {
-      "label": "Step 2",
-      "title": "Set your term",
-      "delight": "Most leases lock you into 12 or 24 months. Yours can be exactly {months}.",
-      "hint": "Match your term to your visa — any length from {min} to {max} months.",
-      "sliderLabel": "Lease term in months",
-      "monthsShort": "mo",
-      "monthsLong": "{count} months"
+      "label": "الخطوة 2",
+      "title": "حدّد مدتك",
+      "delight": "معظم العقود تُلزمك بـ 12 أو 24 شهرًا. عقدك يمكن أن يكون {months} شهرًا بالضبط.",
+      "hint": "طابق مدتك مع تأشيرتك — أي مدة من {min} إلى {max} شهرًا.",
+      "sliderLabel": "مدة الإيجار بالأشهر",
+      "monthsShort": "شهرًا",
+      "monthsLong": "{count} شهرًا"
     },
     "step3": {
-      "label": "Step 3",
-      "title": "Your weekly price",
-      "allInclusive": "Everything included except fuel",
-      "term": "Term",
-      "totalContract": "Total contract value",
-      "kmNote": "Includes {km} km per week",
-      "excessNote": "Excess km at {rate}/km"
+      "label": "الخطوة 3",
+      "title": "سعرك الأسبوعي",
+      "allInclusive": "كل شيء مشمول عدا الوقود",
+      "term": "المدة",
+      "totalContract": "القيمة الإجمالية للعقد",
+      "kmNote": "يشمل {km} كم أسبوعيًا",
+      "excessNote": "الكيلومترات الزائدة بسعر {rate}/كم"
     },
     "step4": {
-      "label": "Step 4",
-      "title": "Get your quote",
-      "cta": "Get my quote"
+      "label": "الخطوة 4",
+      "title": "احصل على عرض السعر",
+      "cta": "أرسل لي عرض السعر"
     },
     "vehicleCard": {
-      "select": "Select",
-      "selected": "Selected",
-      "seats": "{count} seats",
+      "select": "اختيار",
+      "selected": "تم الاختيار",
+      "seats": "{count} مقاعد",
       "fuelEconomy": "{value}"
     },
     "form": {
-      "title": "Get your quote by email",
-      "subtitle": "We'll send your quote and hold your price. No credit check, no obligation.",
-      "name": "Full name",
-      "email": "Email",
-      "phone": "Phone (or WhatsApp)",
-      "employer": "Employer",
-      "visaType": "Visa type",
-      "visaTypePlaceholder": "Select your visa",
+      "title": "احصل على عرض السعر عبر البريد الإلكتروني",
+      "subtitle": "سنرسل لك عرض السعر ونحتفظ به لك. بدون فحص ائتماني وبدون أي التزام.",
+      "name": "الاسم الكامل",
+      "email": "البريد الإلكتروني",
+      "phone": "الهاتف (أو واتساب)",
+      "employer": "جهة العمل",
+      "visaType": "نوع التأشيرة",
+      "visaTypePlaceholder": "اختر تأشيرتك",
       "visaTypes": {
-        "482": "482 — Skills in Demand",
-        "485": "485 — Temporary Graduate",
-        "500": "500 — Student",
-        "400": "400 — Temporary Work",
-        "407": "407 — Training",
-        "408": "408 — Temporary Activity",
-        "417": "417 / 462 — Working Holiday",
-        "600": "600 — Visitor",
-        "other": "Other / not sure"
+        "482": "482 — المهارات المطلوبة",
+        "485": "485 — الخريج المؤقت",
+        "500": "500 — طالب",
+        "400": "400 — عمل مؤقت",
+        "407": "407 — تدريب",
+        "408": "408 — نشاط مؤقت",
+        "417": "417 / 462 — عطلة عمل",
+        "600": "600 — زائر",
+        "other": "أخرى / غير متأكد"
       },
-      "visaExpiry": "Visa expiry date",
-      "submit": "Send my quote",
-      "submitting": "Sending…",
-      "privacyNote": "We only use your details to prepare your quote and follow up. No spam, no credit check.",
+      "visaExpiry": "تاريخ انتهاء التأشيرة",
+      "submit": "أرسل عرض السعر",
+      "submitting": "جارٍ الإرسال…",
+      "privacyNote": "نستخدم بياناتك فقط لإعداد عرض السعر والمتابعة معك. لا رسائل مزعجة ولا فحص ائتماني.",
       "errors": {
-        "nameRequired": "Please enter your name",
-        "emailRequired": "Please enter a valid email",
-        "phoneRequired": "Please enter your phone number",
-        "vehicleRequired": "Please choose a car first",
-        "generic": "We couldn't send your quote. Please try again or email us."
+        "nameRequired": "يرجى إدخال اسمك",
+        "emailRequired": "يرجى إدخال بريد إلكتروني صحيح",
+        "phoneRequired": "يرجى إدخال رقم هاتفك",
+        "vehicleRequired": "يرجى اختيار سيارة أولاً",
+        "generic": "تعذّر إرسال عرض السعر. يرجى المحاولة مرة أخرى أو مراسلتنا عبر البريد الإلكتروني."
       },
       "success": {
-        "title": "Your quote is on its way",
-        "body": "We've emailed your quote for the {vehicle} over {months} months at {price}/week. Our team will be in touch within one business day.",
-        "again": "Build another quote"
+        "title": "عرض السعر في طريقه إليك",
+        "body": "أرسلنا إلى بريدك عرض السعر لسيارة {vehicle} لمدة {months} شهرًا بسعر {price} أسبوعيًا. سيتواصل معك فريقنا خلال يوم عمل واحد.",
+        "again": "أنشئ عرض سعر آخر"
       }
     }
   },
   "pillars": {
-    "title": "How OpenLease is different",
-    "subtitle": "Car leasing in Australia was built for permanent residents on fixed terms. We built OpenLease for you.",
+    "title": "ما الذي يميّز OpenLease",
+    "subtitle": "تأجير السيارات في أستراليا صُمم للمقيمين الدائمين وبمدد ثابتة. نحن صممنا OpenLease من أجلك.",
     "openTerms": {
-      "title": "Open terms",
-      "body": "Your lease matches your visa — not the other way around. 9 to 24 months, any month in between, including odd terms like 15."
+      "title": "مدد مرنة",
+      "body": "عقدك يطابق تأشيرتك — وليس العكس. من 9 إلى 24 شهرًا، وأي شهر بينهما، بما في ذلك مدد غير تقليدية مثل 15 شهرًا."
     },
     "allInclusive": {
-      "title": "All-inclusive",
-      "body": "A brand-new car with one weekly price. Insurance, servicing, maintenance, tyres, rego, CTP and roadside — everything but fuel."
+      "title": "شامل كل شيء",
+      "body": "سيارة جديدة تمامًا بسعر أسبوعي واحد. التأمين والصيانة والإصلاحات والإطارات والتسجيل والتأمين الإلزامي والمساعدة على الطريق — كل شيء عدا الوقود."
     },
     "noCredit": {
-      "title": "No Australian credit history needed",
-      "body": "You're approved on your employment contract, salary and visa — even before you arrive in Australia."
+      "title": "لا حاجة لسجل ائتماني أسترالي",
+      "body": "تحصل على الموافقة بناءً على عقد عملك وراتبك وتأشيرتك — حتى قبل وصولك."
     }
   },
   "included": {
-    "title": "One weekly price. Everything but fuel.",
-    "subtitle": "No surprise bills, no separate policies, no rego renewals. If the car needs it, it's covered.",
+    "title": "سعر أسبوعي واحد. كل شيء عدا الوقود.",
+    "subtitle": "لا فواتير مفاجئة، ولا وثائق تأمين منفصلة، ولا تجديد تسجيل. إذا احتاجت السيارة شيئًا، فهو مشمول.",
     "items": {
-      "insurance": "Comprehensive insurance",
-      "servicing": "Servicing",
-      "maintenance": "Maintenance",
-      "tyres": "Tyres",
-      "rego": "Registration & CTP",
-      "roadside": "24/7 roadside assistance",
-      "delivery": "Delivery & collection"
+      "insurance": "تأمين شامل",
+      "servicing": "صيانة دورية",
+      "maintenance": "إصلاحات",
+      "tyres": "إطارات",
+      "rego": "التسجيل والتأمين الإلزامي",
+      "roadside": "مساعدة على الطريق 24/7",
+      "delivery": "التوصيل والاستلام"
     },
-    "fuelExcluded": "Fuel",
-    "fuelExcludedNote": "The only thing you pay for is fuel."
+    "fuelExcluded": "الوقود",
+    "fuelExcludedNote": "الشيء الوحيد الذي تدفعه هو الوقود."
   },
   "delivery": {
-    "title": "Delivered on arrival. Collected when you leave.",
-    "body": "We deliver your car to the airport or your new home, ready to drive. At the end of your term, we come and collect it. Zero hassle at the two moments you least need it.",
-    "point1": "Airport or home delivery, timed to your arrival",
-    "point2": "Fully registered, insured and fuelled for handover",
-    "point3": "End-of-term collection wherever suits you"
+    "title": "نوصلها عند وصولك. نستلمها عند مغادرتك.",
+    "body": "نوصل سيارتك إلى المطار أو منزلك الجديد جاهزة للقيادة. وفي نهاية المدة، نأتي لاستلامها. صفر متاعب في اللحظتين اللتين تحتاج فيهما إلى الراحة أكثر من أي وقت.",
+    "point1": "توصيل إلى المطار أو المنزل، بتوقيت وصولك",
+    "point2": "مسجّلة ومؤمّنة وممتلئة بالوقود عند التسليم",
+    "point3": "استلام في نهاية المدة أينما يناسبك"
   },
   "howItWorks": {
-    "title": "How it works",
-    "subtitle": "From your visa grant to your driveway in four steps.",
+    "title": "كيف يعمل",
+    "subtitle": "من منح تأشيرتك إلى باب منزلك في أربع خطوات.",
     "steps": {
       "1": {
-        "title": "Choose your car & term",
-        "body": "Pick a brand-new car and slide the term to match your visa."
+        "title": "اختر سيارتك ومدتك",
+        "body": "اختر سيارة جديدة تمامًا وحرّك المؤشر لتطابق المدة تأشيرتك."
       },
       "2": {
-        "title": "Apply online",
-        "body": "Apply before you arrive — approval on your contract, salary and visa. No Australian credit history required."
+        "title": "قدّم الطلب عبر الإنترنت",
+        "body": "قدّم قبل وصولك — الموافقة على أساس عقدك وراتبك وتأشيرتك. لا حاجة لسجل ائتماني أسترالي."
       },
       "3": {
-        "title": "We deliver on arrival",
-        "body": "Your car is waiting — at the airport or your new front door."
+        "title": "نوصلها عند الوصول",
+        "body": "سيارتك في انتظارك — في المطار أو عند باب منزلك الجديد."
       },
       "4": {
-        "title": "Drive. We collect at the end.",
-        "body": "One weekly payment covers everything but fuel. When your term ends, we collect the car."
+        "title": "انطلق. نستلمها في النهاية.",
+        "body": "دفعة أسبوعية واحدة تغطي كل شيء عدا الوقود. عند انتهاء مدتك، نستلم السيارة."
       }
     }
   },
   "partners": {
-    "title": "For employers & migration partners",
-    "body": "Relocating international talent? Give your people mobility from day one. We partner with employers, relocation agents and migration specialists to make cars part of the landing package — with consolidated billing and priority delivery.",
-    "point1": "Fleet-style terms for individual visa lengths",
-    "point2": "One invoice, many drivers, zero admin",
-    "point3": "Priority delivery slots for arrival dates",
-    "cta": "Partner with us",
+    "title": "لأصحاب العمل وشركاء الهجرة",
+    "body": "تستقدمون كفاءات دولية؟ امنحوا موظفيكم حرية التنقل من اليوم الأول. نتعاون مع أصحاب العمل ووكلاء الانتقال ومتخصصي الهجرة لجعل السيارة جزءًا من حزمة الاستقرار — بفوترة موحّدة وأولوية في التسليم.",
+    "point1": "شروط أسطول لمدد تأشيرات فردية",
+    "point2": "فاتورة واحدة، سائقون متعددون، صفر أعباء إدارية",
+    "point3": "مواعيد تسليم ذات أولوية حسب تواريخ الوصول",
+    "cta": "كن شريكًا لنا",
     "form": {
-      "title": "Partner with us",
-      "subtitle": "Tell us about your organisation and we'll be in touch within one business day.",
-      "name": "Contact name",
-      "email": "Work email",
-      "phone": "Phone",
-      "company": "Organisation",
-      "message": "How can we help?",
-      "submit": "Send enquiry",
+      "title": "كن شريكًا لنا",
+      "subtitle": "أخبرنا عن مؤسستك وسنتواصل معك خلال يوم عمل واحد.",
+      "name": "اسم جهة الاتصال",
+      "email": "البريد الإلكتروني للعمل",
+      "phone": "الهاتف",
+      "company": "المؤسسة",
+      "message": "كيف يمكننا المساعدة؟",
+      "submit": "أرسل الاستفسار",
       "success": {
-        "title": "Thanks — we'll be in touch",
-        "body": "Your enquiry has been received. A partnerships lead will contact you within one business day."
+        "title": "شكرًا — سنتواصل معك قريبًا",
+        "body": "تم استلام استفسارك. سيتواصل معك مسؤول الشراكات خلال يوم عمل واحد."
       }
     }
   },
   "faq": {
-    "title": "Frequently asked questions",
+    "title": "الأسئلة الشائعة",
     "items": {
       "who": {
-        "q": "Who is OpenLease for?",
-        "a": "Professionals coming to Australia on temporary visas — skilled workers, graduates, students and working-holiday makers — who need a car for exactly the length of their stay."
+        "q": "لمن صُممت OpenLease؟",
+        "a": "للمهنيين القادمين إلى أستراليا بتأشيرات مؤقتة — العمال المهرة والخريجون والطلاب وأصحاب عطلة العمل — الذين يحتاجون سيارة لمدة إقامتهم بالضبط."
       },
       "included": {
-        "q": "What does the weekly price include?",
-        "a": "Everything except fuel: comprehensive insurance, servicing, maintenance, tyres, registration and CTP, 24/7 roadside assistance, plus delivery and collection. One payment, no surprises."
+        "q": "ماذا يشمل السعر الأسبوعي؟",
+        "a": "كل شيء عدا الوقود: تأمين شامل، صيانة دورية، إصلاحات، إطارات، تسجيل وتأمين إلزامي، مساعدة على الطريق 24/7، بالإضافة إلى التوصيل والاستلام. دفعة واحدة، بلا مفاجآت."
       },
       "credit": {
-        "q": "Do I need an Australian credit history?",
-        "a": "No. We approve you on your employment contract, salary and visa. You can be approved before you even land in Australia."
+        "q": "هل أحتاج إلى سجل ائتماني أسترالي؟",
+        "a": "لا. نوافق على طلبك بناءً على عقد عملك وراتبك وتأشيرتك. يمكنك الحصول على الموافقة حتى قبل هبوطك في أستراليا."
       },
       "term": {
-        "q": "Can the lease really match my exact visa length?",
-        "a": "Yes. Any term from 9 to 24 months — including non-standard terms like 15 months. Set the slider to your visa length and that's your lease."
+        "q": "هل يمكن للعقد فعلاً أن يطابق مدة تأشيرتي بالضبط؟",
+        "a": "نعم. أي مدة من 9 إلى 24 شهرًا — بما في ذلك مدد غير تقليدية مثل 15 شهرًا. اضبط المؤشر على مدة تأشيرتك وهذا هو عقدك."
       },
       "km": {
-        "q": "How many kilometres are included?",
-        "a": "Pricing is based on up to {km} km per week. If you drive more, excess kilometres are charged at a published per-km rate — you'll always know it up front."
+        "q": "كم كيلومترًا مشمول؟",
+        "a": "التسعير مبني على ما يصل إلى {km} كم أسبوعيًا. إذا قدت أكثر، تُحتسب الكيلومترات الزائدة بسعر معلن لكل كيلومتر — ستعرفه دائمًا مقدمًا."
       },
       "end": {
-        "q": "What happens at the end of my lease?",
-        "a": "We come and collect the car — from your home, work or the airport. If your visa is extended, you can extend or re-lease instead."
+        "q": "ماذا يحدث في نهاية عقدي؟",
+        "a": "نأتي لاستلام السيارة — من منزلك أو عملك أو المطار. وإذا مُددت تأشيرتك، يمكنك التمديد أو إعادة الاستئجار بدلاً من ذلك."
       },
       "apply": {
-        "q": "Can I apply before I arrive in Australia?",
-        "a": "Yes — most of our customers do. Apply with your employment contract and visa, get approved, and your car will be waiting when you land."
+        "q": "هل يمكنني التقديم قبل وصولي إلى أستراليا؟",
+        "a": "نعم — معظم عملائنا يفعلون ذلك. قدّم بعقد عملك وتأشيرتك، واحصل على الموافقة، وستكون سيارتك في انتظارك عند هبوطك."
       }
     }
   },
   "disclaimer": {
-    "text": "All pricing is indicative and based on the driver travelling up to {km} km per week. Excess kilometres are charged at a published per-km rate. Final pricing is confirmed on application and subject to assessment and approval. OpenLease agreements are consumer leases provided under applicable Australian consumer credit law."
+    "text": "جميع الأسعار استرشادية ومبنية على قيادة ما يصل إلى {km} كم أسبوعيًا. تُحتسب الكيلومترات الزائدة بسعر معلن لكل كيلومتر. يُؤكَّد السعر النهائي عند تقديم الطلب ويخضع للتقييم والموافقة. عقود OpenLease هي عقود إيجار استهلاكية تُقدَّم بموجب قوانين الائتمان الاستهلاكي الأسترالية المعمول بها."
   },
   "footer": {
-    "tagline": "Brand-new cars for the term of your visa. One weekly price, everything but fuel.",
-    "contactTitle": "Contact",
-    "linksTitle": "Explore",
-    "legalTitle": "Legal",
-    "loginTitle": "Log in",
-    "customerLogin": "Customer Login",
-    "adminLogin": "Admin Login",
-    "rights": "© {year} OpenLease. All rights reserved.",
-    "languageLabel": "Language"
+    "tagline": "سيارات جديدة تمامًا لمدة تأشيرتك. سعر أسبوعي واحد، كل شيء عدا الوقود.",
+    "contactTitle": "اتصل بنا",
+    "linksTitle": "استكشف",
+    "legalTitle": "قانوني",
+    "loginTitle": "تسجيل الدخول",
+    "customerLogin": "دخول العملاء",
+    "adminLogin": "دخول الإدارة",
+    "rights": "© {year} OpenLease. جميع الحقوق محفوظة.",
+    "languageLabel": "اللغة"
   },
   "notFound": {
-    "title": "Page not found",
-    "body": "The page you're looking for doesn't exist.",
-    "cta": "Back to home"
+    "title": "الصفحة غير موجودة",
+    "body": "الصفحة التي تبحث عنها غير موجودة.",
+    "cta": "العودة إلى الرئيسية"
   }
 }

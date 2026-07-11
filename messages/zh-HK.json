@@ -1,246 +1,249 @@
 {
+  "_meta": {
+    "status": "DRAFT — machine-assisted translation (Traditional Chinese, HK usage). TODO: professional human review required before launch (see TRANSLATIONS.md)."
+  },
   "common": {
     "brand": "OpenLease",
-    "perWeek": "/week",
-    "from": "from",
-    "months": "{count} months",
-    "loading": "Loading…",
-    "error": "Something went wrong. Please try again.",
-    "close": "Close"
+    "perWeek": "/週",
+    "from": "低至",
+    "months": "{count} 個月",
+    "loading": "載入中…",
+    "error": "出咗啲問題，請再試一次。",
+    "close": "關閉"
   },
   "header": {
     "nav": {
-      "cars": "Cars",
-      "included": "What's included",
-      "howItWorks": "How it works",
-      "partners": "Partners",
-      "faq": "FAQ"
+      "cars": "車款",
+      "included": "費用包含",
+      "howItWorks": "租賃流程",
+      "partners": "合作夥伴",
+      "faq": "常見問題"
     },
-    "customerLogin": "Customer Login",
-    "adminLogin": "Admin Login",
-    "languageLabel": "Language",
-    "buildYourLease": "Build your lease",
-    "menuOpen": "Open menu",
-    "menuClose": "Close menu"
+    "customerLogin": "客戶登入",
+    "adminLogin": "管理員登入",
+    "languageLabel": "語言",
+    "buildYourLease": "訂製租約",
+    "menuOpen": "開啟選單",
+    "menuClose": "關閉選單"
   },
   "hero": {
-    "eyebrow": "For professionals on temporary Australian visas",
-    "title": "A car for the term of your visa.",
-    "subtitle": "Open lease terms. Brand-new cars. One weekly price covering everything but fuel — insurance, servicing, maintenance, tyres, rego and roadside included. Delivered to you, collected when you leave.",
-    "cta": "Build your lease",
-    "secondaryCta": "How it works",
+    "eyebrow": "專為持澳洲臨時簽證的專業人士而設",
+    "title": "租期與簽證同步的座駕。",
+    "subtitle": "靈活租期，全新車輛。每週一個價錢，除燃油外全部包含——保險、保養、維修、輪胎、牌費及道路救援。送車上門，離境時上門收車。",
+    "cta": "訂製租約",
+    "secondaryCta": "租賃流程",
     "badges": {
-      "newCars": "Brand-new cars",
-      "noCredit": "No Australian credit history needed",
-      "anyTerm": "Any term from {min} to {max} months"
+      "newCars": "全新車輛",
+      "noCredit": "毋須澳洲信貸紀錄",
+      "anyTerm": "{min} 至 {max} 個月任意租期"
     }
   },
   "quote": {
-    "sectionTitle": "Build your lease",
-    "sectionSubtitle": "Pick a car, set your term to match your visa, and see your all-inclusive weekly price — instantly.",
+    "sectionTitle": "訂製您的租約",
+    "sectionSubtitle": "揀選車款，將租期對齊簽證，即時查看全包週租價。",
     "step1": {
-      "label": "Step 1",
-      "title": "Choose your car"
+      "label": "第一步",
+      "title": "揀選車款"
     },
     "step2": {
-      "label": "Step 2",
-      "title": "Set your term",
-      "delight": "Most leases lock you into 12 or 24 months. Yours can be exactly {months}.",
-      "hint": "Match your term to your visa — any length from {min} to {max} months.",
-      "sliderLabel": "Lease term in months",
-      "monthsShort": "mo",
-      "monthsLong": "{count} months"
+      "label": "第二步",
+      "title": "設定租期",
+      "delight": "大多數租約鎖定 12 或 24 個月，您的租期可以啱啱好係 {months} 個月。",
+      "hint": "令租期配合您的簽證——{min} 至 {max} 個月任選。",
+      "sliderLabel": "租期（月）",
+      "monthsShort": "個月",
+      "monthsLong": "{count} 個月"
     },
     "step3": {
-      "label": "Step 3",
-      "title": "Your weekly price",
-      "allInclusive": "Everything included except fuel",
-      "term": "Term",
-      "totalContract": "Total contract value",
-      "kmNote": "Includes {km} km per week",
-      "excessNote": "Excess km at {rate}/km"
+      "label": "第三步",
+      "title": "您的週租價",
+      "allInclusive": "除燃油外全部包含",
+      "term": "租期",
+      "totalContract": "合約總值",
+      "kmNote": "每週包含 {km} 公里",
+      "excessNote": "超額里程 {rate}/公里"
     },
     "step4": {
-      "label": "Step 4",
-      "title": "Get your quote",
-      "cta": "Get my quote"
+      "label": "第四步",
+      "title": "索取報價",
+      "cta": "索取我的報價"
     },
     "vehicleCard": {
-      "select": "Select",
-      "selected": "Selected",
-      "seats": "{count} seats",
+      "select": "揀選",
+      "selected": "已揀選",
+      "seats": "{count} 座位",
       "fuelEconomy": "{value}"
     },
     "form": {
-      "title": "Get your quote by email",
-      "subtitle": "We'll send your quote and hold your price. No credit check, no obligation.",
-      "name": "Full name",
-      "email": "Email",
-      "phone": "Phone (or WhatsApp)",
-      "employer": "Employer",
-      "visaType": "Visa type",
-      "visaTypePlaceholder": "Select your visa",
+      "title": "以電郵索取報價",
+      "subtitle": "我們會發送報價並為您保留價錢。毋須信貸審查，毋須任何承諾。",
+      "name": "姓名",
+      "email": "電郵",
+      "phone": "電話（或 WhatsApp）",
+      "employer": "僱主",
+      "visaType": "簽證類別",
+      "visaTypePlaceholder": "請選擇您的簽證",
       "visaTypes": {
-        "482": "482 — Skills in Demand",
-        "485": "485 — Temporary Graduate",
-        "500": "500 — Student",
-        "400": "400 — Temporary Work",
-        "407": "407 — Training",
-        "408": "408 — Temporary Activity",
-        "417": "417 / 462 — Working Holiday",
-        "600": "600 — Visitor",
-        "other": "Other / not sure"
+        "482": "482 — 緊缺技能簽證",
+        "485": "485 — 臨時畢業生簽證",
+        "500": "500 — 學生簽證",
+        "400": "400 — 臨時工作簽證",
+        "407": "407 — 培訓簽證",
+        "408": "408 — 臨時活動簽證",
+        "417": "417 / 462 — 工作假期簽證",
+        "600": "600 — 訪客簽證",
+        "other": "其他 / 不確定"
       },
-      "visaExpiry": "Visa expiry date",
-      "submit": "Send my quote",
-      "submitting": "Sending…",
-      "privacyNote": "We only use your details to prepare your quote and follow up. No spam, no credit check.",
+      "visaExpiry": "簽證到期日",
+      "submit": "發送報價",
+      "submitting": "發送中…",
+      "privacyNote": "您的資料只會用作準備報價及跟進。絕無垃圾郵件，絕無信貸審查。",
       "errors": {
-        "nameRequired": "Please enter your name",
-        "emailRequired": "Please enter a valid email",
-        "phoneRequired": "Please enter your phone number",
-        "vehicleRequired": "Please choose a car first",
-        "generic": "We couldn't send your quote. Please try again or email us."
+        "nameRequired": "請輸入您的姓名",
+        "emailRequired": "請輸入有效的電郵地址",
+        "phoneRequired": "請輸入您的電話號碼",
+        "vehicleRequired": "請先揀選車款",
+        "generic": "報價發送失敗，請再試一次或電郵聯絡我們。"
       },
       "success": {
-        "title": "Your quote is on its way",
-        "body": "We've emailed your quote for the {vehicle} over {months} months at {price}/week. Our team will be in touch within one business day.",
-        "again": "Build another quote"
+        "title": "報價已發送",
+        "body": "我們已將 {vehicle}（{months} 個月，{price}/週）的報價發送至您的電郵。我們的團隊會於一個工作天內與您聯絡。",
+        "again": "再做一份報價"
       }
     }
   },
   "pillars": {
-    "title": "How OpenLease is different",
-    "subtitle": "Car leasing in Australia was built for permanent residents on fixed terms. We built OpenLease for you.",
+    "title": "OpenLease 有何不同",
+    "subtitle": "澳洲的汽車租賃一向為永久居民同固定租期而設。OpenLease 專為您而設。",
     "openTerms": {
-      "title": "Open terms",
-      "body": "Your lease matches your visa — not the other way around. 9 to 24 months, any month in between, including odd terms like 15."
+      "title": "靈活租期",
+      "body": "租約配合您的簽證，而唔係倒轉。9 至 24 個月，任何月份都得，包括 15 個月呢類非常規租期。"
     },
     "allInclusive": {
-      "title": "All-inclusive",
-      "body": "A brand-new car with one weekly price. Insurance, servicing, maintenance, tyres, rego, CTP and roadside — everything but fuel."
+      "title": "全包價錢",
+      "body": "全新車輛，每週一個價錢。保險、保養、維修、輪胎、牌費、強制第三者保險及道路救援——除燃油外全部包含。"
     },
     "noCredit": {
-      "title": "No Australian credit history needed",
-      "body": "You're approved on your employment contract, salary and visa — even before you arrive in Australia."
+      "title": "毋須澳洲信貸紀錄",
+      "body": "憑您的僱傭合約、薪金同簽證即可獲批——甚至可以喺抵埗之前完成。"
     }
   },
   "included": {
-    "title": "One weekly price. Everything but fuel.",
-    "subtitle": "No surprise bills, no separate policies, no rego renewals. If the car needs it, it's covered.",
+    "title": "每週一個價錢，除燃油外全包。",
+    "subtitle": "冇突發帳單，冇獨立保單，冇續牌煩惱。車輛需要嘅，全部涵蓋。",
     "items": {
-      "insurance": "Comprehensive insurance",
-      "servicing": "Servicing",
-      "maintenance": "Maintenance",
-      "tyres": "Tyres",
-      "rego": "Registration & CTP",
-      "roadside": "24/7 roadside assistance",
-      "delivery": "Delivery & collection"
+      "insurance": "全面保險",
+      "servicing": "定期保養",
+      "maintenance": "維修",
+      "tyres": "輪胎",
+      "rego": "牌費及強制第三者保險",
+      "roadside": "24/7 道路救援",
+      "delivery": "送車及收車"
     },
-    "fuelExcluded": "Fuel",
-    "fuelExcludedNote": "The only thing you pay for is fuel."
+    "fuelExcluded": "燃油",
+    "fuelExcludedNote": "您唯一需要支付嘅就係燃油。"
   },
   "delivery": {
-    "title": "Delivered on arrival. Collected when you leave.",
-    "body": "We deliver your car to the airport or your new home, ready to drive. At the end of your term, we come and collect it. Zero hassle at the two moments you least need it.",
-    "point1": "Airport or home delivery, timed to your arrival",
-    "point2": "Fully registered, insured and fuelled for handover",
-    "point3": "End-of-term collection wherever suits you"
+    "title": "抵埗即交車，離境時收車。",
+    "body": "我們會將車輛送到機場或您的新居，隨時可以上路。租期完結時，我們上門收車。喺您最需要慳心嘅兩個時刻，零煩惱。",
+    "point1": "機場或住宅交車，配合您的抵達時間",
+    "point2": "交車時已完成登記、投保並入滿油",
+    "point3": "租期完結時喺您方便嘅地點收車"
   },
   "howItWorks": {
-    "title": "How it works",
-    "subtitle": "From your visa grant to your driveway in four steps.",
+    "title": "租賃流程",
+    "subtitle": "由簽證批出到座駕到家，只需四步。",
     "steps": {
       "1": {
-        "title": "Choose your car & term",
-        "body": "Pick a brand-new car and slide the term to match your visa."
+        "title": "揀選車款同租期",
+        "body": "揀一部全新座駕，將租期滑到同簽證一致。"
       },
       "2": {
-        "title": "Apply online",
-        "body": "Apply before you arrive — approval on your contract, salary and visa. No Australian credit history required."
+        "title": "網上申請",
+        "body": "抵埗前即可申請——憑僱傭合約、薪金同簽證獲批。毋須澳洲信貸紀錄。"
       },
       "3": {
-        "title": "We deliver on arrival",
-        "body": "Your car is waiting — at the airport or your new front door."
+        "title": "抵埗時交車",
+        "body": "您的座駕已經等緊您——喺機場或您的新居門口。"
       },
       "4": {
-        "title": "Drive. We collect at the end.",
-        "body": "One weekly payment covers everything but fuel. When your term ends, we collect the car."
+        "title": "安心駕駛，期滿收車",
+        "body": "每週一筆付款，除燃油外全部涵蓋。租期完結時，我們上門收車。"
       }
     }
   },
   "partners": {
-    "title": "For employers & migration partners",
-    "body": "Relocating international talent? Give your people mobility from day one. We partner with employers, relocation agents and migration specialists to make cars part of the landing package — with consolidated billing and priority delivery.",
-    "point1": "Fleet-style terms for individual visa lengths",
-    "point2": "One invoice, many drivers, zero admin",
-    "point3": "Priority delivery slots for arrival dates",
-    "cta": "Partner with us",
+    "title": "僱主與移民合作夥伴",
+    "body": "正在安置國際人才？令您的員工由第一日起就有出行自由。我們與僱主、安置代理及移民專家合作，將車輛納入落地安排——統一發票，優先交付。",
+    "point1": "針對個人簽證年期的企業級租賃條款",
+    "point2": "一張發票，多位司機，零行政負擔",
+    "point3": "按抵達日期優先安排交車",
+    "cta": "成為合作夥伴",
     "form": {
-      "title": "Partner with us",
-      "subtitle": "Tell us about your organisation and we'll be in touch within one business day.",
-      "name": "Contact name",
-      "email": "Work email",
-      "phone": "Phone",
-      "company": "Organisation",
-      "message": "How can we help?",
-      "submit": "Send enquiry",
+      "title": "成為合作夥伴",
+      "subtitle": "話俾我們知貴機構的情況，我們會於一個工作天內聯絡您。",
+      "name": "聯絡人姓名",
+      "email": "工作電郵",
+      "phone": "電話",
+      "company": "機構名稱",
+      "message": "我們可以點樣幫到您？",
+      "submit": "發送查詢",
       "success": {
-        "title": "Thanks — we'll be in touch",
-        "body": "Your enquiry has been received. A partnerships lead will contact you within one business day."
+        "title": "多謝您——我們會盡快聯絡",
+        "body": "已收到您的查詢。合作負責人會於一個工作天內與您聯絡。"
       }
     }
   },
   "faq": {
-    "title": "Frequently asked questions",
+    "title": "常見問題",
     "items": {
       "who": {
-        "q": "Who is OpenLease for?",
-        "a": "Professionals coming to Australia on temporary visas — skilled workers, graduates, students and working-holiday makers — who need a car for exactly the length of their stay."
+        "q": "OpenLease 適合邊啲人？",
+        "a": "持臨時簽證來澳的專業人士——技術人員、畢業生、學生同工作假期人士——需要一部同逗留時間完全匹配嘅車。"
       },
       "included": {
-        "q": "What does the weekly price include?",
-        "a": "Everything except fuel: comprehensive insurance, servicing, maintenance, tyres, registration and CTP, 24/7 roadside assistance, plus delivery and collection. One payment, no surprises."
+        "q": "週租價包含啲乜？",
+        "a": "除燃油外的一切：全面保險、保養、維修、輪胎、牌費及強制第三者保險、24/7 道路救援，以及送車同收車。一筆付款，冇意外。"
       },
       "credit": {
-        "q": "Do I need an Australian credit history?",
-        "a": "No. We approve you on your employment contract, salary and visa. You can be approved before you even land in Australia."
+        "q": "我需要澳洲信貸紀錄嗎？",
+        "a": "唔需要。我們憑您的僱傭合約、薪金同簽證審批。您甚至可以喺落地澳洲之前獲批。"
       },
       "term": {
-        "q": "Can the lease really match my exact visa length?",
-        "a": "Yes. Any term from 9 to 24 months — including non-standard terms like 15 months. Set the slider to your visa length and that's your lease."
+        "q": "租期真係可以完全配合我簽證嘅年期？",
+        "a": "可以。9 至 24 個月任意租期——包括 15 個月呢類非常規租期。將滑桿較到您簽證嘅年期，嗰個就係您嘅租期。"
       },
       "km": {
-        "q": "How many kilometres are included?",
-        "a": "Pricing is based on up to {km} km per week. If you drive more, excess kilometres are charged at a published per-km rate — you'll always know it up front."
+        "q": "包含幾多公里？",
+        "a": "價錢基於每週最多 {km} 公里。如果您駕駛更多，超額里程按公佈的每公里費率收取——費用一定預先透明。"
       },
       "end": {
-        "q": "What happens at the end of my lease?",
-        "a": "We come and collect the car — from your home, work or the airport. If your visa is extended, you can extend or re-lease instead."
+        "q": "租期完結之後會點？",
+        "a": "我們會上門收車——您屋企、公司或機場都得。如果您的簽證獲延期，您可以選擇續租或重新租賃。"
       },
       "apply": {
-        "q": "Can I apply before I arrive in Australia?",
-        "a": "Yes — most of our customers do. Apply with your employment contract and visa, get approved, and your car will be waiting when you land."
+        "q": "我可唔可以喺抵達澳洲之前申請？",
+        "a": "可以——我們大部分客戶都係咁做。憑僱傭合約同簽證申請並獲批，落地時您的車已經等緊您。"
       }
     }
   },
   "disclaimer": {
-    "text": "All pricing is indicative and based on the driver travelling up to {km} km per week. Excess kilometres are charged at a published per-km rate. Final pricing is confirmed on application and subject to assessment and approval. OpenLease agreements are consumer leases provided under applicable Australian consumer credit law."
+    "text": "所有價錢均為指示性價錢，基於司機每週行駛不超過 {km} 公里。超額里程按公佈的每公里費率收取。最終價錢於申請時確認，並須經評估及審批。OpenLease 協議為依據澳洲適用消費信貸法律提供的消費租賃。"
   },
   "footer": {
-    "tagline": "Brand-new cars for the term of your visa. One weekly price, everything but fuel.",
-    "contactTitle": "Contact",
-    "linksTitle": "Explore",
-    "legalTitle": "Legal",
-    "loginTitle": "Log in",
-    "customerLogin": "Customer Login",
-    "adminLogin": "Admin Login",
-    "rights": "© {year} OpenLease. All rights reserved.",
-    "languageLabel": "Language"
+    "tagline": "租期與簽證同步的全新座駕。每週一個價錢，除燃油外全包。",
+    "contactTitle": "聯絡我們",
+    "linksTitle": "瀏覽",
+    "legalTitle": "法律資訊",
+    "loginTitle": "登入",
+    "customerLogin": "客戶登入",
+    "adminLogin": "管理員登入",
+    "rights": "© {year} OpenLease。版權所有。",
+    "languageLabel": "語言"
   },
   "notFound": {
-    "title": "Page not found",
-    "body": "The page you're looking for doesn't exist.",
-    "cta": "Back to home"
+    "title": "找不到頁面",
+    "body": "您要搵嘅頁面唔存在。",
+    "cta": "返回主頁"
   }
 }
