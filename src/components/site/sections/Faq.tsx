@@ -1,6 +1,18 @@
 import { getTranslations } from "next-intl/server";
 
-const FAQ_KEYS = ["who", "included", "credit", "term", "km", "end", "apply"] as const;
+const FAQ_KEYS = [
+  "who",
+  "notVisa",
+  "included",
+  "credit",
+  "term",
+  "setTerm",
+  "km",
+  "extended",
+  "end",
+  "earlyEnd",
+  "apply",
+] as const;
 
 export async function Faq({ includedKm }: { includedKm: number }) {
   const t = await getTranslations("faq");

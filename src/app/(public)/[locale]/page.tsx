@@ -7,6 +7,7 @@ import { getSetting } from "@/lib/settings";
 import { Hero } from "@/components/site/sections/Hero";
 import { CarMarquee } from "@/components/site/sections/CarMarquee";
 import { Pillars } from "@/components/site/sections/Pillars";
+import { Situations } from "@/components/site/sections/Situations";
 import { Included } from "@/components/site/sections/Included";
 import { Delivery } from "@/components/site/sections/Delivery";
 import { HowItWorks } from "@/components/site/sections/HowItWorks";
@@ -25,12 +26,13 @@ export default async function HomePage({
   }
   setRequestLocale(locale);
 
-  const [vehicles, config, disclaimerOverride, partnerFormFlag] =
+  const [vehicles, config, disclaimerOverride, partnerFormFlag, bridgingFlag] =
     await Promise.all([
       getActiveVehicles().catch(() => []),
       getPricingConfig().catch(() => null),
       getSetting("disclaimer_text", ""),
       getSetting("feature_partner_form", "true"),
+      getSetting("feature_bridging_card", "true"),
     ]);
 
   const tDisclaimer = await getTranslations("disclaimer");
@@ -51,6 +53,7 @@ export default async function HomePage({
         <QuoteBuilder vehicles={vehicles} config={config} disclaimer={disclaimer} />
       )}
       <Pillars />
+      <Situations showBridging={bridgingFlag !== "false"} />
       <Included items={config?.included_items ?? []} />
       <Delivery />
       <HowItWorks />

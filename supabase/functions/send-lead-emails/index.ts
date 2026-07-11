@@ -48,14 +48,14 @@ function customerEmail(p: Payload): { subject: string; html: string } {
         <p>Here's the quote you built — we're holding this price for you.</p>
         <table cellpadding="6" style="border-collapse:collapse">
           <tr><td><strong>Car</strong></td><td>${q.vehicleName} (brand new)</td></tr>
-          <tr><td><strong>Term</strong></td><td>${q.termMonths} months — matched to your visa</td></tr>
+          <tr><td><strong>Term</strong></td><td>${q.termMonths} months — matched to your timeline</td></tr>
           <tr><td><strong>Weekly price</strong></td><td><strong>${aud(q.weeklyPrice)}/week</strong> — everything included except fuel</td></tr>
-          <tr><td><strong>Included</strong></td><td>Insurance, servicing, maintenance, tyres, rego &amp; CTP, roadside, delivery &amp; collection</td></tr>
+          <tr><td><strong>Included</strong></td><td>Insurance, servicing, maintenance, tyres, rego &amp; CTP, roadside, delivery &amp; end-of-term drop-off</td></tr>
           <tr><td><strong>Kilometres</strong></td><td>${q.includedKmPerWeek} km/week included</td></tr>
           <tr><td><strong>Total contract value</strong></td><td>${aud(q.totalContractValue)}</td></tr>
         </table>
         <p>Our team will be in touch within one business day. No Australian credit
-        history is needed — approval is on your employment contract, salary and visa.</p>
+        history is needed — we assess your signed contract, income and timeline.</p>
         <p style="color:#6b7280;font-size:12px">Pricing is indicative, based on up to
         ${q.includedKmPerWeek} km per week, and confirmed on application, subject to
         assessment and approval. OpenLease agreements are consumer leases provided
