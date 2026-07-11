@@ -163,7 +163,7 @@
     "subtitle": "Car leasing in Australia was built for permanent residents on fixed terms. We built OpenLease for you.",
     "openTerms": {
       "title": "Open terms",
-      "body": "Your lease matches your timeline — your visa, your contract, your project. 9 to 36 months, any month in between. Most leases force you into 12 or 24. Yours can be exactly 15."
+      "body": "Your lease matches your timeline — your visa, your contract, your project. 9 to 24 months, any month in between. Most leases force you into 12 or 24. Yours can be exactly 15."
     },
     "allInclusive": {
       "title": "All-inclusive",
@@ -257,7 +257,7 @@
       },
       "term": {
         "q": "Can the lease really match my exact timeline?",
-        "a": "Yes. Any term from 9 to 36 months — including non-standard terms like 15 months. Set the slider to your end date and that's your lease."
+        "a": "Yes. Any term from 9 to 24 months — including non-standard terms like 15 months. Set the slider to your end date and that's your lease."
       },
       "km": {
         "q": "How many kilometres are included?",
@@ -277,7 +277,7 @@
       },
       "setTerm": {
         "q": "How do you set my term?",
-        "a": "You tell us what sets your timeline — your visa expiry, contract end or project finish — and we match the lease term to that date. You can adjust it to any length between 9 and 36 months."
+        "a": "You tell us what sets your timeline — your visa expiry, contract end or project finish — and we match the lease term to that date. You can adjust it to any length between 9 and 24 months."
       },
       "extended": {
         "q": "What happens if my contract is extended?",
