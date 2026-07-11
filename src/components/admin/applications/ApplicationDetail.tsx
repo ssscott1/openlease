@@ -25,33 +25,65 @@ import type { Application, ApplicationStatus, Lead, Quote, Vehicle } from "@/lib
 import { formatAud } from "@/lib/format";
 import { timeAgo } from "@/lib/admin/status";
 
-const CHECKS: { key: string; label: string; description: string }[] = [
-  {
-    key: "identity_verified",
-    label: "Identity verified",
-    description: "Passport + Australian address confirmed (KYC).",
-  },
-  {
-    key: "income_verified",
-    label: "Income & employment verified",
-    description: "Employment contract and salary evidence reviewed.",
-  },
-  {
-    key: "visa_verified",
+// The third checkpoint verifies whatever anchors the applicant's timeline.
+// It reuses the stored `visa_verified` slot so historical applications stay
+// readable; only the label/description branch by use case.
+const TERM_EVIDENCE: Record<string, { label: string; description: string }> = {
+  visa: {
     label: "Visa verified",
     description: "Visa class and expiry confirmed (VEVO); lease term fits visa.",
   },
-  {
-    key: "not_unsuitable_assessment",
-    label: "'Not unsuitable' assessment",
-    description: "Requirements, objectives and affordability assessed and recorded.",
+  contract: {
+    label: "Contract end date verified",
+    description: "Signed fixed-term contract sighted; lease term fits the contract.",
   },
-  {
-    key: "disclosure_document_sent",
-    label: "Disclosure document sent",
-    description: "Pre-contractual disclosure delivered to the applicant.",
+  project: {
+    label: "Project end date verified",
+    description: "Engagement letter/contract sighted; lease term fits the project.",
   },
-];
+  relocation: {
+    label: "Assignment end date verified",
+    description: "Assignment letter sighted; lease term fits the secondment.",
+  },
+  car_delivery_bridge: {
+    label: "Delivery timeline verified",
+    description: "New-car order/delivery estimate sighted; manual review applies.",
+  },
+  other: {
+    label: "Term evidence verified",
+    description: "Evidence for the nominated end date sighted; manual review applies.",
+  },
+};
+
+function checksFor(useCase: string): { key: string; label: string; description: string }[] {
+  const termEvidence = TERM_EVIDENCE[useCase] ?? TERM_EVIDENCE.other;
+  return [
+    {
+      key: "identity_verified",
+      label: "Identity verified",
+      description: "Passport + Australian address confirmed (KYC).",
+    },
+    {
+      key: "income_verified",
+      label: "Income & employment verified",
+      description: "Employment contract and salary evidence reviewed.",
+    },
+    {
+      key: "visa_verified",
+      ...termEvidence,
+    },
+    {
+      key: "not_unsuitable_assessment",
+      label: "'Not unsuitable' assessment",
+      description: "Requirements, objectives and affordability assessed and recorded.",
+    },
+    {
+      key: "disclosure_document_sent",
+      label: "Disclosure document sent",
+      description: "Pre-contractual disclosure delivered to the applicant.",
+    },
+  ];
+}
 
 const STATUS_FLOW: ApplicationStatus[] = [
   "draft",
@@ -75,6 +107,7 @@ export function ApplicationDetail({
   const [app, setApp] = useState(initialApp);
   const [toast, setToast] = useState<string | null>(null);
 
+  const CHECKS = useMemo(() => checksFor(lead.use_case), [lead.use_case]);
   const allChecked = CHECKS.every((c) => app.checks[c.key]);
   const decided = app.status === "approved" || app.status === "declined";
 

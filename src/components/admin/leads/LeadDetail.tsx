@@ -11,8 +11,17 @@ import type {
   Lead,
   LeadStatus,
   Profile,
+  UseCase,
   Vehicle,
 } from "@/lib/types";
+import { USE_CASES } from "@/lib/types";
+import {
+  USE_CASE_LABELS,
+  VERIFICATION_CHECKLISTS,
+  anchorSanity,
+  needsManualReview,
+} from "@/lib/admin/usecase";
+import { UseCaseBadge } from "@/components/admin/UseCaseBadge";
 import {
   PIPELINE_ORDER,
   STATUS_COLORS,
@@ -202,7 +211,25 @@ export function LeadDetail({
 
       <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-semibold tracking-tight">{lead.name}</h1>
+          <div className="flex flex-wrap items-center gap-2">
+            <h1 className="text-2xl font-semibold tracking-tight">{lead.name}</h1>
+            <UseCaseBadge useCase={lead.use_case} />
+            {needsManualReview(lead.use_case) && (
+              <span className="rounded-full bg-purple-100 px-2 py-0.5 text-[11px] font-semibold text-purple-800">
+                Manual underwriting review
+              </span>
+            )}
+            {anchorSanity(lead, quotes[0]) === "hard" && (
+              <span className="rounded-full bg-red-600 px-2 py-0.5 text-[11px] font-bold text-white">
+                Term extends past visa expiry
+              </span>
+            )}
+            {anchorSanity(lead, quotes[0]) === "warn" && (
+              <span className="rounded-full bg-amber-500 px-2 py-0.5 text-[11px] font-bold text-white">
+                Term extends past anchor date
+              </span>
+            )}
+          </div>
           <p className="mt-0.5 text-sm text-ink-soft">
             {lead.source} · {lead.preferred_language.toUpperCase()} · created {timeAgo(lead.created_at)}
           </p>
@@ -238,10 +265,10 @@ export function LeadDetail({
 
       <div className="mt-6 grid gap-6 lg:grid-cols-5">
         <div className="space-y-6 lg:col-span-3">
-          {/* Contact & visa */}
+          {/* Contact & timeline */}
           <section className="rounded-xl border border-line bg-white p-5">
             <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-soft">
-              Contact & visa
+              Contact & timeline
             </h2>
             <div className="mt-4 grid gap-3 sm:grid-cols-2">
               {(
@@ -249,7 +276,6 @@ export function LeadDetail({
                   ["email", "Email", "email"],
                   ["phone", "Phone", "tel"],
                   ["employer", "Employer", "text"],
-                  ["visa_type", "Visa type", "text"],
                 ] as const
               ).map(([field, label, type]) => (
                 <label key={field} className="text-xs font-medium text-ink-soft">
@@ -266,17 +292,67 @@ export function LeadDetail({
                 </label>
               ))}
               <label className="text-xs font-medium text-ink-soft">
-                Visa expiry
+                Use case
+                <select
+                  value={lead.use_case}
+                  onChange={(e) => patchLead({ use_case: e.target.value as UseCase })}
+                  className={`mt-1 ${input}`}
+                >
+                  {USE_CASES.map((uc) => (
+                    <option key={uc} value={uc}>{USE_CASE_LABELS[uc]}</option>
+                  ))}
+                </select>
+              </label>
+              <label className="text-xs font-medium text-ink-soft">
+                Term anchor date (visa expiry / contract end / …)
                 <input
                   type="date"
-                  defaultValue={lead.visa_expiry ?? ""}
+                  defaultValue={lead.term_anchor_date ?? ""}
                   onBlur={(e) => {
-                    if ((e.target.value || null) !== lead.visa_expiry)
-                      patchLead({ visa_expiry: e.target.value || null });
+                    if ((e.target.value || null) !== lead.term_anchor_date)
+                      patchLead({ term_anchor_date: e.target.value || null });
                   }}
                   className={`mt-1 ${input}`}
                 />
               </label>
+              <label className="text-xs font-medium text-ink-soft">
+                Use case detail
+                <input
+                  defaultValue={lead.use_case_detail}
+                  onBlur={(e) => {
+                    if (e.target.value !== lead.use_case_detail)
+                      patchLead({ use_case_detail: e.target.value });
+                  }}
+                  className={`mt-1 ${input}`}
+                />
+              </label>
+              {lead.use_case === "visa" && (
+                <>
+                  <label className="text-xs font-medium text-ink-soft">
+                    Visa type
+                    <input
+                      defaultValue={lead.visa_type}
+                      onBlur={(e) => {
+                        if (e.target.value !== lead.visa_type)
+                          patchLead({ visa_type: e.target.value });
+                      }}
+                      className={`mt-1 ${input}`}
+                    />
+                  </label>
+                  <label className="text-xs font-medium text-ink-soft">
+                    Visa expiry
+                    <input
+                      type="date"
+                      defaultValue={lead.visa_expiry ?? ""}
+                      onBlur={(e) => {
+                        if ((e.target.value || null) !== lead.visa_expiry)
+                          patchLead({ visa_expiry: e.target.value || null });
+                      }}
+                      className={`mt-1 ${input}`}
+                    />
+                  </label>
+                </>
+              )}
               <label className="text-xs font-medium text-ink-soft">
                 Delivery date (drives end-of-term radar)
                 <input
@@ -456,6 +532,52 @@ export function LeadDetail({
             }}
             onError={(m) => flash(m)}
           />
+
+          {/* Use-case verification checklist */}
+          <section className="rounded-xl border border-line bg-white p-5">
+            <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-soft">
+              Verification — {USE_CASE_LABELS[lead.use_case]}
+            </h2>
+            {needsManualReview(lead.use_case) && (
+              <p className="mt-2 rounded-lg bg-purple-50 px-3 py-2 text-xs font-medium text-purple-800">
+                Manual underwriting review required for this use case.
+              </p>
+            )}
+            <ul className="mt-3 space-y-2.5">
+              {VERIFICATION_CHECKLISTS[lead.use_case].map((item) => {
+                const done = lead.verification?.[item.key];
+                return (
+                  <li key={item.key} className="flex items-center gap-2.5">
+                    <button
+                      type="button"
+                      aria-pressed={Boolean(done)}
+                      onClick={() =>
+                        patchLead({
+                          verification: {
+                            ...lead.verification,
+                            [item.key]: done ? null : new Date().toISOString(),
+                          },
+                        })
+                      }
+                      className={`inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-2 transition ${
+                        done ? "border-accent bg-accent text-white" : "border-line hover:border-accent"
+                      }`}
+                    >
+                      {done && (
+                        <svg aria-hidden className="h-3 w-3" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                        </svg>
+                      )}
+                    </button>
+                    <span className="text-sm">{item.label}</span>
+                    {done && (
+                      <span className="ms-auto text-xs text-ink-soft">{timeAgo(done)}</span>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
 
           {/* Danger zone */}
           <section className="rounded-xl border border-red-200 bg-red-50/50 p-5">

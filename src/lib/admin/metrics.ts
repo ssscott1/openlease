@@ -8,8 +8,10 @@ export interface LeaseEndInfo {
 }
 
 /**
- * End-of-term math: delivery_date + term_months of the lead's converted
- * (else most recent) quote. Leads without a delivery date aren't leases yet.
+ * End-of-term math, for every use case: when a delivery date is set the
+ * lease end is delivery + term of the converted (else most recent) quote;
+ * otherwise the lead's term_anchor_date (visa expiry, contract end, …)
+ * stands in as the expected end.
  */
 export function leaseEnds(leads: Lead[], quotes: Quote[]): LeaseEndInfo[] {
   const byLead = new Map<string, Quote[]>();
@@ -22,13 +24,21 @@ export function leaseEnds(leads: Lead[], quotes: Quote[]): LeaseEndInfo[] {
   const now = Date.now();
   const out: LeaseEndInfo[] = [];
   for (const lead of leads) {
-    if (!lead.delivery_date) continue;
     const leadQuotes = byLead.get(lead.id) ?? [];
     const quote =
       leadQuotes.find((q) => q.status === "converted") ?? leadQuotes[0];
     if (!quote) continue;
-    const end = new Date(lead.delivery_date);
-    end.setMonth(end.getMonth() + quote.term_months);
+
+    let end: Date;
+    if (lead.delivery_date) {
+      end = new Date(lead.delivery_date);
+      end.setMonth(end.getMonth() + quote.term_months);
+    } else if (lead.term_anchor_date) {
+      end = new Date(lead.term_anchor_date);
+    } else {
+      continue;
+    }
+
     out.push({
       lead,
       quote,

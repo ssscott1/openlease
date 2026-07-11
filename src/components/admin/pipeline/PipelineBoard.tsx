@@ -4,7 +4,10 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
-import type { Lead, LeadStatus, Profile } from "@/lib/types";
+import type { Lead, LeadStatus, Profile, UseCase } from "@/lib/types";
+import { USE_CASES } from "@/lib/types";
+import { USE_CASE_LABELS, anchorSanity } from "@/lib/admin/usecase";
+import { UseCaseBadge } from "@/components/admin/UseCaseBadge";
 import {
   PIPELINE_ORDER,
   STATUS_COLORS,
@@ -16,7 +19,7 @@ import type { QuoteWithVehicle } from "@/app/(admin)/admin/(app)/pipeline/page";
 import { NewLeadModal } from "./NewLeadModal";
 
 type View = "board" | "table";
-type SortKey = "created_at" | "name" | "status" | "visa_expiry";
+type SortKey = "created_at" | "name" | "status" | "term_anchor_date";
 
 export function PipelineBoard({
   initialLeads,
@@ -37,6 +40,27 @@ export function PipelineBoard({
   const [dropTarget, setDropTarget] = useState<LeadStatus | null>(null);
   const [toast, setToast] = useState<string | null>(null);
   const [showNew, setShowNew] = useState(searchParams.get("new") === "1");
+
+  // Use-case filter (board + table). Kept in the URL (?uc=visa,contract) so
+  // a bookmarked pipeline URL acts as a saved view per segment.
+  const [useCaseFilter, setUseCaseFilter] = useState<Set<UseCase>>(() => {
+    const raw = searchParams.get("uc");
+    if (!raw) return new Set();
+    return new Set(
+      raw.split(",").filter((v): v is UseCase => (USE_CASES as string[]).includes(v)),
+    );
+  });
+
+  function toggleUseCase(uc: UseCase) {
+    setUseCaseFilter((prev) => {
+      const next = new Set(prev);
+      if (next.has(uc)) next.delete(uc);
+      else next.add(uc);
+      const qs = next.size ? `?uc=${[...next].join(",")}` : "";
+      window.history.replaceState(null, "", `/admin/pipeline${qs}`);
+      return next;
+    });
+  }
 
   // Table state
   const [filterStatus, setFilterStatus] = useState<string>("");
@@ -116,6 +140,9 @@ export function PipelineBoard({
           { key: "email", header: "Email" },
           { key: "phone", header: "Phone" },
           { key: "employer", header: "Employer" },
+          { key: "use_case", header: "Use case" },
+          { key: "term_anchor_date", header: "Term anchor" },
+          { key: "use_case_detail", header: "Use case detail" },
           { key: "visa_type", header: "Visa type" },
           { key: "visa_expiry", header: "Visa expiry" },
           { key: "preferred_language", header: "Language" },
@@ -128,8 +155,17 @@ export function PipelineBoard({
     );
   }
 
+  // Use-case filter applies to both views.
+  const visibleLeads = useMemo(
+    () =>
+      useCaseFilter.size === 0
+        ? leads
+        : leads.filter((l) => useCaseFilter.has(l.use_case)),
+    [leads, useCaseFilter],
+  );
+
   const filtered = useMemo(() => {
-    let rows = leads;
+    let rows = visibleLeads;
     if (filterStatus) rows = rows.filter((l) => l.status === filterStatus);
     if (filterSource) rows = rows.filter((l) => l.source === filterSource);
     if (filterOwner)
@@ -142,7 +178,7 @@ export function PipelineBoard({
       const bv = b[sortKey] ?? "";
       return av < bv ? -dir : av > bv ? dir : 0;
     });
-  }, [leads, filterStatus, filterSource, filterOwner, sortKey, sortAsc]);
+  }, [visibleLeads, filterStatus, filterSource, filterOwner, sortKey, sortAsc]);
 
   function toggleSort(key: SortKey) {
     if (sortKey === key) setSortAsc((v) => !v);
@@ -189,6 +225,29 @@ export function PipelineBoard({
         </div>
       </div>
 
+      {/* Use-case segments — the filter state lives in the URL, so a
+          bookmarked link is a saved view. */}
+      <div className="mt-3 flex flex-wrap gap-2">
+        {USE_CASES.map((uc) => {
+          const on = useCaseFilter.has(uc);
+          return (
+            <button
+              key={uc}
+              type="button"
+              onClick={() => toggleUseCase(uc)}
+              className={`rounded-full border px-3 py-1 text-xs font-medium transition ${
+                on
+                  ? "border-accent bg-accent-soft text-accent-strong"
+                  : "border-line text-ink-soft hover:border-ink-soft"
+              }`}
+            >
+              {on ? "✓ " : ""}
+              {USE_CASE_LABELS[uc]}
+            </button>
+          );
+        })}
+      </div>
+
       {leads.length === 0 ? (
         <div className="mt-16 flex flex-col items-center text-center">
           <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-accent-soft">
@@ -212,7 +271,7 @@ export function PipelineBoard({
       ) : view === "board" ? (
         <div className="no-scrollbar -mx-4 mt-5 flex flex-1 gap-3 overflow-x-auto px-4 pb-4 sm:-mx-6 sm:px-6">
           {PIPELINE_ORDER.map((status) => {
-            const column = leads.filter((l) => l.status === status);
+            const column = visibleLeads.filter((l) => l.status === status);
             return (
               <section
                 key={status}
@@ -264,7 +323,18 @@ export function PipelineBoard({
                             {quote.vehicles?.name ?? "—"} · {quote.term_months}mo · ${Math.round(quote.weekly_price)}/wk
                           </p>
                         )}
-                        <div className="mt-2 flex items-center gap-1.5">
+                        <div className="mt-2 flex flex-wrap items-center gap-1.5">
+                          <UseCaseBadge useCase={lead.use_case} />
+                          {anchorSanity(lead, quote) === "hard" && (
+                            <span title="Term extends past visa expiry" className="rounded-full bg-red-600 px-1.5 py-0.5 text-[10px] font-bold text-white">
+                              !
+                            </span>
+                          )}
+                          {anchorSanity(lead, quote) === "warn" && (
+                            <span title="Term extends past anchor date" className="rounded-full bg-amber-500 px-1.5 py-0.5 text-[10px] font-bold text-white">
+                              !
+                            </span>
+                          )}
                           <span className="rounded bg-mist px-1.5 py-0.5 text-[11px] font-medium text-ink-soft">
                             {lead.source}
                           </span>
@@ -367,7 +437,7 @@ export function PipelineBoard({
                     [
                       ["name", "Name"],
                       ["status", "Status"],
-                      ["visa_expiry", "Visa expiry"],
+                      ["term_anchor_date", "Term anchor"],
                       ["created_at", "Created"],
                     ] as [SortKey, string][]
                   ).map(([key, label]) => (
@@ -410,8 +480,9 @@ export function PipelineBoard({
                         <span className={`rounded-full px-2 py-0.5 text-xs font-semibold ${STATUS_COLORS[lead.status]}`}>
                           {STATUS_LABELS[lead.status]}
                         </span>
+                        <UseCaseBadge useCase={lead.use_case} className="ms-1.5" />
                       </td>
-                      <td className="p-3 text-ink-soft">{lead.visa_expiry ?? "—"}</td>
+                      <td className="p-3 text-ink-soft">{lead.term_anchor_date ?? "—"}</td>
                       <td className="p-3 text-ink-soft">{timeAgo(lead.created_at)}</td>
                       <td className="p-3 text-ink-soft">
                         {quote ? `${quote.vehicles?.name ?? ""} ${quote.term_months}mo $${Math.round(quote.weekly_price)}/wk` : "—"}

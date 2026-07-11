@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 import type { Lead } from "@/lib/types";
+import { USE_CASES } from "@/lib/types";
+import { USE_CASE_LABELS } from "@/lib/admin/usecase";
 import { locales } from "@/i18n/routing";
 
 export function NewLeadModal({
@@ -39,6 +41,8 @@ export function NewLeadModal({
         email: String(fd.get("email") ?? "").trim(),
         phone: String(fd.get("phone") ?? "").trim(),
         employer: String(fd.get("employer") ?? "").trim(),
+        use_case: String(fd.get("use_case") ?? "other"),
+        term_anchor_date: (fd.get("term_anchor_date") as string) || null,
         visa_type: String(fd.get("visa_type") ?? "").trim(),
         visa_expiry: (fd.get("visa_expiry") as string) || null,
         preferred_language: String(fd.get("preferred_language") ?? "en"),
@@ -93,6 +97,18 @@ export function NewLeadModal({
           <label className="text-sm font-medium">
             Visa type
             <input name="visa_type" placeholder="e.g. 482" className={input} />
+          </label>
+          <label className="text-sm font-medium">
+            Use case
+            <select name="use_case" defaultValue="visa" className={input}>
+              {USE_CASES.map((uc) => (
+                <option key={uc} value={uc}>{USE_CASE_LABELS[uc]}</option>
+              ))}
+            </select>
+          </label>
+          <label className="text-sm font-medium">
+            Term anchor date
+            <input name="term_anchor_date" type="date" className={input} />
           </label>
           <label className="text-sm font-medium">
             Visa expiry

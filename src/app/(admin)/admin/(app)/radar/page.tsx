@@ -10,7 +10,7 @@ export default async function RadarPage() {
     supabase
       .from("leads")
       .select("*")
-      .not("delivery_date", "is", null),
+      .or("delivery_date.not.is.null,term_anchor_date.not.is.null"),
     supabase.from("quotes").select("*, vehicles(name)"),
   ]);
 

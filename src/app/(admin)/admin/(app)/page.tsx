@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import type { Lead, Quote } from "@/lib/types";
+import { USE_CASES } from "@/lib/types";
 import { PIPELINE_ORDER, STATUS_COLORS, STATUS_LABELS } from "@/lib/admin/status";
+import { USE_CASE_COLORS, USE_CASE_LABELS } from "@/lib/admin/usecase";
 import { countBy, leaseEnds } from "@/lib/admin/metrics";
 import { formatAud, formatDate } from "@/lib/format";
 
@@ -45,6 +47,21 @@ export default async function DashboardPage() {
 
   const bySource = countBy(leads, (l) => l.source);
   const byLanguage = countBy(leads, (l) => l.preferred_language);
+
+  // Per-use-case volume, conversion and active leases.
+  const useCaseRows = USE_CASES.map((uc) => {
+    const cohort = leads.filter((l) => l.use_case === uc);
+    const ucWon = cohort.filter((l) =>
+      ["approved", "delivered", "active", "ended"].includes(l.status),
+    ).length;
+    const ucClosed = ucWon + cohort.filter((l) => l.status === "lost").length;
+    return {
+      useCase: uc,
+      total: cohort.length,
+      active: cohort.filter((l) => l.status === "active").length,
+      conversion: ucClosed > 0 ? Math.round((ucWon / ucClosed) * 100) : null,
+    };
+  }).filter((row) => row.total > 0);
   const statusCounts = new Map(countBy(leads, (l) => l.status));
   const maxStatus = Math.max(1, ...statusCounts.values());
 
@@ -132,6 +149,45 @@ export default async function DashboardPage() {
                 </li>
               ))}
             </ul>
+          )}
+        </section>
+
+        {/* Use cases */}
+        <section className="rounded-xl border border-line bg-white p-5 lg:col-span-2">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-soft">
+            By use case
+          </h2>
+          {useCaseRows.length === 0 ? (
+            <p className="mt-4 text-sm text-ink-soft">No leads yet.</p>
+          ) : (
+            <div className="mt-4 overflow-x-auto">
+              <table className="w-full min-w-[480px] text-sm">
+                <thead>
+                  <tr className="border-b border-line text-xs uppercase tracking-wide text-ink-soft">
+                    <th className="py-2 pe-3 text-start font-semibold">Use case</th>
+                    <th className="px-2 py-2 text-end font-semibold">Leads</th>
+                    <th className="px-2 py-2 text-end font-semibold">Conversion</th>
+                    <th className="px-2 py-2 text-end font-semibold">Active leases</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {useCaseRows.map((row) => (
+                    <tr key={row.useCase} className="border-b border-line/60 last:border-0">
+                      <td className="py-2 pe-3">
+                        <span className={`rounded-full px-2 py-0.5 text-xs font-semibold ${USE_CASE_COLORS[row.useCase]}`}>
+                          {USE_CASE_LABELS[row.useCase]}
+                        </span>
+                      </td>
+                      <td className="px-2 py-2 text-end tabular-nums">{row.total}</td>
+                      <td className="px-2 py-2 text-end tabular-nums">
+                        {row.conversion === null ? "—" : `${row.conversion}%`}
+                      </td>
+                      <td className="px-2 py-2 text-end tabular-nums">{row.active}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           )}
         </section>
 
