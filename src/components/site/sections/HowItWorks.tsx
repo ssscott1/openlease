@@ -15,7 +15,7 @@ export async function HowItWorks() {
         </div>
         <ol className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, i) => (
-            <li key={step} className="relative rounded-2xl bg-white p-6 shadow-sm">
+            <li key={step} className="relative rounded-xl border border-line bg-white p-6">
               <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-ink text-sm font-bold text-white">
                 {i + 1}
               </span>

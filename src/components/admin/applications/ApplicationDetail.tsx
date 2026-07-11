@@ -190,7 +190,7 @@ export function ApplicationDetail({
         </div>
       )}
 
-      <section className="mt-6 rounded-2xl border border-line bg-white p-5">
+      <section className="mt-6 rounded-xl border border-line bg-white p-5">
         <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-soft">
           Responsible-lending & disclosure checklist
         </h2>
@@ -236,7 +236,7 @@ export function ApplicationDetail({
         </ul>
       </section>
 
-      <section className="mt-4 rounded-2xl border border-line bg-white p-5">
+      <section className="mt-4 rounded-xl border border-line bg-white p-5">
         <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-soft">
           Assessment notes
         </h2>

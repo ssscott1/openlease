@@ -70,7 +70,7 @@ export function NewLeadModal({
       <form
         onSubmit={onSubmit}
         onClick={(e) => e.stopPropagation()}
-        className="w-full max-w-lg rounded-2xl bg-white p-6 shadow-2xl"
+        className="w-full max-w-lg rounded-xl bg-white p-6 shadow-2xl"
       >
         <h2 className="text-lg font-semibold">New lead</h2>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">

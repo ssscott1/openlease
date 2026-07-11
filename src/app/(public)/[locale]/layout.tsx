@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { routing, rtlLocales, type Locale } from "@/i18n/routing";
-import { geistSans, geistMono } from "@/app/fonts";
+import { displayFont, bodyFont, monoFont } from "@/app/fonts";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { DEFAULT_CUSTOMER_LOGIN_URL, getSettings } from "@/lib/settings";
@@ -46,7 +46,7 @@ export default async function PublicLayout({
     <html
       lang={locale}
       dir={dir}
-      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      className={`${displayFont.variable} ${bodyFont.variable} ${monoFont.variable} antialiased`}
     >
       <body className="flex min-h-screen flex-col">
         <NextIntlClientProvider>

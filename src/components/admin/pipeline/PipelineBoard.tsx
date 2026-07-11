@@ -228,7 +228,7 @@ export function PipelineBoard({
                   if (dragId) moveLead(dragId, status);
                   setDragId(null);
                 }}
-                className={`flex w-64 shrink-0 flex-col rounded-2xl border p-2 transition-colors ${
+                className={`flex w-64 shrink-0 flex-col rounded-xl border p-2 transition-colors ${
                   dropTarget === status
                     ? "border-accent bg-accent-soft/60"
                     : "border-transparent bg-white/60"
@@ -251,7 +251,7 @@ export function PipelineBoard({
                         draggable
                         onDragStart={() => setDragId(lead.id)}
                         onDragEnd={() => setDragId(null)}
-                        className={`block cursor-grab rounded-xl border border-line bg-white p-3 shadow-sm transition hover:border-accent/50 hover:shadow ${
+                        className={`block cursor-grab rounded-xl border border-line bg-white p-3 transition hover:border-accent/50 ${
                           dragId === lead.id ? "opacity-50" : ""
                         }`}
                       >
@@ -349,7 +349,7 @@ export function PipelineBoard({
             )}
           </div>
 
-          <div className="mt-3 overflow-x-auto rounded-2xl border border-line bg-white">
+          <div className="mt-3 overflow-x-auto rounded-xl border border-line bg-white">
             <table className="w-full min-w-[760px] text-sm">
               <thead>
                 <tr className="border-b border-line text-start text-xs uppercase tracking-wide text-ink-soft">

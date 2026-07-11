@@ -1,22 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Compact SUV illustration">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#f2f8f5"/>
-      <stop offset="1" stop-color="#e7f5ef"/>
+      <stop offset="0" stop-color="#f7f8f6"/>
+      <stop offset="1" stop-color="#eef1fb"/>
     </linearGradient>
   </defs>
   <rect width="640" height="400" fill="url(#bg)"/>
   <ellipse cx="320" cy="332" rx="225" ry="16" fill="#0b0f0d" opacity="0.08"/>
   <path d="M180 240 C195 172 240 152 320 152 C400 152 438 172 452 240 Z" fill="#334155"/>
-  <path d="M198 235 C210 185 250 165 318 165 C386 165 416 185 430 235 Z" fill="#cfe2db"/>
+  <path d="M198 235 C210 185 250 165 318 165 C386 165 416 185 430 235 Z" fill="#d9dfeb"/>
   <rect x="314" y="168" width="6" height="70" fill="#334155"/>
   <rect x="88" y="226" width="464" height="78" rx="36" fill="#3f4f63"/>
   <rect x="88" y="258" width="464" height="46" rx="23" fill="#334155"/>
-  <rect x="110" y="244" width="54" height="10" rx="5" fill="#e7f5ef" opacity="0.85"/>
+  <rect x="110" y="244" width="54" height="10" rx="5" fill="#eef1fb" opacity="0.85"/>
   <rect x="476" y="244" width="54" height="10" rx="5" fill="#b45309" opacity="0.7"/>
   <circle cx="192" cy="304" r="46" fill="#0b0f0d"/>
   <circle cx="192" cy="304" r="21" fill="#e5e7eb"/>
   <circle cx="448" cy="304" r="46" fill="#0b0f0d"/>
   <circle cx="448" cy="304" r="21" fill="#e5e7eb"/>
-  <rect x="256" y="266" width="128" height="8" rx="4" fill="#0e8a5f" opacity="0.9"/>
+  <rect x="256" y="266" width="128" height="8" rx="4" fill="#3e64c8" opacity="0.9"/>
 </svg>

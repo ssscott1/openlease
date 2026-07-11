@@ -239,7 +239,7 @@ export function LeadDetail({
       <div className="mt-6 grid gap-6 lg:grid-cols-5">
         <div className="space-y-6 lg:col-span-3">
           {/* Contact & visa */}
-          <section className="rounded-2xl border border-line bg-white p-5">
+          <section className="rounded-xl border border-line bg-white p-5">
             <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-soft">
               Contact & visa
             </h2>
@@ -293,7 +293,7 @@ export function LeadDetail({
           </section>
 
           {/* Quotes */}
-          <section className="rounded-2xl border border-line bg-white p-5">
+          <section className="rounded-xl border border-line bg-white p-5">
             <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-soft">
               Quotes
             </h2>
@@ -360,7 +360,7 @@ export function LeadDetail({
           </section>
 
           {/* Timeline */}
-          <section className="rounded-2xl border border-line bg-white p-5">
+          <section className="rounded-xl border border-line bg-white p-5">
             <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-soft">
               Timeline
             </h2>
@@ -416,7 +416,7 @@ export function LeadDetail({
 
         <div className="space-y-6 lg:col-span-2">
           {/* Next action */}
-          <section className="rounded-2xl border border-line bg-white p-5">
+          <section className="rounded-xl border border-line bg-white p-5">
             <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-soft">
               Next action
             </h2>
@@ -458,7 +458,7 @@ export function LeadDetail({
           />
 
           {/* Danger zone */}
-          <section className="rounded-2xl border border-red-200 bg-red-50/50 p-5">
+          <section className="rounded-xl border border-red-200 bg-red-50/50 p-5">
             <h2 className="text-sm font-semibold uppercase tracking-wide text-red-700">
               Danger zone
             </h2>
@@ -541,7 +541,7 @@ function NewQuoteCard({
   }
 
   return (
-    <section className="rounded-2xl border border-line bg-white p-5">
+    <section className="rounded-xl border border-line bg-white p-5">
       <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-soft">
         New quote
       </h2>

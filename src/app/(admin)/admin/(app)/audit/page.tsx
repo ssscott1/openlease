@@ -61,7 +61,7 @@ export default async function AuditPage({
         ))}
       </div>
 
-      <div className="mt-4 overflow-hidden rounded-2xl border border-line bg-white">
+      <div className="mt-4 overflow-hidden rounded-xl border border-line bg-white">
         {entries.length === 0 ? (
           <p className="p-8 text-center text-sm text-ink-soft">No audit entries yet.</p>
         ) : (

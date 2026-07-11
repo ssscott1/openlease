@@ -80,7 +80,7 @@ export function PricingEditor({
       </p>
 
       <div className="mt-6 grid gap-6 lg:grid-cols-2">
-        <section className="rounded-2xl border border-line bg-white p-5">
+        <section className="rounded-xl border border-line bg-white p-5">
           <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-soft">Terms & kilometres</h2>
           <div className="mt-4 grid grid-cols-2 gap-3">
             <label className="text-sm font-medium">
@@ -213,7 +213,7 @@ export function PricingEditor({
           </button>
         </section>
 
-        <section className="rounded-2xl border border-line bg-white p-5">
+        <section className="rounded-xl border border-line bg-white p-5">
           <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-soft">
             Live preview
           </h2>

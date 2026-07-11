@@ -19,8 +19,8 @@
       "partners": "ਭਾਈਵਾਲ",
       "faq": "ਸਵਾਲ-ਜਵਾਬ"
     },
-    "customerLogin": "ਗਾਹਕ ਲੌਗਇਨ",
-    "adminLogin": "ਐਡਮਿਨ ਲੌਗਇਨ",
+    "customerLogin": "ਗਾਹਕ",
+    "adminLogin": "ਐਡਮਿਨ",
     "languageLabel": "ਭਾਸ਼ਾ",
     "buildYourLease": "ਆਪਣੀ ਲੀਜ਼ ਬਣਾਓ",
     "menuOpen": "ਮੀਨੂ ਖੋਲ੍ਹੋ",
@@ -236,8 +236,8 @@
     "linksTitle": "ਖੋਜੋ",
     "legalTitle": "ਕਾਨੂੰਨੀ",
     "loginTitle": "ਲੌਗਇਨ",
-    "customerLogin": "ਗਾਹਕ ਲੌਗਇਨ",
-    "adminLogin": "ਐਡਮਿਨ ਲੌਗਇਨ",
+    "customerLogin": "ਗਾਹਕ",
+    "adminLogin": "ਐਡਮਿਨ",
     "rights": "© {year} OpenLease। ਸਾਰੇ ਹੱਕ ਰਾਖਵੇਂ ਹਨ।",
     "languageLabel": "ਭਾਸ਼ਾ"
   },

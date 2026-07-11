@@ -16,7 +16,7 @@ export default async function PricingPage() {
 
   if (!config) {
     return (
-      <p className="rounded-2xl border border-dashed border-line p-8 text-center text-sm text-ink-soft">
+      <p className="rounded-xl border border-dashed border-line p-8 text-center text-sm text-ink-soft">
         No pricing config row found — run the seed migration.
       </p>
     );

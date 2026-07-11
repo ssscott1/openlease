@@ -130,7 +130,7 @@ export function VehicleManager({ initialVehicles }: { initialVehicles: Vehicle[]
 
       <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {vehicles.map((v) => (
-          <div key={v.id} className={`overflow-hidden rounded-2xl border bg-white ${v.active ? "border-line" : "border-dashed border-line opacity-60"}`}>
+          <div key={v.id} className={`overflow-hidden rounded-xl border bg-white ${v.active ? "border-line" : "border-dashed border-line opacity-60"}`}>
             <div className="relative aspect-[16/10] bg-accent-soft">
               {v.image_url && (
                 <Image
@@ -174,7 +174,7 @@ export function VehicleManager({ initialVehicles }: { initialVehicles: Vehicle[]
           </div>
         ))}
         {vehicles.length === 0 && (
-          <p className="col-span-full rounded-2xl border border-dashed border-line p-8 text-center text-sm text-ink-soft">
+          <p className="col-span-full rounded-xl border border-dashed border-line p-8 text-center text-sm text-ink-soft">
             No vehicles yet — add your first one.
           </p>
         )}
@@ -182,7 +182,7 @@ export function VehicleManager({ initialVehicles }: { initialVehicles: Vehicle[]
 
       {editing && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/40 p-4" onClick={() => setEditing(null)} role="dialog" aria-modal="true">
-          <form onSubmit={save} onClick={(e) => e.stopPropagation()} className="max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-6 shadow-2xl">
+          <form onSubmit={save} onClick={(e) => e.stopPropagation()} className="max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-xl bg-white p-6 shadow-2xl">
             <h2 className="text-lg font-semibold">{editing.id ? `Edit ${editing.name}` : "Add vehicle"}</h2>
             <div className="mt-4 grid gap-3 sm:grid-cols-2">
               <label className="text-sm font-medium sm:col-span-2">

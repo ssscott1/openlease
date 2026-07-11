@@ -46,7 +46,7 @@ export async function Included({ items }: { items: string[] }) {
           {items.map((key) => (
             <li
               key={key}
-              className="flex flex-col items-start gap-3 rounded-2xl bg-white p-5 shadow-sm"
+              className="flex flex-col items-start gap-3 rounded-xl border border-line bg-white p-5"
             >
               <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-accent-soft text-accent-strong">
                 <svg aria-hidden className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.8} stroke="currentColor">
@@ -58,7 +58,7 @@ export async function Included({ items }: { items: string[] }) {
               </span>
             </li>
           ))}
-          <li className="flex flex-col items-start gap-3 rounded-2xl border-2 border-dashed border-line bg-transparent p-5">
+          <li className="flex flex-col items-start gap-3 rounded-xl border-2 border-dashed border-line bg-transparent p-5">
             <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-line/60 text-ink-soft">
               <svg aria-hidden className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.8} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 3l18 18M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125" />

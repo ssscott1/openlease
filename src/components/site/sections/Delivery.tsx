@@ -26,11 +26,11 @@ export async function Delivery() {
         </div>
         <div aria-hidden className="relative hidden h-80 overflow-hidden rounded-3xl bg-accent-soft lg:block">
           <svg viewBox="0 0 640 400" className="absolute inset-0 h-full w-full">
-            <path d="M0 320 L640 320" stroke="#0e8a5f" strokeOpacity="0.25" strokeWidth="3" strokeDasharray="14 12" />
-            <path d="M80 320 C 180 320 200 180 320 180 C 440 180 460 320 560 320" fill="none" stroke="#0e8a5f" strokeWidth="3" />
-            <circle cx="80" cy="320" r="10" fill="#0e8a5f" />
-            <circle cx="560" cy="320" r="10" fill="#0e8a5f" />
-            <path d="M300 150 l20 -24 20 24 -8 0 0 22 -24 0 0 -22 z" fill="#0b6e4c" />
+            <path d="M0 320 L640 320" stroke="#3e64c8" strokeOpacity="0.25" strokeWidth="3" strokeDasharray="14 12" />
+            <path d="M80 320 C 180 320 200 180 320 180 C 440 180 460 320 560 320" fill="none" stroke="#3e64c8" strokeWidth="3" />
+            <circle cx="80" cy="320" r="10" fill="#3e64c8" />
+            <circle cx="560" cy="320" r="10" fill="#3e64c8" />
+            <path d="M300 150 l20 -24 20 24 -8 0 0 22 -24 0 0 -22 z" fill="#2f4da3" />
           </svg>
         </div>
       </div>

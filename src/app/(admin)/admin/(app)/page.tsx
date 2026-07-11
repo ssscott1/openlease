@@ -70,7 +70,7 @@ export default async function DashboardPage() {
 
       <div className="mt-6 grid gap-6 lg:grid-cols-2">
         {/* Funnel */}
-        <section className="rounded-2xl border border-line bg-white p-5">
+        <section className="rounded-xl border border-line bg-white p-5">
           <div className="flex items-center justify-between">
             <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-soft">Pipeline</h2>
             <Link href="/admin/pipeline" className="text-sm font-medium text-accent-strong hover:underline">
@@ -99,7 +99,7 @@ export default async function DashboardPage() {
         </section>
 
         {/* End-of-term radar preview */}
-        <section className="rounded-2xl border border-line bg-white p-5">
+        <section className="rounded-xl border border-line bg-white p-5">
           <div className="flex items-center justify-between">
             <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-soft">
               End-of-term radar (90 days)
@@ -136,7 +136,7 @@ export default async function DashboardPage() {
         </section>
 
         {/* Sources & languages */}
-        <section className="rounded-2xl border border-line bg-white p-5">
+        <section className="rounded-xl border border-line bg-white p-5">
           <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-soft">
             Leads by source & language
           </h2>
@@ -147,7 +147,7 @@ export default async function DashboardPage() {
         </section>
 
         {/* Recent leads */}
-        <section className="rounded-2xl border border-line bg-white p-5">
+        <section className="rounded-xl border border-line bg-white p-5">
           <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-soft">
             Latest leads
           </h2>
@@ -182,7 +182,7 @@ export default async function DashboardPage() {
 
 function Stat({ label, value, sub }: { label: string; value: string; sub: string }) {
   return (
-    <div className="rounded-2xl border border-line bg-white p-4">
+    <div className="rounded-xl border border-line bg-white p-4">
       <p className="text-xs font-medium uppercase tracking-wide text-ink-soft">{label}</p>
       <p className="mt-1 text-2xl font-semibold tabular-nums tracking-tight">{value}</p>
       <p className="mt-0.5 text-xs text-ink-soft">{sub}</p>

@@ -19,8 +19,8 @@
       "partners": "合作夥伴",
       "faq": "常見問題"
     },
-    "customerLogin": "客戶登入",
-    "adminLogin": "管理員登入",
+    "customerLogin": "客戶",
+    "adminLogin": "管理員",
     "languageLabel": "語言",
     "buildYourLease": "訂製租約",
     "menuOpen": "開啟選單",
@@ -236,8 +236,8 @@
     "linksTitle": "瀏覽",
     "legalTitle": "法律資訊",
     "loginTitle": "登入",
-    "customerLogin": "客戶登入",
-    "adminLogin": "管理員登入",
+    "customerLogin": "客戶",
+    "adminLogin": "管理員",
     "rights": "© {year} OpenLease。版權所有。",
     "languageLabel": "語言"
   },

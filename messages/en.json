@@ -16,8 +16,8 @@
       "partners": "Partners",
       "faq": "FAQ"
     },
-    "customerLogin": "Customer Login",
-    "adminLogin": "Admin Login",
+    "customerLogin": "Customer",
+    "adminLogin": "Admin",
     "languageLabel": "Language",
     "buildYourLease": "Build your lease",
     "menuOpen": "Open menu",
@@ -233,8 +233,8 @@
     "linksTitle": "Explore",
     "legalTitle": "Legal",
     "loginTitle": "Log in",
-    "customerLogin": "Customer Login",
-    "adminLogin": "Admin Login",
+    "customerLogin": "Customer",
+    "adminLogin": "Admin",
     "rights": "© {year} OpenLease. All rights reserved.",
     "languageLabel": "Language"
   },

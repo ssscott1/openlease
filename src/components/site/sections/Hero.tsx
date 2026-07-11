@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { OpenRing } from "@/components/Logo";
 
 export async function Hero({
   termMin,
@@ -11,15 +12,15 @@ export async function Hero({
 
   return (
     <section className="relative overflow-hidden">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-40 start-1/2 h-[480px] w-[900px] -translate-x-1/2 rounded-full bg-accent-soft blur-3xl rtl:translate-x-1/2"
+      {/* One ring per composition, cropped, very low contrast, gap right. */}
+      <OpenRing
+        className="pointer-events-none absolute -end-40 -top-48 h-[560px] w-[560px] text-accent opacity-[0.06]"
       />
       <div className="relative mx-auto flex max-w-6xl flex-col items-center px-4 pb-20 pt-16 text-center sm:px-6 sm:pt-24">
-        <p className="animate-rise rounded-full border border-accent/20 bg-accent-soft px-4 py-1.5 text-sm font-medium text-accent-strong">
+        <p className="animate-rise rounded-full bg-accent-soft px-4 py-1.5 font-mono text-xs font-medium uppercase tracking-wider text-accent">
           {t("eyebrow")}
         </p>
-        <h1 className="mt-6 max-w-4xl animate-rise text-4xl font-semibold leading-tight tracking-tight [animation-delay:80ms] sm:text-6xl sm:leading-tight">
+        <h1 className="mt-6 max-w-4xl animate-rise text-4xl font-bold leading-tight tracking-tight [animation-delay:80ms] sm:text-6xl sm:leading-tight sm:tracking-[-0.03em]">
           {t("title")}
         </h1>
         <p className="mt-6 max-w-2xl animate-rise text-lg leading-relaxed text-ink-soft [animation-delay:160ms]">
@@ -28,13 +29,13 @@ export async function Hero({
         <div className="mt-8 flex animate-rise flex-col items-center gap-3 [animation-delay:240ms] sm:flex-row">
           <a
             href="#build"
-            className="rounded-full bg-accent px-7 py-3.5 text-base font-semibold text-white shadow-lg shadow-accent/25 transition hover:bg-accent-strong"
+            className="rounded-full bg-accent px-7 py-3.5 text-base font-semibold text-white transition hover:bg-accent-strong"
           >
             {t("cta")}
           </a>
           <a
             href="#how-it-works"
-            className="rounded-full border border-line px-7 py-3.5 text-base font-medium transition hover:border-ink-soft"
+            className="rounded-full border border-ink px-7 py-3.5 text-base font-medium transition hover:bg-mist"
           >
             {t("secondaryCta")}
           </a>
@@ -46,7 +47,7 @@ export async function Hero({
             t("badges.anyTerm", { min: termMin, max: termMax }),
           ].map((badge) => (
             <li key={badge} className="flex items-center gap-2">
-              <svg aria-hidden className="h-4 w-4 text-accent" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+              <svg aria-hidden className="h-4 w-4 text-ink" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
               </svg>
               {badge}

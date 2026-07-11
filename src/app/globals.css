@@ -1,19 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  /* OpenLease design tokens — one accent, near-black ink, generous white space */
-  --color-accent: #0e8a5f;
-  --color-accent-strong: #0b6e4c;
-  --color-accent-soft: #e7f5ef;
-  --color-ink: #0b0f0d;
-  --color-ink-soft: #4b5563;
-  --color-mist: #f6f7f7;
-  --color-line: #e5e7eb;
+  /* OpenLease brand guidelines v1.0 — one confident accent against
+     near-black ink and generous white. Whitespace dominates. */
+  --color-accent: #3e64c8; /* Open accent — one job per view */
+  --color-accent-strong: #2f4da3;
+  --color-accent-soft: #eef1fb;
+  --color-ink: #101613;
+  --color-ink-soft: #4d5552;
+  --color-mist: #f4f6f3;
+  --color-line: #e4e8e4; /* hairline borders — cards never get shadows */
 
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
+  --font-sans: var(--font-instrument), ui-sans-serif, system-ui, -apple-system,
     "Segoe UI", "Noto Sans", "Noto Sans SC", "Noto Sans HK",
     "Noto Sans Arabic", "Noto Sans Gurmukhi", sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-display: var(--font-schibsted), var(--font-instrument), ui-sans-serif,
+    system-ui, "Noto Sans", "Noto Sans SC", "Noto Sans HK", "Noto Sans Arabic",
+    "Noto Sans Gurmukhi", sans-serif;
+  --font-mono: var(--font-spline-mono), ui-monospace, "SFMono-Regular", monospace;
 
   --animate-rise: rise 0.5s ease-out both;
 
@@ -39,6 +43,15 @@ body {
   font-family: var(--font-sans);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Display face carries headlines, prices and the wordmark (sentence case,
+   tightened tracking as size increases). */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
 }
 
 /* Range slider — the term slider is the hero interaction, style it properly */

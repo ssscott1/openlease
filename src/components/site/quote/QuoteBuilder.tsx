@@ -130,10 +130,10 @@ export function QuoteBuilder({
                   role="radio"
                   aria-checked={selected}
                   onClick={() => setVehicleId(v.id)}
-                  className={`group w-64 shrink-0 snap-start overflow-hidden rounded-2xl border-2 bg-white text-start transition-all sm:w-72 ${
+                  className={`group w-64 shrink-0 snap-start overflow-hidden rounded-xl border bg-white text-start transition-all sm:w-72 ${
                     selected
-                      ? "border-accent shadow-lg shadow-accent/10"
-                      : "border-transparent shadow-sm hover:shadow-md"
+                      ? "border-accent ring-1 ring-accent"
+                      : "border-line hover:border-ink-soft"
                   }`}
                 >
                   <div className="relative aspect-[16/10] w-full bg-accent-soft">
@@ -177,7 +177,7 @@ export function QuoteBuilder({
 
         <div className="mt-10 grid gap-8 lg:grid-cols-2">
           {/* Step 2 — term slider */}
-          <div className="rounded-2xl bg-white p-6 shadow-sm sm:p-8">
+          <div className="rounded-xl border border-line bg-white p-6 sm:p-8">
             <StepLabel label={t("step2.label")} title={t("step2.title")} />
             <p className="mt-2 text-sm text-ink-soft">
               {t("step2.hint", { min, max })}
@@ -212,7 +212,7 @@ export function QuoteBuilder({
           </div>
 
           {/* Step 3 — live price */}
-          <div className="rounded-2xl bg-ink p-6 text-white shadow-sm sm:p-8">
+          <div className="rounded-xl bg-ink p-6 text-white sm:p-8">
             <StepLabel label={t("step3.label")} title={t("step3.title")} dark />
             <div aria-live="polite" className="mt-6">
               <div className="flex items-baseline gap-2">
@@ -267,7 +267,7 @@ export function QuoteBuilder({
         </div>
 
         {/* Step 4 — capture */}
-        <div className="mt-8 rounded-2xl bg-white p-6 shadow-sm sm:p-8">
+        <div className="mt-8 rounded-xl border border-line bg-white p-6 sm:p-8">
           {submitState === "success" && submitted ? (
             <div className="animate-rise text-center" role="status">
               <span className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-full bg-accent-soft">
@@ -358,7 +358,7 @@ function StepLabel({
   return (
     <div>
       <span
-        className={`text-xs font-semibold uppercase tracking-widest ${
+        className={`font-mono text-xs font-medium uppercase tracking-widest ${
           dark ? "text-accent" : "text-accent-strong"
         }`}
       >

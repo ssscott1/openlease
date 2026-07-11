@@ -19,8 +19,8 @@
       "partners": "合作伙伴",
       "faq": "常见问题"
     },
-    "customerLogin": "客户登录",
-    "adminLogin": "管理员登录",
+    "customerLogin": "客户",
+    "adminLogin": "管理员",
     "languageLabel": "语言",
     "buildYourLease": "定制租约",
     "menuOpen": "打开菜单",
@@ -236,8 +236,8 @@
     "linksTitle": "浏览",
     "legalTitle": "法律信息",
     "loginTitle": "登录",
-    "customerLogin": "客户登录",
-    "adminLogin": "管理员登录",
+    "customerLogin": "客户",
+    "adminLogin": "管理员",
     "rights": "© {year} OpenLease。保留所有权利。",
     "languageLabel": "语言"
   },

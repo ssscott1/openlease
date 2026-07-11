@@ -37,7 +37,7 @@ export function PartnerForm() {
 
   if (state === "success") {
     return (
-      <div className="flex flex-col items-center justify-center rounded-2xl bg-white/5 p-8 text-center" role="status">
+      <div className="flex flex-col items-center justify-center rounded-xl bg-white/5 p-8 text-center" role="status">
         <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-accent/20">
           <svg aria-hidden className="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
@@ -53,7 +53,7 @@ export function PartnerForm() {
     "rounded-xl border border-white/20 bg-white/10 px-3.5 py-2.5 text-base text-white placeholder-white/40 focus:outline-2 focus:outline-accent";
 
   return (
-    <form onSubmit={onSubmit} className="rounded-2xl bg-white/5 p-6 sm:p-8">
+    <form onSubmit={onSubmit} className="rounded-xl bg-white/5 p-6 sm:p-8">
       <h3 className="text-xl font-semibold">{t("title")}</h3>
       <p className="mt-1 text-sm text-white/70">{t("subtitle")}</p>
       <div className="mt-6 grid gap-4 sm:grid-cols-2">

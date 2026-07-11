@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import NextLink from "next/link";
 import { Link } from "@/i18n/navigation";
+import { Logo } from "@/components/Logo";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const NAV_ANCHORS = [
@@ -16,24 +17,13 @@ const NAV_ANCHORS = [
 
 export function Header({ customerLoginUrl }: { customerLoginUrl: string }) {
   const t = useTranslations("header");
-  const tc = useTranslations("common");
   const [open, setOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-white/90 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
-        <Link
-          href="/"
-          className="flex items-center gap-2 text-lg font-semibold tracking-tight"
-          onClick={() => setOpen(false)}
-        >
-          <span
-            aria-hidden
-            className="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-accent text-sm font-bold text-white"
-          >
-            O
-          </span>
-          {tc("brand")}
+        <Link href="/" onClick={() => setOpen(false)}>
+          <Logo />
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex" aria-label="Main">
@@ -64,12 +54,6 @@ export function Header({ customerLoginUrl }: { customerLoginUrl: string }) {
           >
             {t("adminLogin")}
           </NextLink>
-          <a
-            href="#build"
-            className="rounded-full bg-accent px-4 py-1.5 text-sm font-semibold text-white transition hover:bg-accent-strong"
-          >
-            {t("buildYourLease")}
-          </a>
         </div>
 
         <div className="flex items-center gap-2 lg:hidden">
@@ -114,13 +98,6 @@ export function Header({ customerLoginUrl }: { customerLoginUrl: string }) {
             ))}
           </nav>
           <div className="mt-4 flex flex-col gap-3">
-            <a
-              href="#build"
-              onClick={() => setOpen(false)}
-              className="rounded-full bg-accent px-4 py-2.5 text-center text-sm font-semibold text-white"
-            >
-              {t("buildYourLease")}
-            </a>
             <a
               href={customerLoginUrl}
               target="_blank"

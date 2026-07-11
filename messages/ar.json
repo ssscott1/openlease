@@ -19,8 +19,8 @@
       "partners": "الشركاء",
       "faq": "الأسئلة الشائعة"
     },
-    "customerLogin": "دخول العملاء",
-    "adminLogin": "دخول الإدارة",
+    "customerLogin": "العملاء",
+    "adminLogin": "الإدارة",
     "languageLabel": "اللغة",
     "buildYourLease": "صمّم عقدك",
     "menuOpen": "فتح القائمة",
@@ -236,8 +236,8 @@
     "linksTitle": "استكشف",
     "legalTitle": "قانوني",
     "loginTitle": "تسجيل الدخول",
-    "customerLogin": "دخول العملاء",
-    "adminLogin": "دخول الإدارة",
+    "customerLogin": "العملاء",
+    "adminLogin": "الإدارة",
     "rights": "© {year} OpenLease. جميع الحقوق محفوظة.",
     "languageLabel": "اللغة"
   },

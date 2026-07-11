@@ -40,7 +40,7 @@ export function LoginForm() {
   return (
     <form
       onSubmit={onSubmit}
-      className="rounded-2xl border border-line bg-white p-6 shadow-sm"
+      className="rounded-xl border border-line bg-white p-6"
     >
       <h1 className="text-lg font-semibold">Admin Login</h1>
       <div className="mt-5 space-y-4">

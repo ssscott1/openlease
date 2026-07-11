@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import type { StaffRole } from "@/lib/types";
+import { Logo } from "@/components/Logo";
 import { GlobalSearch } from "./GlobalSearch";
 
 const NAV = [
@@ -120,11 +121,8 @@ export function AdminShell({
     <div className="flex min-h-screen">
       {/* Desktop sidebar */}
       <aside className="sticky top-0 hidden h-screen w-60 shrink-0 flex-col border-e border-line bg-white p-4 lg:flex">
-        <Link href="/admin" className="mb-6 flex items-center gap-2 px-2 text-lg font-semibold tracking-tight">
-          <span aria-hidden className="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-accent text-sm font-bold text-white">
-            O
-          </span>
-          OpenLease
+        <Link href="/admin" className="mb-6 block px-2">
+          <Logo />
         </Link>
         {navList}
         <div className="border-t border-line pt-4">

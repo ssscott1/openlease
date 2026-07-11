@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import NextLink from "next/link";
 import { Link } from "@/i18n/navigation";
+import { Logo } from "@/components/Logo";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export async function Footer({
@@ -24,17 +25,8 @@ export async function Footer({
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <Link
-              href="/"
-              className="flex items-center gap-2 text-lg font-semibold tracking-tight"
-            >
-              <span
-                aria-hidden
-                className="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-accent text-sm font-bold text-white"
-              >
-                O
-              </span>
-              OpenLease
+            <Link href="/" className="inline-block">
+              <Logo />
             </Link>
             <p className="mt-3 max-w-xs text-sm text-ink-soft">{t("tagline")}</p>
             <div className="mt-4">

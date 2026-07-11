@@ -36,7 +36,7 @@ export async function Pillars() {
         {PILLARS.map(({ key, icon }) => (
           <div
             key={key}
-            className="rounded-2xl border border-line p-6 transition hover:border-accent/40 hover:shadow-md sm:p-8"
+            className="rounded-xl border border-line p-6 transition hover:border-accent/40 sm:p-8"
           >
             <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
               <svg aria-hidden className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.8} stroke="currentColor">

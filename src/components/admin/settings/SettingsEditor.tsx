@@ -58,7 +58,7 @@ export function SettingsEditor({ initialSettings }: { initialSettings: Setting[]
 
       <div className="mt-6 space-y-3">
         {settings.map((row) => (
-          <div key={row.key} className="rounded-2xl border border-line bg-white p-4">
+          <div key={row.key} className="rounded-xl border border-line bg-white p-4">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <div>
                 <p className="font-mono text-sm font-semibold">{row.key}</p>
@@ -99,7 +99,7 @@ export function SettingsEditor({ initialSettings }: { initialSettings: Setting[]
         ))}
       </div>
 
-      <form onSubmit={addSetting} className="mt-6 rounded-2xl border border-dashed border-line p-4">
+      <form onSubmit={addSetting} className="mt-6 rounded-xl border border-dashed border-line p-4">
         <h2 className="text-sm font-semibold">Add setting</h2>
         <div className="mt-3 grid gap-2 sm:grid-cols-3">
           <input name="key" placeholder="key_name" required className="rounded-xl border border-line px-3 py-2 text-sm" />

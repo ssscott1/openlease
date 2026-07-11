@@ -134,7 +134,7 @@ export function RadarView({
       </div>
 
       {rows.length === 0 ? (
-        <div className="mt-12 rounded-2xl border border-dashed border-line p-10 text-center">
+        <div className="mt-12 rounded-xl border border-dashed border-line p-10 text-center">
           <h2 className="text-lg font-semibold">No tracked leases yet</h2>
           <p className="mx-auto mt-2 max-w-md text-sm text-ink-soft">
             Set a <strong>delivery date</strong> on a lead with a quote and it
@@ -155,7 +155,7 @@ export function RadarView({
                   {inBucket.map((info) => (
                     <div
                       key={info.lead.id}
-                      className={`flex flex-wrap items-center gap-3 rounded-2xl border p-4 ${bucket.tone}`}
+                      className={`flex flex-wrap items-center gap-3 rounded-xl border p-4 ${bucket.tone}`}
                     >
                       <div className="min-w-0 flex-1">
                         <Link href={`/admin/leads/${info.lead.id}`} className="font-semibold hover:underline">
@@ -172,7 +172,7 @@ export function RadarView({
                           </p>
                         )}
                       </div>
-                      <span className="rounded-full bg-white px-2.5 py-1 text-xs font-bold tabular-nums shadow-sm">
+                      <span className="rounded-full bg-white px-2.5 py-1 text-xs font-bold tabular-nums">
                         {info.daysLeft < 0 ? `${-info.daysLeft}d overdue` : `${info.daysLeft}d`}
                       </span>
                       <div className="flex gap-1.5">
