@@ -31,6 +31,7 @@ export interface Vehicle {
   slug: string;
   name: string;
   descriptor: string;
+  long_description: string;
   image_url: string | null;
   base_weekly_rate: number;
   sort_order: number;

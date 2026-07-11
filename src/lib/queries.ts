@@ -13,6 +13,19 @@ export async function getActiveVehicles(): Promise<Vehicle[]> {
   return (data ?? []) as Vehicle[];
 }
 
+/** A single active vehicle for its detail page. */
+export async function getVehicleBySlug(slug: string): Promise<Vehicle | null> {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("vehicles")
+    .select("*")
+    .eq("slug", slug)
+    .eq("active", true)
+    .maybeSingle();
+  if (error) throw error;
+  return data as Vehicle | null;
+}
+
 /** The live pricing rules that drive the quoting tool. */
 export async function getPricingConfig(): Promise<PricingConfigRow | null> {
   const supabase = await createClient();

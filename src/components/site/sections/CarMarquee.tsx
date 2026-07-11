@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { getLocale, getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { formatAud } from "@/lib/format";
 import { weeklyPrice } from "@/lib/pricing";
 import type { PricingConfigRow, Vehicle } from "@/lib/types";
@@ -35,9 +36,9 @@ export async function CarMarquee({
 
   const row = (hidden: boolean) =>
     cards.map(({ vehicle: v, fromPrice }) => (
-      <a
+      <Link
         key={`${v.id}${hidden ? "-dup" : ""}`}
-        href="#build"
+        href={`/cars/${v.slug}`}
         aria-hidden={hidden || undefined}
         tabIndex={hidden ? -1 : undefined}
         className="group w-80 shrink-0 overflow-hidden rounded-xl border border-line bg-white transition-colors hover:border-accent sm:w-[23rem]"
@@ -80,7 +81,7 @@ export async function CarMarquee({
             </span>
           </div>
         </div>
-      </a>
+      </Link>
     ));
 
   return (

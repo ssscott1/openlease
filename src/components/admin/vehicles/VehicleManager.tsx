@@ -9,6 +9,7 @@ const EMPTY: Partial<Vehicle> = {
   name: "",
   slug: "",
   descriptor: "",
+  long_description: "",
   base_weekly_rate: 300,
   sort_order: 0,
   active: true,
@@ -39,6 +40,7 @@ export function VehicleManager({ initialVehicles }: { initialVehicles: Vehicle[]
       name: String(fd.get("name") ?? "").trim(),
       slug: String(fd.get("slug") ?? "").trim().toLowerCase().replace(/\s+/g, "-"),
       descriptor: String(fd.get("descriptor") ?? "").trim(),
+      long_description: String(fd.get("long_description") ?? "").trim(),
       base_weekly_rate: Number(fd.get("base_weekly_rate")),
       sort_order: Number(fd.get("sort_order")),
       body_type: String(fd.get("body_type") ?? "").trim(),
@@ -159,6 +161,17 @@ export function VehicleManager({ initialVehicles }: { initialVehicles: Vehicle[]
               <p className="mt-2 text-xs text-ink-soft">
                 {v.body_type} · {v.seats} seats · {v.fuel_economy} · order {v.sort_order}
               </p>
+              <p className="mt-1 text-xs text-ink-soft">
+                <a
+                  href={`/cars/${v.slug}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-accent-strong hover:underline"
+                  title="Open the public car details page"
+                >
+                  /cars/{v.slug} ↗
+                </a>
+              </p>
               <div className="mt-3 flex gap-2">
                 <button type="button" onClick={() => setEditing(v)} className="rounded-lg border border-line px-2.5 py-1 text-xs font-medium hover:border-ink-soft">
                   Edit
@@ -196,6 +209,15 @@ export function VehicleManager({ initialVehicles }: { initialVehicles: Vehicle[]
               <label className="text-sm font-medium">
                 Descriptor
                 <input name="descriptor" defaultValue={editing.descriptor} placeholder="The family all-rounder" className={input} />
+              </label>
+              <label className="text-sm font-medium sm:col-span-2">
+                Detailed description (shown on the /cars/[slug] page)
+                <textarea
+                  name="long_description"
+                  rows={4}
+                  defaultValue={editing.long_description}
+                  className={input}
+                />
               </label>
               <label className="text-sm font-medium">
                 Base weekly rate (24m, AUD) *

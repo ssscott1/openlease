@@ -40,6 +40,20 @@
     "subtitle": "Five brand-new cars. One all-inclusive weekly price each.",
     "cta": "Build your lease"
   },
+  "carPage": {
+    "back": "All cars",
+    "about": "About this car",
+    "inclusions": "Included in your weekly price",
+    "applyTitle": "Apply for this car",
+    "applySubtitle": "Set your term to match your visa, tell us about yourself, and we'll hold your price. No Australian credit history needed.",
+    "submit": "Apply now",
+    "submitting": "Submitting…"
+  },
+  "thanks": {
+    "title": "Application received",
+    "body": "Thanks — our team will contact you shortly to confirm your details and the next steps. Keep an eye on your inbox.",
+    "cta": "Back to home"
+  },
   "quote": {
     "sectionTitle": "Build your lease",
     "sectionSubtitle": "Pick a car, set your term to match your visa, and see your all-inclusive weekly price — instantly.",

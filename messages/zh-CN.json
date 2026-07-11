@@ -43,6 +43,20 @@
     "subtitle": "五款全新座驾，每款一个全包周价。",
     "cta": "定制租约"
   },
+  "carPage": {
+    "back": "全部车型",
+    "about": "车辆介绍",
+    "inclusions": "周租价包含",
+    "applyTitle": "申请这辆车",
+    "applySubtitle": "将租期设为与签证一致，填写您的信息，我们将为您保留价格。无需澳大利亚信用记录。",
+    "submit": "立即申请",
+    "submitting": "提交中…"
+  },
+  "thanks": {
+    "title": "申请已收到",
+    "body": "感谢您——我们的团队将很快与您联系，确认您的信息和后续步骤。请留意您的邮箱。",
+    "cta": "返回首页"
+  },
   "quote": {
     "sectionTitle": "定制您的租约",
     "sectionSubtitle": "选择车型，将租期与签证对齐，立即查看全包周租价。",

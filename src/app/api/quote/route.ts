@@ -15,7 +15,10 @@ interface QuoteRequestBody {
   visaType?: string;
   visaExpiry?: string;
   locale?: string;
+  source?: string;
 }
+
+const ALLOWED_SOURCES = new Set(["website", "car_page"]);
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -75,7 +78,7 @@ export async function POST(request: NextRequest) {
     visa_type: body.visaType?.trim() ?? "",
     visa_expiry: body.visaExpiry || null,
     preferred_language: body.locale ?? "en",
-    source: "website",
+    source: ALLOWED_SOURCES.has(body.source ?? "") ? body.source : "website",
     status: "new",
   });
   if (leadError) {

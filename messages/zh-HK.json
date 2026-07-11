@@ -43,6 +43,20 @@
     "subtitle": "五款全新座駕，每款一個全包週價。",
     "cta": "訂製租約"
   },
+  "carPage": {
+    "back": "全部車款",
+    "about": "車輛介紹",
+    "inclusions": "週租價包含",
+    "applyTitle": "申請此車款",
+    "applySubtitle": "將租期設定至同簽證一致，填寫您的資料，我們會為您保留價錢。毋須澳洲信貸紀錄。",
+    "submit": "立即申請",
+    "submitting": "提交中…"
+  },
+  "thanks": {
+    "title": "申請已收到",
+    "body": "多謝您——我們的團隊會盡快與您聯絡，確認您的資料及後續步驟。請留意您的電郵。",
+    "cta": "返回主頁"
+  },
   "quote": {
     "sectionTitle": "訂製您的租約",
     "sectionSubtitle": "揀選車款，將租期對齊簽證，即時查看全包週租價。",
