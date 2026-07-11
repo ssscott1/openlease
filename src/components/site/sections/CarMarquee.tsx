@@ -92,7 +92,9 @@ export async function CarMarquee({
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
               {t("title")}
             </h2>
-            <p className="mt-2 text-lg text-ink-soft">{t("subtitle")}</p>
+            <p className="mt-2 text-lg text-ink-soft">
+              {t("subtitle", { count: vehicles.length })}
+            </p>
           </div>
           <a
             href="#build"

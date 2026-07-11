@@ -40,7 +40,7 @@
   },
   "browse": {
     "title": "浏览车型",
-    "subtitle": "五款全新座驾，每款一个全包周价。",
+    "subtitle": "{count} 款全新座驾，每款一个全包周价。",
     "cta": "定制租约"
   },
   "carPage": {
@@ -94,8 +94,8 @@
       "fuelEconomy": "{value}"
     },
     "form": {
-      "title": "通过邮件获取报价",
-      "subtitle": "我们将发送报价并为您保留价格。无信用检查，无任何义务。",
+      "title": "立即申请",
+      "subtitle": "填写您的信息，我们将为您保留价格。我们的团队将很快与您联系——无信用检查，无任何义务。",
       "name": "姓名",
       "email": "电子邮箱",
       "phone": "电话（或 WhatsApp）",
@@ -114,7 +114,7 @@
         "other": "其他 / 不确定"
       },
       "visaExpiry": "签证到期日",
-      "submit": "发送报价",
+      "submit": "立即申请",
       "submitting": "发送中…",
       "privacyNote": "您的信息仅用于准备报价和后续跟进。绝无垃圾邮件，绝无信用检查。",
       "errors": {

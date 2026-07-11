@@ -37,7 +37,7 @@
   },
   "browse": {
     "title": "Browse our cars",
-    "subtitle": "Five brand-new cars. One all-inclusive weekly price each.",
+    "subtitle": "{count} brand-new cars. One all-inclusive weekly price each.",
     "cta": "Build your lease"
   },
   "carPage": {
@@ -91,8 +91,8 @@
       "fuelEconomy": "{value}"
     },
     "form": {
-      "title": "Get your quote by email",
-      "subtitle": "We'll send your quote and hold your price. No credit check, no obligation.",
+      "title": "Apply now",
+      "subtitle": "Tell us about yourself and we'll hold your price. Our team will be in touch shortly — no credit check, no obligation.",
       "name": "Full name",
       "email": "Email",
       "phone": "Phone (or WhatsApp)",
@@ -111,7 +111,7 @@
         "other": "Other / not sure"
       },
       "visaExpiry": "Visa expiry date",
-      "submit": "Send my quote",
+      "submit": "Apply now",
       "submitting": "Sending…",
       "privacyNote": "We only use your details to prepare your quote and follow up. No spam, no credit check.",
       "errors": {

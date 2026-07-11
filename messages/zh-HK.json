@@ -40,7 +40,7 @@
   },
   "browse": {
     "title": "瀏覽車款",
-    "subtitle": "五款全新座駕，每款一個全包週價。",
+    "subtitle": "{count} 款全新座駕，每款一個全包週價。",
     "cta": "訂製租約"
   },
   "carPage": {
@@ -94,8 +94,8 @@
       "fuelEconomy": "{value}"
     },
     "form": {
-      "title": "以電郵索取報價",
-      "subtitle": "我們會發送報價並為您保留價錢。毋須信貸審查，毋須任何承諾。",
+      "title": "立即申請",
+      "subtitle": "填寫您的資料，我們會為您保留價錢。我們的團隊會盡快與您聯絡——毋須信貸審查，毋須任何承諾。",
       "name": "姓名",
       "email": "電郵",
       "phone": "電話（或 WhatsApp）",
@@ -114,7 +114,7 @@
         "other": "其他 / 不確定"
       },
       "visaExpiry": "簽證到期日",
-      "submit": "發送報價",
+      "submit": "立即申請",
       "submitting": "發送中…",
       "privacyNote": "您的資料只會用作準備報價及跟進。絕無垃圾郵件，絕無信貸審查。",
       "errors": {
