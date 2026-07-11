@@ -114,3 +114,36 @@ input[type="range"].ol-range::-moz-range-thumb {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+/* Browse-cars marquee: the track holds two copies of the card row and
+   slides one full copy per loop. Pauses on hover/keyboard focus. */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 45s linear infinite;
+}
+
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+
+[dir="rtl"] .marquee-track {
+  animation-direction: reverse;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+  .marquee {
+    overflow-x: auto;
+  }
+}

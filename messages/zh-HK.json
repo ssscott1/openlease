@@ -38,6 +38,11 @@
       "anyTerm": "{min} 至 {max} 個月任意租期"
     }
   },
+  "browse": {
+    "title": "瀏覽車款",
+    "subtitle": "五款全新座駕，每款一個全包週價。",
+    "cta": "訂製租約"
+  },
   "quote": {
     "sectionTitle": "訂製您的租約",
     "sectionSubtitle": "揀選車款，將租期對齊簽證，即時查看全包週租價。",

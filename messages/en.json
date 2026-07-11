@@ -35,6 +35,11 @@
       "anyTerm": "Any term from {min} to {max} months"
     }
   },
+  "browse": {
+    "title": "Browse our cars",
+    "subtitle": "Five brand-new cars. One all-inclusive weekly price each.",
+    "cta": "Build your lease"
+  },
   "quote": {
     "sectionTitle": "Build your lease",
     "sectionSubtitle": "Pick a car, set your term to match your visa, and see your all-inclusive weekly price — instantly.",

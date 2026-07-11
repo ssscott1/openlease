@@ -38,6 +38,11 @@
       "anyTerm": "{min} 至 {max} 个月任意租期"
     }
   },
+  "browse": {
+    "title": "浏览车型",
+    "subtitle": "五款全新座驾，每款一个全包周价。",
+    "cta": "定制租约"
+  },
   "quote": {
     "sectionTitle": "定制您的租约",
     "sectionSubtitle": "选择车型，将租期与签证对齐，立即查看全包周租价。",

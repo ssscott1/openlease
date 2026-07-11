@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import { getActiveVehicles, getPricingConfig } from "@/lib/queries";
 import { getSetting } from "@/lib/settings";
 import { Hero } from "@/components/site/sections/Hero";
+import { CarMarquee } from "@/components/site/sections/CarMarquee";
 import { Pillars } from "@/components/site/sections/Pillars";
 import { Included } from "@/components/site/sections/Included";
 import { Delivery } from "@/components/site/sections/Delivery";
@@ -43,6 +44,9 @@ export default async function HomePage({
         termMin={config?.term_min_months ?? 9}
         termMax={config?.term_max_months ?? 24}
       />
+      {config && vehicles.length > 0 && (
+        <CarMarquee vehicles={vehicles} config={config} />
+      )}
       {config && vehicles.length > 0 && (
         <QuoteBuilder vehicles={vehicles} config={config} disclaimer={disclaimer} />
       )}
