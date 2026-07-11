@@ -72,7 +72,7 @@
       "title": "揀選車款"
     },
     "step2": {
-      "label": "第二步",
+      "label": "第三步",
       "title": "設定租期",
       "delight": "大多數租約鎖定 12 或 24 個月。您嘅可以配合簽證、合約或項目——如果您嘅時間線啱啱好如此，就係 {months} 個月。",
       "hint": "令租期配合您嘅時間線——{min} 至 {max} 個月任選。",
@@ -81,7 +81,7 @@
       "monthsLong": "{count} 個月"
     },
     "step3": {
-      "label": "第三步",
+      "label": "第四步",
       "title": "您的週租價",
       "allInclusive": "除燃油外全部包含",
       "term": "租期",
@@ -90,7 +90,7 @@
       "excessNote": "超額里程 {rate}/公里"
     },
     "step4": {
-      "label": "第四步",
+      "label": "第五步",
       "title": "索取報價",
       "cta": "索取我的報價"
     },
@@ -136,6 +136,29 @@
         "body": "我們已將 {vehicle}（{months} 個月，{price}/週）的報價發送至您的電郵。我們的團隊會於一個工作天內與您聯絡。",
         "again": "再做一份報價"
       }
+    },
+    "situation": {
+      "label": "第二步",
+      "title": "乜嘢決定您嘅時間線？",
+      "required": "請話畀我們知乜嘢決定您嘅時間線",
+      "options": {
+        "visa": "簽證",
+        "contract": "固定年期合約",
+        "project": "項目 / 季節性工作",
+        "relocation": "外派 / 駐留",
+        "car_delivery_bridge": "等緊新車交付",
+        "other": "其他"
+      },
+      "fields": {
+        "contractEnd": "合約完結日期",
+        "projectEnd": "預計項目完結日期",
+        "assignmentEnd": "派駐完結日期",
+        "deliveryMonth": "預計交付月份",
+        "dealer": "經銷商（選填）",
+        "reason": "請講下您嘅情況",
+        "endDate": "預計完結日期"
+      },
+      "anchorApplied": "我們已將租期配合您嘅完結日期——可以隨時調整。"
     }
   },
   "pillars": {

@@ -7,8 +7,12 @@ import { useRouter } from "@/i18n/navigation";
 import { formatAud } from "@/lib/format";
 import { weeklyPrice, weeksInTerm } from "@/lib/pricing";
 import type { PricingConfigRow, Vehicle } from "@/lib/types";
-
-const VISA_TYPE_KEYS = ["482", "485", "500", "400", "407", "408", "417", "600", "other"] as const;
+import {
+  TimelinePicker,
+  EMPTY_TIMELINE,
+  monthsUntil,
+  type TimelineValue,
+} from "./TimelinePicker";
 
 export function QuoteBuilder({
   vehicles,
@@ -27,6 +31,8 @@ export function QuoteBuilder({
 
   const [vehicleId, setVehicleId] = useState<string | null>(null);
   const [term, setTerm] = useState(12);
+  const [timeline, setTimeline] = useState<TimelineValue>(EMPTY_TIMELINE);
+  const [anchorApplied, setAnchorApplied] = useState(false);
   const [busy, setBusy] = useState(false);
   const [formError, setFormError] = useState<string | null>(null);
   const scrollerRef = useRef<HTMLDivElement>(null);
@@ -99,11 +105,28 @@ export function QuoteBuilder({
     label: tIncluded.has(`items.${key}`) ? tIncluded(`items.${key}`) : key,
   }));
 
+  function onTimelineChange(next: TimelineValue) {
+    setTimeline(next);
+    setFormError(null);
+    const preset = monthsUntil(next.anchorDate, min, max);
+    if (preset !== null) {
+      setTerm(preset);
+      setAnchorApplied(true);
+    } else {
+      setAnchorApplied(false);
+    }
+  }
+
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (!vehicle) {
       setFormError(t("form.errors.vehicleRequired"));
       document.getElementById("cars")?.scrollIntoView({ behavior: "smooth" });
+      return;
+    }
+    if (!timeline.useCase) {
+      setFormError(t("situation.required"));
+      document.getElementById("timeline")?.scrollIntoView({ behavior: "smooth" });
       return;
     }
     const fd = new FormData(e.currentTarget);
@@ -120,8 +143,12 @@ export function QuoteBuilder({
           email: fd.get("email"),
           phone: fd.get("phone"),
           employer: fd.get("employer"),
-          visaType: fd.get("visaType"),
-          visaExpiry: fd.get("visaExpiry") || undefined,
+          useCase: timeline.useCase,
+          termAnchorDate: timeline.anchorDate || undefined,
+          useCaseDetail: timeline.detail || undefined,
+          visaType: timeline.useCase === "visa" ? timeline.visaType : undefined,
+          visaExpiry:
+            timeline.useCase === "visa" ? timeline.anchorDate || undefined : undefined,
           locale,
         }),
       });
@@ -220,7 +247,15 @@ export function QuoteBuilder({
 
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mt-8 space-y-8">
-          {/* Step 2 — term slider */}
+          {/* Step 2 — what's setting your timeline */}
+          <div id="timeline" className="scroll-mt-20 rounded-xl border border-line bg-white p-6 sm:p-8">
+            <StepLabel label={t("situation.label")} title={t("situation.title")} />
+            <div className="mt-5">
+              <TimelinePicker value={timeline} onChange={onTimelineChange} />
+            </div>
+          </div>
+
+          {/* Step 3 — term slider */}
           <div className="rounded-xl border border-line bg-white p-6 sm:p-8">
             <StepLabel label={t("step2.label")} title={t("step2.title")} />
             <p className="mt-2 text-sm text-ink-soft">
@@ -250,6 +285,14 @@ export function QuoteBuilder({
               <span>{t("step2.monthsLong", { count: min })}</span>
               <span>{t("step2.monthsLong", { count: max })}</span>
             </div>
+            {anchorApplied && (
+              <p className="mt-5 flex items-center justify-center gap-2 text-sm font-medium text-accent-strong">
+                <svg aria-hidden className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                </svg>
+                {t("situation.anchorApplied")}
+              </p>
+            )}
             <p className="mt-5 rounded-xl bg-accent-soft px-4 py-3 text-center text-sm font-medium text-accent-strong">
               {t("step2.delight", { months: term })}
             </p>
@@ -324,24 +367,6 @@ export function QuoteBuilder({
               <Field label={t("form.email")} name="email" type="email" required autoComplete="email" />
               <Field label={t("form.phone")} name="phone" type="tel" required autoComplete="tel" />
               <Field label={t("form.employer")} name="employer" autoComplete="organization" />
-              <label className="flex flex-col gap-1.5 text-sm font-medium">
-                {t("form.visaType")}
-                <select
-                  name="visaType"
-                  className="rounded-xl border border-line bg-white px-3.5 py-2.5 text-base font-normal focus:outline-2 focus:outline-accent"
-                  defaultValue=""
-                >
-                  <option value="" disabled>
-                    {t("form.visaTypePlaceholder")}
-                  </option>
-                  {VISA_TYPE_KEYS.map((key) => (
-                    <option key={key} value={key}>
-                      {t(`form.visaTypes.${key}`)}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <Field label={t("form.visaExpiry")} name="visaExpiry" type="date" />
               <div className="sm:col-span-2 lg:col-span-3">
                 {formError && (
                   <p role="alert" className="mb-3 rounded-xl bg-red-50 px-4 py-2.5 text-sm text-red-700">

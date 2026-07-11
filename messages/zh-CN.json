@@ -72,7 +72,7 @@
       "title": "选择车型"
     },
     "step2": {
-      "label": "第二步",
+      "label": "第三步",
       "title": "设置租期",
       "delight": "大多数租约锁定 12 或 24 个月。您的可以匹配签证、合同或项目——如果您的时间线正好如此，就是 {months} 个月。",
       "hint": "让租期匹配您的时间线——{min} 至 {max} 个月任选。",
@@ -81,7 +81,7 @@
       "monthsLong": "{count} 个月"
     },
     "step3": {
-      "label": "第三步",
+      "label": "第四步",
       "title": "您的周租价",
       "allInclusive": "除燃油外全部包含",
       "term": "租期",
@@ -90,7 +90,7 @@
       "excessNote": "超出里程 {rate}/公里"
     },
     "step4": {
-      "label": "第四步",
+      "label": "第五步",
       "title": "获取报价",
       "cta": "获取我的报价"
     },
@@ -136,6 +136,29 @@
         "body": "我们已将 {vehicle}（{months} 个月，{price}/周）的报价发送至您的邮箱。我们的团队将在一个工作日内与您联系。",
         "again": "再做一份报价"
       }
+    },
+    "situation": {
+      "label": "第二步",
+      "title": "什么决定您的时间线？",
+      "required": "请告诉我们什么决定您的时间线",
+      "options": {
+        "visa": "签证",
+        "contract": "固定期限合同",
+        "project": "项目 / 季节性工作",
+        "relocation": "外派 / 驻留",
+        "car_delivery_bridge": "等待新车交付",
+        "other": "其他"
+      },
+      "fields": {
+        "contractEnd": "合同结束日期",
+        "projectEnd": "预计项目结束日期",
+        "assignmentEnd": "派驻结束日期",
+        "deliveryMonth": "预计交付月份",
+        "dealer": "经销商（选填）",
+        "reason": "请说明您的情况",
+        "endDate": "预计结束日期"
+      },
+      "anchorApplied": "我们已将租期匹配到您的结束日期——可随时调整。"
     }
   },
   "pillars": {

@@ -16,6 +16,23 @@ export type QuoteStatus = "draft" | "sent" | "converted";
 
 export type ActivityType = "note" | "call" | "email" | "status_change" | "system";
 
+export type UseCase =
+  | "visa"
+  | "contract"
+  | "project"
+  | "relocation"
+  | "car_delivery_bridge"
+  | "other";
+
+export const USE_CASES: UseCase[] = [
+  "visa",
+  "contract",
+  "project",
+  "relocation",
+  "car_delivery_bridge",
+  "other",
+];
+
 export type ApplicationStatus =
   | "draft"
   | "identity_pending"
@@ -70,6 +87,10 @@ export interface Lead {
   employer: string;
   visa_type: string;
   visa_expiry: string | null;
+  use_case: UseCase;
+  term_anchor_date: string | null;
+  use_case_detail: string;
+  verification: Record<string, string | null>;
   preferred_language: string;
   source: string;
   status: LeadStatus;

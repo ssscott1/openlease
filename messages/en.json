@@ -69,7 +69,7 @@
       "title": "Choose your car"
     },
     "step2": {
-      "label": "Step 2",
+      "label": "Step 3",
       "title": "Set your term",
       "delight": "Most leases lock you to 12 or 24 months. Yours can match your visa, contract or project — exactly {months} if that's your timeline.",
       "hint": "Match your term to your timeline — any length from {min} to {max} months.",
@@ -78,7 +78,7 @@
       "monthsLong": "{count} months"
     },
     "step3": {
-      "label": "Step 3",
+      "label": "Step 4",
       "title": "Your weekly price",
       "allInclusive": "Everything included except fuel",
       "term": "Term",
@@ -87,7 +87,7 @@
       "excessNote": "Excess km at {rate}/km"
     },
     "step4": {
-      "label": "Step 4",
+      "label": "Step 5",
       "title": "Get your quote",
       "cta": "Get my quote"
     },
@@ -133,6 +133,29 @@
         "body": "We've emailed your quote for the {vehicle} over {months} months at {price}/week. Our team will be in touch within one business day.",
         "again": "Build another quote"
       }
+    },
+    "situation": {
+      "label": "Step 2",
+      "title": "What's setting your timeline?",
+      "required": "Please tell us what's setting your timeline",
+      "options": {
+        "visa": "Visa",
+        "contract": "Fixed-term contract",
+        "project": "Project / seasonal work",
+        "relocation": "Relocation / secondment",
+        "car_delivery_bridge": "Waiting for a new car",
+        "other": "Other"
+      },
+      "fields": {
+        "contractEnd": "Contract end date",
+        "projectEnd": "Expected project end date",
+        "assignmentEnd": "Assignment end date",
+        "deliveryMonth": "Expected delivery month",
+        "dealer": "Dealer (optional)",
+        "reason": "Tell us about your situation",
+        "endDate": "Intended end date"
+      },
+      "anchorApplied": "We've matched your term to your end date — adjust if you like."
     }
   },
   "pillars": {

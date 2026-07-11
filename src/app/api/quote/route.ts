@@ -12,6 +12,9 @@ interface QuoteRequestBody {
   email?: string;
   phone?: string;
   employer?: string;
+  useCase?: string;
+  termAnchorDate?: string;
+  useCaseDetail?: string;
   visaType?: string;
   visaExpiry?: string;
   locale?: string;
@@ -19,6 +22,14 @@ interface QuoteRequestBody {
 }
 
 const ALLOWED_SOURCES = new Set(["website", "car_page"]);
+const ALLOWED_USE_CASES = new Set([
+  "visa",
+  "contract",
+  "project",
+  "relocation",
+  "car_delivery_bridge",
+  "other",
+]);
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -69,14 +80,23 @@ export async function POST(request: NextRequest) {
   const leadId = randomUUID();
   const quoteId = randomUUID();
 
+  const useCase = ALLOWED_USE_CASES.has(body.useCase ?? "")
+    ? (body.useCase as string)
+    : "other";
+  const isVisa = useCase === "visa";
+
   const { error: leadError } = await supabase.from("leads").insert({
     id: leadId,
     name,
     email,
     phone,
     employer: body.employer?.trim() ?? "",
-    visa_type: body.visaType?.trim() ?? "",
-    visa_expiry: body.visaExpiry || null,
+    use_case: useCase,
+    term_anchor_date: body.termAnchorDate || null,
+    use_case_detail: body.useCaseDetail?.trim().slice(0, 500) ?? "",
+    // Visa fields are populated only for visa leads (spec §4).
+    visa_type: isVisa ? (body.visaType?.trim() ?? "") : "",
+    visa_expiry: isVisa ? body.visaExpiry || null : null,
     preferred_language: body.locale ?? "en",
     source: ALLOWED_SOURCES.has(body.source ?? "") ? body.source : "website",
     status: "new",

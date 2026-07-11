@@ -38,6 +38,7 @@ export async function POST(request: NextRequest) {
     employer: body.company?.trim() ?? "",
     preferred_language: body.locale ?? "en",
     source: "partner",
+    use_case: "other",
     status: "new",
     next_action: body.message?.trim().slice(0, 500) ?? "",
   });

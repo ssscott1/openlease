@@ -6,13 +6,17 @@ import { useRouter } from "@/i18n/navigation";
 import { formatAud } from "@/lib/format";
 import { weeklyPrice, weeksInTerm } from "@/lib/pricing";
 import type { PricingConfigRow, Vehicle } from "@/lib/types";
-
-const VISA_TYPE_KEYS = ["482", "485", "500", "400", "407", "408", "417", "600", "other"] as const;
+import {
+  TimelinePicker,
+  EMPTY_TIMELINE,
+  monthsUntil,
+  type TimelineValue,
+} from "@/components/site/quote/TimelinePicker";
 
 /**
- * The apply form on a car's detail page: pick a term (live-priced by the
- * shared pricing engine), enter details, and submit through the controlled
- * /api/quote path — landing in the CRM as a new lead with source=car_page.
+ * The apply form on a car's detail page: say what sets your timeline, pick
+ * a term (pre-set from the anchor date, live-priced by the shared pricing
+ * engine), enter details, and submit through the controlled /api/quote path.
  */
 export function ApplyForm({
   vehicle,
@@ -28,6 +32,8 @@ export function ApplyForm({
   const router = useRouter();
 
   const [term, setTerm] = useState(12);
+  const [timeline, setTimeline] = useState<TimelineValue>(EMPTY_TIMELINE);
+  const [anchorApplied, setAnchorApplied] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -37,8 +43,24 @@ export function ApplyForm({
   const total = weekly * weeksInTerm(term);
   const fillPct = ((term - min) / Math.max(1, max - min)) * 100;
 
+  function onTimelineChange(next: TimelineValue) {
+    setTimeline(next);
+    setError(null);
+    const preset = monthsUntil(next.anchorDate, min, max);
+    if (preset !== null) {
+      setTerm(preset);
+      setAnchorApplied(true);
+    } else {
+      setAnchorApplied(false);
+    }
+  }
+
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (!timeline.useCase) {
+      setError(tQuote("situation.required"));
+      return;
+    }
     const fd = new FormData(e.currentTarget);
     setBusy(true);
     setError(null);
@@ -53,8 +75,12 @@ export function ApplyForm({
           email: fd.get("email"),
           phone: fd.get("phone"),
           employer: fd.get("employer"),
-          visaType: fd.get("visaType"),
-          visaExpiry: fd.get("visaExpiry") || undefined,
+          useCase: timeline.useCase,
+          termAnchorDate: timeline.anchorDate || undefined,
+          useCaseDetail: timeline.detail || undefined,
+          visaType: timeline.useCase === "visa" ? timeline.visaType : undefined,
+          visaExpiry:
+            timeline.useCase === "visa" ? timeline.anchorDate || undefined : undefined,
           locale,
           source: "car_page",
         }),
@@ -72,8 +98,12 @@ export function ApplyForm({
 
   return (
     <form onSubmit={onSubmit} className="mt-6">
+      {/* Use case */}
+      <p className="mb-3 text-sm font-semibold">{tQuote("situation.title")}</p>
+      <TimelinePicker value={timeline} onChange={onTimelineChange} />
+
       {/* Term + live price */}
-      <div className="rounded-xl bg-mist p-5">
+      <div className="mt-5 rounded-xl bg-mist p-5">
         <div className="flex flex-wrap items-baseline justify-between gap-2">
           <p className="text-sm font-medium">
             {tQuote("step2.monthsLong", { count: term })}
@@ -103,7 +133,9 @@ export function ApplyForm({
           <span>{tQuote("step2.monthsLong", { count: max })}</span>
         </div>
         <p className="mt-3 text-xs font-medium text-accent-strong">
-          {tQuote("step2.delight", { months: term })}
+          {anchorApplied
+            ? tQuote("situation.anchorApplied")
+            : tQuote("step2.delight", { months: term })}
         </p>
       </div>
 
@@ -124,23 +156,6 @@ export function ApplyForm({
         <label className="flex flex-col gap-1.5 text-sm font-medium">
           {tQuote("form.employer")}
           <input name="employer" autoComplete="organization" className={input} />
-        </label>
-        <label className="flex flex-col gap-1.5 text-sm font-medium">
-          {tQuote("form.visaType")}
-          <select name="visaType" defaultValue="" className={input}>
-            <option value="" disabled>
-              {tQuote("form.visaTypePlaceholder")}
-            </option>
-            {VISA_TYPE_KEYS.map((key) => (
-              <option key={key} value={key}>
-                {tQuote(`form.visaTypes.${key}`)}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label className="flex flex-col gap-1.5 text-sm font-medium">
-          {tQuote("form.visaExpiry")}
-          <input name="visaExpiry" type="date" className={input} />
         </label>
       </div>
 
