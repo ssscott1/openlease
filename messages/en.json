@@ -24,16 +24,23 @@
     "menuClose": "Close menu"
   },
   "hero": {
-    "eyebrow": "For professionals on temporary Australian visas",
-    "title": "A car for the term of your visa.",
-    "subtitle": "Open lease terms. Brand-new cars. One weekly price covering everything but fuel — insurance, servicing, maintenance, tyres, rego and roadside included. Delivered to you, collected when you leave.",
+    "eyebrow": "For professionals in Australia for a defined term",
+    "subtitle": "Open lease terms. Brand-new cars. One weekly price covering everything but fuel — insurance, servicing, maintenance, tyres, rego and roadside included. Delivered to you, drop off when your term ends.",
     "cta": "Build your lease",
     "secondaryCta": "How it works",
     "badges": {
       "newCars": "Brand-new cars",
       "noCredit": "No Australian credit history needed",
       "anyTerm": "Any term from {min} to {max} months"
-    }
+    },
+    "titleTemplate": "A new car for the term of your <word></word>",
+    "words": {
+      "visa": "Visa",
+      "contract": "Contract",
+      "project": "Project",
+      "relocation": "Relocation"
+    },
+    "ariaTitle": "A new car for the term of your visa, contract, project or relocation"
   },
   "browse": {
     "title": "Browse our cars",

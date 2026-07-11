@@ -1,5 +1,8 @@
 import { getTranslations } from "next-intl/server";
 import { OpenRing } from "@/components/Logo";
+import { RotatingWord } from "./RotatingWord";
+
+const ROTATION_ORDER = ["visa", "contract", "project", "relocation"] as const;
 
 export async function Hero({
   termMin,
@@ -20,8 +23,19 @@ export async function Hero({
         <p className="animate-rise rounded-full bg-accent-soft px-4 py-1.5 font-mono text-xs font-medium uppercase tracking-wider text-accent">
           {t("eyebrow")}
         </p>
-        <h1 className="mt-6 max-w-4xl animate-rise text-4xl font-bold leading-tight tracking-tight [animation-delay:80ms] sm:text-6xl sm:leading-tight sm:tracking-[-0.03em]">
-          {t("title")}
+        <h1
+          aria-label={t("ariaTitle")}
+          className="mt-6 max-w-4xl animate-rise text-4xl font-bold leading-tight tracking-tight [animation-delay:80ms] sm:text-6xl sm:leading-tight sm:tracking-[-0.03em]"
+        >
+          <span aria-hidden>
+            {t.rich("titleTemplate", {
+              word: () => (
+                <RotatingWord
+                  words={ROTATION_ORDER.map((key) => t(`words.${key}`))}
+                />
+              ),
+            })}
+          </span>
         </h1>
         <p className="mt-6 max-w-2xl animate-rise text-lg leading-relaxed text-ink-soft [animation-delay:160ms]">
           {t("subtitle")}

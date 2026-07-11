@@ -147,3 +147,26 @@ input[type="range"].ol-range::-moz-range-thumb {
     overflow-x: auto;
   }
 }
+
+/* Hero rotating word — vertical roll-down (split-flap feel, but smooth). */
+@keyframes roll-in {
+  from {
+    transform: translateY(-110%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes roll-out {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(110%);
+    opacity: 0;
+  }
+}
