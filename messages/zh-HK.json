@@ -1,0 +1,246 @@
+{
+  "common": {
+    "brand": "OpenLease",
+    "perWeek": "/week",
+    "from": "from",
+    "months": "{count} months",
+    "loading": "Loading…",
+    "error": "Something went wrong. Please try again.",
+    "close": "Close"
+  },
+  "header": {
+    "nav": {
+      "cars": "Cars",
+      "included": "What's included",
+      "howItWorks": "How it works",
+      "partners": "Partners",
+      "faq": "FAQ"
+    },
+    "customerLogin": "Customer Login",
+    "adminLogin": "Admin Login",
+    "languageLabel": "Language",
+    "buildYourLease": "Build your lease",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu"
+  },
+  "hero": {
+    "eyebrow": "For professionals on temporary Australian visas",
+    "title": "A car for the term of your visa.",
+    "subtitle": "Open lease terms. Brand-new cars. One weekly price covering everything but fuel — insurance, servicing, maintenance, tyres, rego and roadside included. Delivered to you, collected when you leave.",
+    "cta": "Build your lease",
+    "secondaryCta": "How it works",
+    "badges": {
+      "newCars": "Brand-new cars",
+      "noCredit": "No Australian credit history needed",
+      "anyTerm": "Any term from {min} to {max} months"
+    }
+  },
+  "quote": {
+    "sectionTitle": "Build your lease",
+    "sectionSubtitle": "Pick a car, set your term to match your visa, and see your all-inclusive weekly price — instantly.",
+    "step1": {
+      "label": "Step 1",
+      "title": "Choose your car"
+    },
+    "step2": {
+      "label": "Step 2",
+      "title": "Set your term",
+      "delight": "Most leases lock you into 12 or 24 months. Yours can be exactly {months}.",
+      "hint": "Match your term to your visa — any length from {min} to {max} months.",
+      "sliderLabel": "Lease term in months",
+      "monthsShort": "mo",
+      "monthsLong": "{count} months"
+    },
+    "step3": {
+      "label": "Step 3",
+      "title": "Your weekly price",
+      "allInclusive": "Everything included except fuel",
+      "term": "Term",
+      "totalContract": "Total contract value",
+      "kmNote": "Includes {km} km per week",
+      "excessNote": "Excess km at {rate}/km"
+    },
+    "step4": {
+      "label": "Step 4",
+      "title": "Get your quote",
+      "cta": "Get my quote"
+    },
+    "vehicleCard": {
+      "select": "Select",
+      "selected": "Selected",
+      "seats": "{count} seats",
+      "fuelEconomy": "{value}"
+    },
+    "form": {
+      "title": "Get your quote by email",
+      "subtitle": "We'll send your quote and hold your price. No credit check, no obligation.",
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone (or WhatsApp)",
+      "employer": "Employer",
+      "visaType": "Visa type",
+      "visaTypePlaceholder": "Select your visa",
+      "visaTypes": {
+        "482": "482 — Skills in Demand",
+        "485": "485 — Temporary Graduate",
+        "500": "500 — Student",
+        "400": "400 — Temporary Work",
+        "407": "407 — Training",
+        "408": "408 — Temporary Activity",
+        "417": "417 / 462 — Working Holiday",
+        "600": "600 — Visitor",
+        "other": "Other / not sure"
+      },
+      "visaExpiry": "Visa expiry date",
+      "submit": "Send my quote",
+      "submitting": "Sending…",
+      "privacyNote": "We only use your details to prepare your quote and follow up. No spam, no credit check.",
+      "errors": {
+        "nameRequired": "Please enter your name",
+        "emailRequired": "Please enter a valid email",
+        "phoneRequired": "Please enter your phone number",
+        "vehicleRequired": "Please choose a car first",
+        "generic": "We couldn't send your quote. Please try again or email us."
+      },
+      "success": {
+        "title": "Your quote is on its way",
+        "body": "We've emailed your quote for the {vehicle} over {months} months at {price}/week. Our team will be in touch within one business day.",
+        "again": "Build another quote"
+      }
+    }
+  },
+  "pillars": {
+    "title": "How OpenLease is different",
+    "subtitle": "Car leasing in Australia was built for permanent residents on fixed terms. We built OpenLease for you.",
+    "openTerms": {
+      "title": "Open terms",
+      "body": "Your lease matches your visa — not the other way around. 9 to 24 months, any month in between, including odd terms like 15."
+    },
+    "allInclusive": {
+      "title": "All-inclusive",
+      "body": "A brand-new car with one weekly price. Insurance, servicing, maintenance, tyres, rego, CTP and roadside — everything but fuel."
+    },
+    "noCredit": {
+      "title": "No Australian credit history needed",
+      "body": "You're approved on your employment contract, salary and visa — even before you arrive in Australia."
+    }
+  },
+  "included": {
+    "title": "One weekly price. Everything but fuel.",
+    "subtitle": "No surprise bills, no separate policies, no rego renewals. If the car needs it, it's covered.",
+    "items": {
+      "insurance": "Comprehensive insurance",
+      "servicing": "Servicing",
+      "maintenance": "Maintenance",
+      "tyres": "Tyres",
+      "rego": "Registration & CTP",
+      "roadside": "24/7 roadside assistance",
+      "delivery": "Delivery & collection"
+    },
+    "fuelExcluded": "Fuel",
+    "fuelExcludedNote": "The only thing you pay for is fuel."
+  },
+  "delivery": {
+    "title": "Delivered on arrival. Collected when you leave.",
+    "body": "We deliver your car to the airport or your new home, ready to drive. At the end of your term, we come and collect it. Zero hassle at the two moments you least need it.",
+    "point1": "Airport or home delivery, timed to your arrival",
+    "point2": "Fully registered, insured and fuelled for handover",
+    "point3": "End-of-term collection wherever suits you"
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "subtitle": "From your visa grant to your driveway in four steps.",
+    "steps": {
+      "1": {
+        "title": "Choose your car & term",
+        "body": "Pick a brand-new car and slide the term to match your visa."
+      },
+      "2": {
+        "title": "Apply online",
+        "body": "Apply before you arrive — approval on your contract, salary and visa. No Australian credit history required."
+      },
+      "3": {
+        "title": "We deliver on arrival",
+        "body": "Your car is waiting — at the airport or your new front door."
+      },
+      "4": {
+        "title": "Drive. We collect at the end.",
+        "body": "One weekly payment covers everything but fuel. When your term ends, we collect the car."
+      }
+    }
+  },
+  "partners": {
+    "title": "For employers & migration partners",
+    "body": "Relocating international talent? Give your people mobility from day one. We partner with employers, relocation agents and migration specialists to make cars part of the landing package — with consolidated billing and priority delivery.",
+    "point1": "Fleet-style terms for individual visa lengths",
+    "point2": "One invoice, many drivers, zero admin",
+    "point3": "Priority delivery slots for arrival dates",
+    "cta": "Partner with us",
+    "form": {
+      "title": "Partner with us",
+      "subtitle": "Tell us about your organisation and we'll be in touch within one business day.",
+      "name": "Contact name",
+      "email": "Work email",
+      "phone": "Phone",
+      "company": "Organisation",
+      "message": "How can we help?",
+      "submit": "Send enquiry",
+      "success": {
+        "title": "Thanks — we'll be in touch",
+        "body": "Your enquiry has been received. A partnerships lead will contact you within one business day."
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": {
+      "who": {
+        "q": "Who is OpenLease for?",
+        "a": "Professionals coming to Australia on temporary visas — skilled workers, graduates, students and working-holiday makers — who need a car for exactly the length of their stay."
+      },
+      "included": {
+        "q": "What does the weekly price include?",
+        "a": "Everything except fuel: comprehensive insurance, servicing, maintenance, tyres, registration and CTP, 24/7 roadside assistance, plus delivery and collection. One payment, no surprises."
+      },
+      "credit": {
+        "q": "Do I need an Australian credit history?",
+        "a": "No. We approve you on your employment contract, salary and visa. You can be approved before you even land in Australia."
+      },
+      "term": {
+        "q": "Can the lease really match my exact visa length?",
+        "a": "Yes. Any term from 9 to 24 months — including non-standard terms like 15 months. Set the slider to your visa length and that's your lease."
+      },
+      "km": {
+        "q": "How many kilometres are included?",
+        "a": "Pricing is based on up to {km} km per week. If you drive more, excess kilometres are charged at a published per-km rate — you'll always know it up front."
+      },
+      "end": {
+        "q": "What happens at the end of my lease?",
+        "a": "We come and collect the car — from your home, work or the airport. If your visa is extended, you can extend or re-lease instead."
+      },
+      "apply": {
+        "q": "Can I apply before I arrive in Australia?",
+        "a": "Yes — most of our customers do. Apply with your employment contract and visa, get approved, and your car will be waiting when you land."
+      }
+    }
+  },
+  "disclaimer": {
+    "text": "All pricing is indicative and based on the driver travelling up to {km} km per week. Excess kilometres are charged at a published per-km rate. Final pricing is confirmed on application and subject to assessment and approval. OpenLease agreements are consumer leases provided under applicable Australian consumer credit law."
+  },
+  "footer": {
+    "tagline": "Brand-new cars for the term of your visa. One weekly price, everything but fuel.",
+    "contactTitle": "Contact",
+    "linksTitle": "Explore",
+    "legalTitle": "Legal",
+    "loginTitle": "Log in",
+    "customerLogin": "Customer Login",
+    "adminLogin": "Admin Login",
+    "rights": "© {year} OpenLease. All rights reserved.",
+    "languageLabel": "Language"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The page you're looking for doesn't exist.",
+    "cta": "Back to home"
+  }
+}
