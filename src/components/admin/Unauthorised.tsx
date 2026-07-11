@@ -26,7 +26,7 @@ export function Unauthorised({ email }: { email: string }) {
         No CRM access for this account
       </h1>
       <p className="mt-2 max-w-md text-sm text-ink-soft">
-        You're signed in as <strong>{email}</strong>, but this account has no
+        You&apos;re signed in as <strong>{email}</strong>, but this account has no
         active staff profile. An administrator needs to add a row for it in
         the <code className="rounded bg-mist px-1">profiles</code> table with
         role <code className="rounded bg-mist px-1">admin</code> or{" "}
